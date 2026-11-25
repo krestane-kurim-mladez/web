@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mládež Křesťané Kuřim</title>
+<meta name="description" content="Mládež Křesťané Kuřim: hry, chvály, Bible a svačina. Každý pátek v 17:00, zdarma a bez nátlaku.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%20role%3D%22img%22%20aria-label%3D%22Ml%C3%A1de%C5%BE%20K%C5%99es%C5%A5an%C3%A9%20Ku%C5%99im%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2216%22%20fill%3D%22%2324384D%22/%3E%3Cg%20fill%3D%22%23F2B84B%22%3E%3Crect%20x%3D%2235%22%20y%3D%2210%22%20width%3D%228%22%20height%3D%2244%22%20rx%3D%222%22/%3E%3Crect%20x%3D%2225%22%20y%3D%2220%22%20width%3D%2228%22%20height%3D%228%22%20rx%3D%222%22/%3E%3C/g%3E%3Cg%20fill%3D%22%23E0634D%22%3E%3Crect%20x%3D%2221%22%20y%3D%2214%22%20width%3D%228%22%20height%3D%2244%22%20rx%3D%222%22/%3E%3Crect%20x%3D%2211%22%20y%3D%2226%22%20width%3D%2228%22%20height%3D%228%22%20rx%3D%222%22/%3E%3C/g%3E%3Cpath%20d%3D%22M12%2054h14%22%20stroke%3D%22%23fff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.5%22/%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--slate:#24384D;--deep:#14202C;--terra:#C44F3B;--terra-h:#A94030;--coral:#E0634D;--sun:#F2B84B;
+--bg:#F8F6F2;--card:#fff;--text:#1B2733;--muted:#5A6874;--line:#E3DED5;
+--head:'Plus Jakarta Sans','Segoe UI',system-ui,sans-serif;--body:'Inter','Segoe UI',system-ui,sans-serif;--r:24px;color-scheme:light}
+:root[data-theme=dark]{--bg:#0F1923;--card:#18262F;--text:#EAF0F4;--muted:#9FB0BC;--line:#26384A;color-scheme:dark}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0F1923;--card:#18262F;--text:#EAF0F4;--muted:#9FB0BC;--line:#26384A;color-scheme:dark}}
+*{box-sizing:border-box;margin:0}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html{scroll-behavior:smooth}
+body{font:16px/1.7 var(--body);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:var(--head);line-height:1.1;letter-spacing:-.02em}
+h2{font-size:clamp(1.7rem,4vw,2.5rem);margin-bottom:.6rem}h3{font-size:1.2rem;margin-bottom:.3rem}
+p+p{margin-top:.9rem}a{color:var(--terra)}a:hover{color:var(--terra-h)}
+:root[data-theme=dark] a{color:var(--coral)}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:8px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+.sec{padding:clamp(2.5rem,6vw,4.5rem) 0}
+.lead{color:var(--muted);font-size:1.1rem;max-width:62ch}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font:700 1rem var(--head);padding:.85rem 1.5rem;border-radius:999px;border:2px solid transparent;background:var(--terra);color:#fff;text-decoration:none;cursor:pointer;transition:.2s}
+.btn:hover{background:var(--terra-h);color:#fff;transform:translateY(-2px)}
+.btn.ghost{background:transparent;border-color:currentColor;color:inherit}.btn.ghost:hover{background:rgba(255,255,255,.14);color:inherit}
+.btn[aria-disabled=true]{opacity:.55;pointer-events:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:1.6rem}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:60;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:.8rem;height:60px}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--text)!important;font:800 1rem var(--head)}
+.brand svg{width:34px;height:34px}.brand small{display:block;font:600 .68rem var(--body);color:var(--muted);margin-top:-.2rem}
+.sp{margin-left:auto}
+.ib{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer;font-size:1.1rem;display:grid;place-items:center}
+.burger{width:auto;padding:0 1.1rem;border-radius:999px;gap:.6rem;display:inline-flex;font:700 .95rem var(--head);background:var(--slate);color:#fff;border-color:var(--slate)}
+.burger i{display:block;width:20px;height:2px;background:#fff;box-shadow:0 6px #fff,0 -6px #fff;transition:.25s}
+.burger[aria-expanded=true] i{box-shadow:none;transform:rotate(45deg)}
+.burger[aria-expanded=true] i::after{content:"";position:absolute;width:20px;height:2px;background:#fff;transform:rotate(90deg)}
+.burger i{position:relative}
+
+#menu{position:fixed;inset:0;z-index:55;background:var(--deep);color:#fff;padding:84px 0 2rem;overflow:auto;visibility:hidden;opacity:0;transform:translateY(-12px);transition:.3s}
+#menu.open{visibility:visible;opacity:1;transform:none}
+#menu nav{display:grid;gap:.2rem}
+#menu nav a{display:flex;align-items:baseline;gap:1rem;color:#fff;text-decoration:none;font:800 clamp(1.8rem,6vw,3.2rem) var(--head);padding:.25rem 0;border-bottom:1px solid rgba(255,255,255,.12)}
+#menu nav a span{font:600 .85rem var(--body);color:var(--sun);min-width:2rem}
+#menu nav a:hover,#menu nav a[aria-current=page]{color:var(--sun)}
+.mfoot{margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:.7rem}
+
+.hero{background:var(--deep);color:#fff;position:relative;overflow:hidden;padding:clamp(3.5rem,9vw,6.5rem) 0 0}
+.hero::before{content:"";position:absolute;width:620px;height:620px;right:-160px;top:-180px;background:radial-gradient(circle,rgba(224,99,77,.55),transparent 65%)}
+.hero::after{content:"";position:absolute;width:520px;height:520px;left:-200px;bottom:-120px;background:radial-gradient(circle,rgba(242,184,75,.25),transparent 65%)}
+.hero .wrap{position:relative;z-index:1}
+.hero h1{font-size:clamp(2.8rem,10vw,7rem);text-transform:uppercase;letter-spacing:-.04em}
+.hero h1 em{font-style:normal;color:var(--sun)}.hero h1 u{text-decoration:none;color:transparent;-webkit-text-stroke:2px #fff}
+.hero p.sub{font-size:1.2rem;max-width:46ch;color:#D3DDE5;margin:1.2rem 0 1.6rem}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.next{margin:2.2rem 0 2.6rem;display:inline-flex;flex-wrap:wrap;gap:1.2rem;align-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:var(--r);padding:1rem 1.4rem}
+.next b{font:800 1.15rem var(--head);display:block}.next span{color:#B9C8D3;font-size:.92rem}
+.cd{display:flex;gap:.5rem}.cd div{background:rgba(0,0,0,.25);border-radius:12px;padding:.4rem .7rem;text-align:center;min-width:58px}
+.cd strong{font:800 1.5rem var(--head);display:block;line-height:1.2}.cd small{font-size:.7rem;color:#B9C8D3}
+.marq{background:var(--terra);color:#fff;overflow:hidden;white-space:nowrap;padding:.8rem 0;font:800 1.2rem var(--head);text-transform:uppercase}
+.marq div{display:inline-block;animation:mq 28s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+.tiles{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.tile{display:block;position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:1.6rem;text-decoration:none;color:var(--text)!important;min-height:180px;transition:.25s;overflow:hidden}
+.tile:hover{transform:translateY(-5px);border-color:var(--terra);box-shadow:0 14px 34px rgba(0,0,0,.12)}
+.tile .n{font:800 .85rem var(--head);color:var(--terra)}.tile h3{font-size:1.5rem;margin:.4rem 0}.tile p{color:var(--muted);font-size:.95rem}
+.tile .ar{position:absolute;right:1.2rem;bottom:1rem;font-size:1.6rem;color:var(--terra);transition:.25s}.tile:hover .ar{transform:translateX(6px)}
+.band{background:var(--slate);color:#fff;border-radius:var(--r);padding:clamp(1.6rem,4vw,2.6rem);display:grid;gap:1.4rem;grid-template-columns:1.2fr 1fr;align-items:center}
+@media(max-width:800px){.band,.where{grid-template-columns:1fr!important}}
+.band h2{margin:0}.band p{color:#D3DDE5}
+.pills{display:flex;flex-wrap:wrap;gap:.5rem}.pills span{background:var(--sun);color:#3A2A00;font-weight:700;border-radius:999px;padding:.4rem 1rem;font-size:.95rem}
+
+.view{display:none}.view.on{display:block;animation:in .45s}
+@keyframes in{from{opacity:0;transform:translateY(10px)}}
+.ph{background:var(--slate);color:#fff;padding:clamp(2.6rem,7vw,4.6rem) 0 clamp(2rem,5vw,3rem);position:relative;overflow:hidden}
+.ph::after{content:"";position:absolute;right:-80px;top:-80px;width:340px;height:340px;background:radial-gradient(circle,rgba(224,99,77,.5),transparent 65%)}
+.ph .wrap{position:relative;z-index:1}.ph h1{font-size:clamp(2.2rem,7vw,4.6rem)}.ph p{color:#D3DDE5;font-size:1.15rem;max-width:60ch;margin-top:.8rem}
+.two{display:grid;gap:2rem;grid-template-columns:1fr 1fr;align-items:start}@media(max-width:800px){.two{grid-template-columns:1fr}}
+details{background:var(--card);border:1px solid var(--line);border-radius:18px;margin-bottom:.7rem;overflow:hidden}
+summary{cursor:pointer;list-style:none;padding:1.05rem 1.3rem;font:700 1.05rem var(--head);display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}summary::after{content:"+";font-size:1.5rem;line-height:1;color:var(--terra);transition:.2s}
+details[open] summary::after{transform:rotate(45deg)}details>div{padding:0 1.3rem 1.2rem;color:var(--muted)}
+.steps{display:grid;gap:1rem;counter-reset:s}
+.step{counter-increment:s;display:grid;grid-template-columns:64px 1fr;gap:1.2rem;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:1.4rem}
+.step::before{content:counter(s);width:56px;height:56px;border-radius:18px;background:var(--terra);color:#fff;font:800 1.6rem/56px var(--head);text-align:center}
+.step:nth-child(2)::before{background:var(--sun);color:#3A2A00}.step:nth-child(3)::before{background:var(--slate)}.step:nth-child(4)::before{background:var(--coral)}
+.step p{color:var(--muted)}
+.fact{border-left:5px solid var(--sun);padding:.3rem 0 .3rem 1.2rem;margin:1.2rem 0;font:700 1.25rem/1.4 var(--head)}
+
+.bar{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}
+.tab{font:600 .92rem var(--body);padding:.5rem 1.1rem;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer}
+.tab[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+:root[data-theme=dark] .tab[aria-pressed=true]{background:var(--sun);color:#3A2A00;border-color:var(--sun)}
+.quick{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}.quick .tab{font-size:.82rem;padding:.35rem .8rem}.quick .tab[aria-pressed=true]{background:var(--terra);color:#fff;border-color:var(--terra)}
+figure{margin-top:1rem;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--card)}figure img{width:100%;display:block;max-height:480px;object-fit:cover}figcaption{padding:.8rem 1.2rem;color:var(--muted);font-size:.9rem}
+
+.calw{display:grid;gap:1.2rem;grid-template-columns:1.25fr 1fr}@media(max-width:900px){.calw{grid-template-columns:1fr}}
+.ch{display:flex;align-items:center;justify-content:space-between;margin-bottom:.8rem}.ch h3{text-transform:capitalize;margin:0}
+.cg{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}.cg b{font:600 .75rem var(--body);color:var(--muted);text-align:center;padding:.3rem 0}
+.cg button{aspect-ratio:1;border-radius:12px;border:1px solid transparent;background:transparent;color:var(--text);font:600 .95rem var(--body);cursor:pointer;position:relative}
+.cg button:hover{background:var(--line)}.cg button.e::after{content:"";position:absolute;bottom:6px;left:50%;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:var(--terra)}
+.cg button.sp2::after{background:var(--sun);width:9px;height:9px;margin-left:-4.5px}.cg button.t{border-color:var(--terra)}.cg button.s{background:var(--slate);color:#fff}
+.ev{display:grid;grid-template-columns:70px 1fr;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--line)}.ev:last-child{border:0}
+.ev .d{background:var(--slate);color:#fff;border-radius:14px;text-align:center;padding:.4rem;height:fit-content}.ev .d b{font:800 1.4rem var(--head);display:block;line-height:1.1}.ev .d small{font-size:.72rem}
+.ev.sp .d{background:var(--terra)}.ev h4{font:700 1rem var(--head)}.ev p,.ev a{font-size:.88rem;color:var(--muted)}.ev a{color:var(--terra)}
+
+.ct{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.ct .card h3{display:flex;gap:.5rem;align-items:center}.ct .big{font:800 1.25rem var(--head);word-break:break-word}
+.where{display:grid;grid-template-columns:.9fr 1.1fr;gap:1.5rem;align-items:stretch}
+.map{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);min-height:340px}.map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+address{font-style:normal;font:700 1.2rem/1.5 var(--head);margin:.6rem 0 1rem}
+footer{background:var(--deep);color:#C8D4DD;padding:2.6rem 0 2rem;margin-top:2rem}
+footer .row{display:flex;flex-wrap:wrap;gap:1.2rem;align-items:center;justify-content:space-between}
+footer .big{font:800 1.15rem var(--head);color:#fff;text-decoration:none;background:var(--terra);padding:.9rem 1.5rem;border-radius:999px}footer .big:hover{background:var(--terra-h);color:#fff}
+footer small{display:block;margin-top:1.2rem;color:#8296A5}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:70;background:var(--bg)}
+#menu{top:env(safe-area-inset-top,0px)}
+.map{position:relative}.maplink{position:absolute;left:.7rem;bottom:.7rem;z-index:2;background:var(--deep);color:#fff!important;text-decoration:none;font:700 .85rem var(--head);padding:.5rem .9rem;border-radius:999px}
+#menu nav a b{font:inherit}#menu nav a small{display:block;font:500 .88rem/1.4 var(--body);color:#9FB0BC;margin-top:.1rem}
+@media(min-width:900px){#menu nav{grid-template-columns:1fr 1fr;column-gap:3rem}#menu nav a{font-size:clamp(1.6rem,3vw,2.3rem);padding:.7rem 0;border-bottom:1px solid rgba(255,255,255,.1)}}
+@media(max-width:899px){#menu nav a{font-size:clamp(1.4rem,6vw,1.9rem);padding:.55rem 0;border-bottom:1px solid rgba(255,255,255,.1)}}
+#menu.open nav a{animation:in .45s both}#menu.open nav a:nth-child(2){animation-delay:.04s}#menu.open nav a:nth-child(3){animation-delay:.08s}#menu.open nav a:nth-child(4){animation-delay:.12s}#menu.open nav a:nth-child(5){animation-delay:.16s}#menu.open nav a:nth-child(6){animation-delay:.2s}#menu.open nav a:nth-child(7){animation-delay:.24s}#menu.open nav a:nth-child(8){animation-delay:.28s}
+.soc{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.2rem}.soc a{color:#fff;text-decoration:none;font:600 .95rem var(--head);padding:.6rem 1.1rem;border:1px solid rgba(255,255,255,.25);border-radius:999px}.soc a:hover{background:rgba(255,255,255,.12);color:var(--sun)}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="logo" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#24384D"/><g fill="#F2B84B"><rect x="35" y="10" width="8" height="44" rx="2"/><rect x="25" y="20" width="28" height="8" rx="2"/></g><g fill="#E0634D"><rect x="21" y="14" width="8" height="44" rx="2"/><rect x="11" y="26" width="28" height="8" rx="2"/></g><path d="M12 54h14" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".5"/></symbol></svg>
+
+<header class="top"><div class="wrap">
+  <a class="brand" href="#uvod" aria-label="Mládež Křesťané Kuřim – domů"><svg aria-hidden="true"><use href="#logo"/></svg><span>Mládež<small>Křesťané Kuřim</small></span></a>
+  <span class="sp"></span>
+  <button class="ib" id="theme" type="button" aria-label="Přepnout světlý a tmavý režim">🌓</button>
+  <button class="ib burger" id="burger" type="button" aria-expanded="false" aria-controls="menu"><i></i><span>Menu</span></button>
+</div></header>
+
+<div id="menu" role="dialog" aria-label="Hlavní menu"><div class="wrap">
+  <nav>
+    <a href="#uvod"><span>00</span><b>Úvod<small>Zpátky na začátek</small></b></a>
+    <a href="#mladez"><span>01</span><b>Kdo jsme (mládež)<small>Kdo je mládež a pro koho je</small></b></a>
+    <a href="#program"><span>02</span><b>Co a jak<small>Pátek krok za krokem</small></b></a>
+    <a href="#sbor"><span>03</span><b>Křesťané Kuřim<small>Sbor, do kterého patříme</small></b></a>
+    <a href="#vira"><span>04</span><b>Čemu věříme<small>Základy víry srozumitelně</small></b></a>
+    <a href="#prostory"><span>05</span>3D prohlídka</a>
+    <a href="#kalendar"><span>05</span><b>Kalendář akcí<small>Pátky i speciální akce</small></b></a>
+    <a href="#kontakt"><span>06</span><b>Kontakty<small>Telefon, e-mail, sítě a mapa</small></b></a>
+    <a href="#podminky"><span>07</span><b>Podmínky<small>Pravidla mládeže a informace o sboru</small></b></a>
+  </nav>
+  <div class="mfoot"><a class="btn" href="https://krestanekurim.cz/" target="_blank" rel="noopener">Web sboru: krestanekurim.cz ↗</a><a class="btn ghost" data-c="tel" href="#">Zavolat</a></div>
+  <div class="soc"><a data-c="ig2" target="_blank" rel="noopener" href="#">📸 Instagram</a><a data-c="fb2" target="_blank" rel="noopener" href="#">👍 Facebook</a><a data-c="mail2" href="#">✉️ E-mail</a></div>
+</div></div>
+
+<main id="main" tabindex="-1">
+
+<!-- ÚVOD -->
+<section class="view" id="v-">
+  <div class="hero"><div class="wrap">
+    <h1>Hry. <em>Chvály.</em> <u>Bible.</u> Svačina.</h1>
+    <p class="sub">Mládež Křesťané Kuřim pro lidi kolem 13–18 let. Každý pátek v 17:00, zdarma, bez registrací a bez tlaku.</p>
+    <div class="cta"><a class="btn" href="#program">Jak to probíhá</a><a class="btn ghost" href="#kontakt">Kde nás najdeš</a></div>
+    <div class="next" id="next"><div><b id="nxT">Nejbližší setkání</b><span id="nxD"></span></div><div class="cd" aria-hidden="true"><div><strong id="c1">0</strong><small>dní</small></div><div><strong id="c2">0</strong><small>hodin</small></div><div><strong id="c3">0</strong><small>minut</small></div><div><strong id="c4">0</strong><small>sekund</small></div></div></div>
+  </div>
+  <div class="marq" aria-hidden="true"><div>Hry ✦ Chvály ✦ Bible ✦ Svačina ✦ Zdarma ✦ Pátek 17:00 ✦ Hry ✦ Chvály ✦ Bible ✦ Svačina ✦ Zdarma ✦ Pátek 17:00 ✦ Hry ✦ Chvály ✦ Bible ✦ Svačina ✦ Zdarma ✦ Pátek 17:00 ✦ Hry ✦ Chvály ✦ Bible ✦ Svačina ✦ Zdarma ✦ Pátek 17:00 ✦ </div></div></div>
+  <div class="sec"><div class="wrap">
+    <h2>Objev web</h2><p class="lead" style="margin-bottom:1.6rem">Každá část má vlastní stránku. Vyber si, co tě zajímá.</p>
+    <div class="tiles">
+      <a class="tile" href="#mladez"><span class="n">01</span><h3>Kdo jsme</h3><p>Kdo je mládež, pro koho je a na co se můžeš zeptat.</p><span class="ar">→</span></a>
+      <a class="tile" href="#program"><span class="n">02</span><h3>Co a jak</h3><p>Pátek krok za krokem a tvůj první večer.</p><span class="ar">→</span></a>
+      <a class="tile" href="#sbor"><span class="n">03</span><h3>Křesťané Kuřim</h3><p>Sbor, do kterého patříme, a další akce.</p><span class="ar">→</span></a>
+      <a class="tile" href="#vira"><span class="n">04</span><h3>Čemu věříme</h3><p>Základy víry srozumitelně a do hloubky.</p><span class="ar">→</span></a>
+      <a class="tile" href="#kalendar"><span class="n">05</span><h3>Kalendář akcí</h3><p>Pátky i speciální akce přehledně na jednom místě.</p><span class="ar">→</span></a>
+    </div>
+  </div></div>
+  <div class="sec" style="padding-top:0"><div class="wrap">
+    <div class="band"><div><h2>Všechno zdarma</h2><p>Vstup, program i svačina nestojí nic. Nikdo tě do ničeho nenutí a nemusíš nic umět.</p></div><div class="pills"><span>Zdarma</span><span>Bez registrace</span><span>Bez tlaku</span></div></div>
+  </div></div>
+  <div class="sec" style="padding-top:0"><div class="wrap where">
+    <div><h2>Najdeš nás u nádraží</h2><p class="lead">Na rohu ulic Legionářská a Husova. Celou adresu a kontakty máš na stránce Kontakty.</p><p style="margin-top:1.2rem"><a class="btn" href="#kontakt">Kontakty a adresa</a></p></div>
+    <div class="map"><iframe title="Mapa: Křesťané Kuřim" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-map></iframe><a class="maplink" data-c="gmap" target="_blank" rel="noopener" href="#">Otevřít v Mapách ↗</a></div>
+  </div></div>
+</section>
+
+<!-- KDO JSME -->
+<section class="view" id="v-mladez">
+  <div class="ph"><div class="wrap"><h1>Kdo jsme</h1><p>Parta lidí z Kuřimi a okolí, která se schází v pátek večer. Ne kroužek, ne škola, ne přednáška.</p></div></div>
+  <div class="sec"><div class="wrap two">
+    <div><h2>Mládež v kostce</h2>
+      <p>Mládež je určená všem lidem ve věku přibližně od 13 do 18 let. Společně hrajeme hry, zpíváme chvály, učíme se z Bible o Bohu a o tom všem se normálně bavíme.</p>
+      <p>Patříme pod místní sbor Křesťané Kuřim, ale pátek má svůj vlastní rytmus a styl, uzpůsobený mladým lidem.</p>
+      <div class="fact">Nemusíš nic umět, nic znát a nic platit.</div>
+    </div>
+    <div class="grid" style="grid-template-columns:1fr">
+      <div class="card"><h3>Pro koho</h3><p>Pro kluky a holky zhruba 13–18 let, věřící i hledající. Přijít můžeš sám, nebo s kamarádem.</p></div>
+      <div class="card"><h3>Jak se tu chováme</h3><p>Přátelsky a otevřeně. Pokud nechceš hrát, zpívat nebo mluvit, nikdo to po tobě nechce.</p></div>
+      <div class="card"><h3>Kdo to vede</h3><p>Kontaktní osobou mládeže je Josef Sponar. Telefon a další kontakty najdeš na stránce <a href="#kontakt">Kontakty</a>.</p></div>
+    </div>
+  </div></div>
+  <div class="sec" style="padding-top:0"><div class="wrap"><h2>Časté otázky</h2><div style="margin-top:1rem">
+    <details><summary>Musím věřit v Boha, abych mohl přijít?</summary><div>Ne. Jsi vítaný, ať jsi věřící, nebo jen zvědavý. Můžeš se ptát na cokoli a nikdo tě nebude tlačit k žádnému rozhodnutí.</div></details>
+    <details><summary>Co když nikoho neznám?</summary><div>Většina z nás někdy přišla poprvé. Hry na začátku jsou právě proto, aby se led rychle rozpustil.</div></details>
+    <details><summary>Musím hrát hry nebo zpívat?</summary><div>Nemusíš. Kdo nechce hrát, může v klidu sedět a povídat si s ostatními. Zpívat můžeš nahlas, potichu, nebo jen poslouchat.</div></details>
+    <details><summary>Kolik to stojí?</summary><div>Nic. Vstup, program i svačina jsou zdarma.</div></details>
+    <details><summary>Musím se předem hlásit?</summary><div>Ne. Nejsou tu žádné registrace ani formuláře. Přijď v pátek v 17:00. Když chceš, můžeš se předem ozvat vedoucímu.</div></details>
+  </div></div></div>
+</section>
+
+<!-- CO A JAK -->
+<section class="view" id="v-program">
+  <div class="ph"><div class="wrap"><h1>Co a jak</h1><p>Každý pátek od 17:00 do 18:30. Čtyři části, které na sebe navazují.</p></div></div>
+  <div class="sec"><div class="wrap"><div class="steps">
+    <div class="step"><div><h3>Hry</h3><p>Rozjezd večera. Hry, při kterých se zasmějeme a poznáme. Žádná výkonnost, jde o zábavu.</p></div></div>
+    <div class="step"><div><h3>Chvály</h3><p>Zpíváme křesťanské písně. Je to společný čas, kdy se zklidníme a obrátíme se k Bohu.</p></div></div>
+    <div class="step"><div><h3>Slovo z Bible</h3><p>Otevřeme biblický text a promluvíme si o tom, co říká do skutečného života: do školy, přátelství i rozhodování.</p></div></div>
+    <div class="step"><div><h3>Svačina, hry a pokec</h3><p>Svačina je na stole. Při dalších hrách platí: kdo nechce hrát, může v klidu sedět a kecat s ostatními.</p></div></div>
+  </div>
+  <div class="two" style="margin-top:2.5rem"><div><h2>Tvůj první večer</h2><p>Dorazíš, někdo tě přivítá a ukáže ti, kde co je. Nic nevyplňuješ a nikomu se nepředstavuješ, pokud nechceš. Prostě se přidáš.</p></div>
+  <div><h2>Co s sebou</h2><p>Nic zvláštního. Pohodlné oblečení na hry a dobrá nálada. Pokud chceš vědět, kde přesně nás najdeš, mrkni na <a href="#kontakt">Kontakty</a>.</p></div></div>
+  </div></div>
+</section>
+
+<!-- SBOR -->
+<section class="view" id="v-sbor">
+  <div class="ph"><div class="wrap"><h1>Křesťané Kuřim</h1><p>Místní sbor, do kterého mládež patří. Rodina, kde je každý návštěvník vítaný.</p></div></div>
+  <div class="sec"><div class="wrap two">
+    <div><h2>Kdo je sbor</h2>
+      <p>Jsme křesťanská církev, jejímž posláním je sdílet dobrou zprávu o tom, že Ježíš Kristus nabízí každému člověku smíření s Bohem a odpuštění hříchů. Chceme přivádět lidi ke Kristu a zakládat nová společenství.</p>
+      <p>Naše společenství je rodina přijatá Bohem. Staráme se jeden o druhého, modlíme se jeden za druhého a navzájem si sloužíme.</p></div>
+    <div><h2>Kam patříme</h2>
+      <p>Mládež je součástí sboru Křesťané Kuřim, z.s. Sbor se schází v budově na rohu ulic Legionářská a Husova, hned u nádraží. Pátečním večerem to ale nekončí.</p>
+      <p style="margin-top:1.2rem"><a class="btn" href="https://krestanekurim.cz/kdo-jsme/" target="_blank" rel="noopener">Víc o sboru ↗</a></p></div>
+  </div></div>
+  <div class="sec" style="padding-top:0"><div class="wrap"><h2>Další setkání ve sboru</h2><div class="grid" style="margin-top:1rem">
+    <div class="card"><h3>Nedělní bohoslužby</h3><p>Každou neděli od 9:45.</p><p><a href="https://krestanekurim.cz/nedelni-bohosluzby/" target="_blank" rel="noopener">Podrobnosti ↗</a></p></div>
+    <div class="card"><h3>Biblické hodiny</h3><p>Každý čtvrtek od 18:00.</p><p><a href="https://krestanekurim.cz/biblicke-hodiny/" target="_blank" rel="noopener">Podrobnosti ↗</a></p></div>
+    <div class="card"><h3>Dětský klub</h3><p>Program pro děti.</p><p><a href="https://krestanekurim.cz/detsky-klub/" target="_blank" rel="noopener">Podrobnosti ↗</a></p></div>
+    <div class="card"><h3>CityCamp</h3><p>Letní akce pro mladší generaci.</p><p><a href="https://krestanekurim.cz/citycamp/" target="_blank" rel="noopener">Podrobnosti ↗</a></p></div>
+    <div class="card"><h3>Kázání a písně online</h3><p>Zmeškal jsi neděli? Kázání najdeš na YouTube i Spotify.</p><p><a href="https://www.youtube.com/krestanekurim" target="_blank" rel="noopener">YouTube ↗</a> · <a href="https://open.spotify.com/show/4n0OOeqW0Dg8RijaboeNXo" target="_blank" rel="noopener">Spotify ↗</a></p></div>
+    <div class="card"><h3>Potřebuješ pomoc?</h3><p>Sbor má stránku pro ty, kdo něco řeší.</p><p><a href="https://krestanekurim.cz/potrebuji-pomoc/" target="_blank" rel="noopener">Otevřít ↗</a></p></div>
+  </div></div></div>
+</section>
+
+<!-- VÍRA -->
+<section class="view" id="v-vira">
+  <div class="ph"><div class="wrap"><h1>Čemu věříme</h1><p>Základy víry sboru Křesťané Kuřim. Srozumitelně, ale bez ořezávání.</p></div></div>
+  <div class="sec"><div class="wrap two">
+    <div>
+      <details open><summary>Bůh: Otec, Syn a Duch Svatý</summary><div><p>Věříme v jednoho Boha, který existuje ve třech osobách: Otec, Syn a Duch Svatý. Je stvořitel a vládce všeho a jediný si zaslouží naši nejvyšší lásku a úctu.</p><p>Ježíš Kristus je Boží Syn, skutečně Bůh i skutečně člověk. Žil bez hříchu, zemřel na kříži za naše hříchy a třetího dne vstal z mrtvých. Duch Svatý nás usvědčuje, vede a v nás přebývá.</p></div></details>
+      <details><summary>Bible</summary><div>Bible je zapsané Boží slovo. Věříme, že je autoritativní, spolehlivá a naprosto dostačující ve všem, co se týká víry a života s Bohem. Proto se každý pátek vracíme k jejímu textu.</div></details>
+      <details><summary>Člověk</summary><div>Člověk je stvořený k Božímu obrazu, aby Boha uctíval. Kvůli hříchu je ale jeho vztah s Bohem rozbitý a sám ho opravit nedokáže.</div></details>
+    </div>
+    <div>
+      <details open><summary>Spasení z milosti</summary><div>Smíření s Bohem přichází pokáním a vírou v to, co pro nás udělal Ježíš. Odpuštění je Boží dar, ne odměna za naše skutky. Nemusíš si ho zasloužit a nemůžeš si ho koupit.</div></details>
+      <details><summary>Život s Bohem a církev</summary><div>Víra se projevuje změnou, v níž se postupně podobáme Kristu, a Duch Svatý nám v tom pomáhá. Církev tvoří všichni, kdo patří Kristu. Místně se scházejí lidé, kteří si navzájem slouží a nechávají se vést zkušenými staršími.</div></details>
+      <details><summary>Co bude na konci</summary><div>Věříme, že se Ježíš vrátí, spravedlivě odsoudí zlo a vytvoří nové nebe a novou zemi. Ti, kdo patří Bohu, budou žít v jeho blízkosti.</div></details>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:1.4rem"><p class="lead">Tohle je stručné shrnutí. Plné znění vyznání víry sboru najdeš na webu <a href="https://krestanekurim.cz/cemu-verime/" target="_blank" rel="noopener">krestanekurim.cz</a>.</p></div></div>
+</section>
+
+<!-- KALENDÁŘ -->
+<section class="view" id="v-kalendar">
+  <div class="ph"><div class="wrap"><h1>Kalendář akcí</h1><p>Pátky i speciální akce. Klikni na den a uvidíš, co se děje.</p></div></div>
+  <div class="sec"><div class="wrap calw">
+    <div class="card"><div class="ch"><button class="ib" id="cp" aria-label="Předchozí měsíc">←</button><h3 id="cm"></h3><button class="ib" id="cn" aria-label="Další měsíc">→</button></div><div class="cg" id="cg"></div>
+      <p style="font-size:.82rem;color:var(--muted);margin-top:.8rem">Žlutá tečka = páteční mládež, červená = speciální akce.</p></div>
+    <div class="card"><h3 id="dt">Nejbližší akce</h3><div id="el"></div></div>
+  </div>
+  <div class="wrap" id="gcw" style="margin-top:1rem" hidden><div class="map"><iframe title="Google Kalendář" id="gcf" loading="lazy"></iframe></div></div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="view" id="v-kontakt">
+  <div class="ph"><div class="wrap"><h1>Kontakty</h1><p>Ozvi se, když něco potřebuješ. Nebo prostě přijď v pátek.</p></div></div>
+  <div class="sec"><div class="wrap">
+    <div class="ct">
+      <div class="card"><h3>👤 Josef Sponar</h3><p>Vedoucí mládeže</p><p class="big"><a data-c="tel" href="#"></a></p></div>
+      <div class="card"><h3>✉️ E-mail</h3><p>Pište nám cokoli</p><p class="big"><a data-c="mail" href="#"></a></p></div>
+      <div class="card"><h3>📸 Instagram</h3><p>Novinky a fotky</p><p class="big"><a data-c="ig" href="#" target="_blank" rel="noopener"></a></p></div>
+      <div class="card"><h3>👍 Facebook</h3><p>Novinky a akce</p><p class="big"><a data-c="fb" href="#" target="_blank" rel="noopener"></a></p></div>
+      <div class="card"><h3>⛪ Web sboru</h3><p>Křesťané Kuřim, z.s.</p><p class="big"><a href="https://krestanekurim.cz/" target="_blank" rel="noopener">krestanekurim.cz ↗</a></p></div>
+    </div>
+    <div class="where" style="margin-top:2rem">
+      <div><h2>Kde, kdy a jak</h2>
+        <address data-c="addr"></address>
+        <p><strong>Kdy:</strong> každý pátek 17:00–18:30</p>
+        <p><strong>Kde přesně:</strong> roh ulic Legionářská a Husova, hned u vlakového a autobusového nádraží. Vcházíme <strong>pravým vstupem</strong>.</p>
+        <p><strong>Jak:</strong> jen přijď. Bez registrace, zdarma.</p>
+        <p style="margin-top:1.2rem;display:flex;gap:.6rem;flex-wrap:wrap"><a class="btn" data-c="gmap" target="_blank" rel="noopener" href="#">Otevřít v Google Mapách</a><a class="btn ghost" style="color:var(--text)" href="https://en.mapy.cz/s/dehuhucuso" target="_blank" rel="noopener">Mapy.cz</a></p></div>
+      <div class="map"><iframe title="Mapa: kde nás najdeš" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-map></iframe><a class="maplink" data-c="gmap" target="_blank" rel="noopener" href="#">Otevřít v Mapách ↗</a></div>
+    </div>
+    <div class="where" style="margin-top:3rem">
+      <div><h2>Sbor Křesťané Kuřim</h2>
+        <p>Druhé místo na mapě: Křesťané Kuřim podle Google Map. Sem patří sbor, pod který mládež spadá.</p>
+        <p style="margin-top:1.2rem;display:flex;gap:.6rem;flex-wrap:wrap"><a class="btn" href="https://maps.app.goo.gl/KmsgEg1TPojikvoQ7" target="_blank" rel="noopener">Otevřít v Google Mapách</a><a class="btn ghost" style="color:var(--text)" href="https://krestanekurim.cz/kontakt/" target="_blank" rel="noopener">Kontakt sboru ↗</a></p></div>
+      <div class="map"><iframe title="Mapa: Křesťané Kuřim" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=49.3007041,16.5302991&output=embed"></iframe><a class="maplink" href="https://maps.app.goo.gl/KmsgEg1TPojikvoQ7" target="_blank" rel="noopener">Otevřít v Mapách ↗</a></div>
+    </div>
+  </div></div>
+</section>
+<!-- PODMÍNKY -->
+<section class="view" id="v-podminky">
+  <div class="ph"><div class="wrap"><h1>Podmínky</h1><p>Jak to u nás funguje: pravidla mládeže a základní informace o sboru, pod který patříme.</p></div></div>
+  <div class="sec"><div class="wrap two">
+    <div class="card"><h2>Podmínky mládeže</h2>
+      <p><strong>Pro koho:</strong> pro všechny ve věku přibližně od 13 do 18 let.</p>
+      <p><strong>Cena a přihlášení:</strong> mládež je zdarma a bez registrace. Stačí přijít.</p>
+      <p><strong>Kdy a kde:</strong> každý pátek 17:00–18:30, Legionářská 281, Kuřim. Pátky bez mládeže najdeš v kalendáři akcí.</p>
+      <p><strong>Program:</strong> hry, chvály, slovo z Bible, rozhovor a svačina. Nikoho do ničeho nenutíme, k programu se můžeš připojit, jak ti vyhovuje.</p>
+      <p><strong>Společná pravidla:</strong> chováme se k sobě s respektem, nikoho neposmíváme a nedovolujeme šikanu. Dbáme na pokyny vedoucích a na bezpečnost her.</p>
+      <p><strong>Fotky a sdílení:</strong> fotografie z mládeže zveřejňujeme na webu a sítích jen se souhlasem dotyčných a u nezletilých i rodičů.</p>
+      <p><strong>Rodiče:</strong> s dotazy se můžou obrátit na Josefa Sponara, kontakt je na stránce <a href="#kontakt">Kontakty</a>.</p></div>
+    <div class="card"><h2>Podmínky sboru</h2>
+      <p>Mládež patří pod spolek <strong>Křesťané Kuřim, z. s.</strong> (spolek, IČO 07706791, sídlo Smetanova 572/4, 664 34 Kuřim, zapsaný od 28. 12. 2018 u Krajského soudu v Brně, sp. zn. L 25552).</p>
+      <p><strong>Co sbor učí a v co věří:</strong> shrnutí najdeš na stránce <a href="#vira">Čemu věříme</a>, plné znění na webu sboru.</p>
+      <p><strong>Členství a další pravidla sboru:</strong> podmínky členství a další dokumenty zveřejňuje sbor na svém webu.</p>
+      <p style="margin-top:1.2rem;display:flex;gap:.6rem;flex-wrap:wrap"><a class="btn" href="https://krestanekurim.cz/clenstvi/" target="_blank" rel="noopener">Členství ↗</a><a class="btn ghost" style="color:var(--text)" href="https://krestanekurim.cz/cemu-verime/" target="_blank" rel="noopener">Čemu věříme ↗</a></p></div>
+  </div></div>
+</section>
+</main>
+
+<footer><div class="wrap"><div class="row"><a class="brand" href="#uvod" style="color:#fff!important"><svg aria-hidden="true"><use href="#logo"/></svg><span>Mládež<small style="color:#8296A5">Křesťané Kuřim</small></span></a><a class="big" href="https://krestanekurim.cz/" target="_blank" rel="noopener">Hlavní web sboru: krestanekurim.cz ↗</a></div><small>© 2026 Mládež Křesťané Kuřim. Součást sboru Křesťané Kuřim, z.s.</small></div></footer>
+
+<script>
+/* =========================================================
+   NASTAVENÍ – tady upravuješ kontakty a akce kalendáře.
+   Stačí změnit text mezi uvozovkami a uložit soubor.
+   ========================================================= */
+var CFG={
+  phone:"776498104", phoneShow:"776 498 104",
+  email:"krestane.kurim.mladez@gmail.com",
+  instagram:"https://www.instagram.com/krestanekurim.mladez/",
+  facebook:"https://www.facebook.com/krestanekurim.mladez",
+  address:"Křesťané Kuřim\nLegionářská 281\n664 34 Kuřim",
+  mapQuery:"Legionářská 281, 664 34 Kuřim",
+  googleCalendarId:"",                           // volitelné: ID veřejného Google Kalendáře (viz návod)
+  weekly:{on:true,time:"17:00",end:"18:30",title:"Páteční mládež",note:"Hry, chvály, slovo z Bible, svačina"},
+  weeklyCancelled:[],                            // pátky bez mládeže, např. "2026-12-25"
+  /* SPECIÁLNÍ AKCE – přidej řádek podle vzoru:
+     {date:"2026-12-19", time:"16:00", end:"19:00", title:"Vánoční večer", note:"Společná oslava", place:"Křesťané Kuřim"}, */
+  events:[]
+};
+
+(function(){
+"use strict";
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+
+/* dosazení kontaktů */
+var map="https://www.google.com/maps?q="+encodeURIComponent(CFG.mapQuery)+"&output=embed";
+$$("[data-map]").forEach(function(f){f.src=map});
+$$("[data-c]").forEach(function(a){
+  var k=a.dataset.c;
+  if(k==="tel"){a.href="tel:+420"+CFG.phone;if(!a.textContent)a.textContent=CFG.phoneShow}
+  if(k==="mail"){a.href="mailto:"+CFG.email;a.textContent=CFG.email}
+  if(k==="ig"){if(CFG.instagram){a.href=CFG.instagram;a.textContent=CFG.instagram.replace(/^https?:\/\/(www\.)?instagram\.com\//,"@").replace(/\/$/,"")}else{a.removeAttribute("href");a.textContent="Brzy přidáme"}}
+  if(k==="fb"){if(CFG.facebook){a.href=CFG.facebook;a.textContent="@"+CFG.facebook.replace(/\/$/,"").split("/").pop()}else{a.removeAttribute("href");a.textContent="Brzy přidáme"}}
+  if(k==="mail2"){a.href="mailto:"+CFG.email}
+  if(k==="ig2"&&CFG.instagram)a.href=CFG.instagram;
+  if(k==="fb2"&&CFG.facebook)a.href=CFG.facebook;
+  if(k==="addr")a.innerHTML=CFG.address.replace(/\n/g,"<br>");
+  if(k==="gmap")a.href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(CFG.mapQuery);
+});
+
+/* téma */
+var root=document.documentElement;
+try{var sv=localStorage.getItem("theme");if(sv)root.setAttribute("data-theme",sv)}catch(e){}
+$("#theme").onclick=function(){
+  var d=root.getAttribute("data-theme")==="dark"||(!root.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme:dark)").matches);
+  var n=d?"light":"dark";root.setAttribute("data-theme",n);try{localStorage.setItem("theme",n)}catch(e){}
+};
+
+/* menu */
+var menu=$("#menu"),bg=$("#burger");
+function mo(o){menu.classList.toggle("open",o);bg.setAttribute("aria-expanded",o);document.body.style.overflow=o?"hidden":"";$(".burger span").textContent=o?"Zavřít":"Menu"}
+bg.onclick=function(){mo(!menu.classList.contains("open"))};
+addEventListener("keydown",function(e){if(e.key==="Escape")mo(false)});
+
+/* router */
+var T={"":"Úvod","mladez":"Kdo jsme","program":"Co a jak","sbor":"Křesťané Kuřim","vira":"Čemu věříme","kalendar":"Kalendář akcí","kontakt":"Kontakty","podminky":"Podmínky"};
+function route(){
+  var r=location.hash.replace(/^#/,"");if(r==="uvod")r="";if(!T.hasOwnProperty(r))r="";
+  $$(".view").forEach(function(v){v.classList.toggle("on",v.id==="v-"+r)});
+  $$("#menu nav a").forEach(function(a){a.removeAttribute("aria-current");if(a.getAttribute("href")==="#"+(r||"uvod"))a.setAttribute("aria-current","page")});
+  document.title=(r?T[r]+" · ":"")+"Mládež Křesťané Kuřim";
+  mo(false);scrollTo(0,0);
+}
+addEventListener("hashchange",route);
+
+/* kalendář */
+function key(d){return d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2)}
+var EV={};
+function build(){
+  EV={};function add(k,e){(EV[k]=EV[k]||[]).push(e)}
+  CFG.events.forEach(function(e){add(e.date,e)});
+  if(CFG.weekly.on){
+    var d=new Date();d.setHours(12,0,0,0);d.setMonth(d.getMonth()-2);
+    while(d.getDay()!==5)d.setDate(d.getDate()+1);
+    for(var i=0;i<130;i++){var k=key(d);if(CFG.weeklyCancelled.indexOf(k)<0)add(k,{date:k,time:CFG.weekly.time,end:CFG.weekly.end,title:CFG.weekly.title,note:CFG.weekly.note,weekly:true});d.setDate(d.getDate()+7)}
+  }
+}
+function when(e){var p=e.date.split("-"),t=(e.time||"00:00").split(":");return new Date(+p[0],p[1]-1,+p[2],+t[0],+t[1])}
+function all(){var a=[];Object.keys(EV).forEach(function(k){EV[k].forEach(function(e){a.push(e)})});return a.sort(function(x,y){return when(x)-when(y)})}
+function nextEv(){var n=new Date(),l=all();for(var i=0;i<l.length;i++){var e=l[i],end=when(e);end.setHours(end.getHours()+2);if(end>n)return e}return null}
+function gcal(e){
+  var w=when(e),f=function(d){return d.getFullYear()+("0"+(d.getMonth()+1)).slice(-2)+("0"+d.getDate()).slice(-2)+"T"+("0"+d.getHours()).slice(-2)+("0"+d.getMinutes()).slice(-2)+"00"};
+  var en=new Date(w);if(e.end){var q=e.end.split(":");en.setHours(+q[0],+q[1])}else en.setHours(en.getHours()+2);
+  return "https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent(e.title)+"&dates="+f(w)+"/"+f(en)+"&details="+encodeURIComponent(e.note||"")+"&location="+encodeURIComponent(e.place||CFG.mapQuery);
+}
+var MN=["leden","únor","březen","duben","květen","červen","červenec","srpen","září","říjen","listopad","prosinec"];
+var cur=new Date();cur.setDate(1);var selDay=null;
+function evHtml(l){
+  if(!l.length)return"<p style='color:var(--muted)'>V tento den nic neplánujeme.</p>";
+  return l.map(function(e){var p=e.date.split("-");
+    return "<div class='ev"+(e.weekly?"":" sp")+"'><div class='d'><b>"+(+p[2])+"</b><small>"+MN[p[1]-1].slice(0,3)+".</small></div><div><h4>"+e.title+"</h4><p>"+(e.time||"")+(e.end?"–"+e.end:"")+(e.place?" · "+e.place:"")+"</p>"+(e.note?"<p>"+e.note+"</p>":"")+"<a href='"+gcal(e)+"' target='_blank' rel='noopener'>Přidat do kalendáře</a></div></div>"}).join("");
+}
+function renderCal(){
+  $("#cm").textContent=MN[cur.getMonth()]+" "+cur.getFullYear();
+  var g=$("#cg");g.innerHTML=["Po","Út","St","Čt","Pá","So","Ne"].map(function(x){return"<b>"+x+"</b>"}).join("");
+  var first=(cur.getDay()+6)%7,days=new Date(cur.getFullYear(),cur.getMonth()+1,0).getDate(),tk=key(new Date());
+  for(var i=0;i<first;i++)g.appendChild(document.createElement("span"));
+  for(var d=1;d<=days;d++){
+    var k=cur.getFullYear()+"-"+("0"+(cur.getMonth()+1)).slice(-2)+"-"+("0"+d).slice(-2),b=document.createElement("button"),l=EV[k]||[];
+    b.type="button";b.textContent=d;
+    if(l.length){b.className="e";if(l.some(function(e){return !e.weekly}))b.className="e";else b.className="e sp2"}
+    if(k===tk)b.classList.add("t");if(k===selDay)b.classList.add("s");
+    b.onclick=(function(k,d){return function(){selDay=k;$("#dt").textContent=d+". "+MN[cur.getMonth()]+" "+cur.getFullYear();$("#el").innerHTML=evHtml(EV[k]||[]);renderCal()}})(k,d);
+    g.appendChild(b);
+  }
+}
+$("#cp").onclick=function(){cur.setMonth(cur.getMonth()-1);renderCal()};
+$("#cn").onclick=function(){cur.setMonth(cur.getMonth()+1);renderCal()};
+build();renderCal();
+$("#el").innerHTML=evHtml(all().filter(function(e){return when(e)>new Date()}).slice(0,6));
+if(CFG.googleCalendarId){$("#gcw").hidden=false;$("#gcf").src="https://calendar.google.com/calendar/embed?src="+encodeURIComponent(CFG.googleCalendarId)+"&ctz=Europe%2FPrague&hl=cs"}
+
+/* odpočet */
+function tick(){
+  var e=nextEv();if(!e)return;
+  var w=when(e),n=new Date(),ms=w-n,live=ms<=0;
+  $("#nxT").textContent=live?"Právě teď to běží!":e.title;
+  $("#nxD").textContent=w.toLocaleDateString("cs-CZ",{weekday:"long",day:"numeric",month:"long"})+" v "+e.time;
+  if(ms<0)ms=0;var s=Math.floor(ms/1000);
+  $("#c1").textContent=Math.floor(s/86400);$("#c2").textContent=Math.floor(s%86400/3600);$("#c3").textContent=Math.floor(s%3600/60);$("#c4").textContent=s%60;
+}
+tick();setInterval(tick,1000);
+
+route();
+})();
+</script>
+</body>
+</html>
