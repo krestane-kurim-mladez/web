@@ -1,0 +1,13 @@
+{
+  "phone": "776498104",
+  "phoneShow": "776 498 104",
+  "email": "krestanevkurimi@gmail.com",
+  "instagram": "",
+  "address": "Křesťané Kuřim\nLegionářská 281\n664 34 Kuřim",
+  "mapQuery": "Legionářská 281, 664 34 Kuřim",
+  "googleCalendarId": "",
+  "weekly": {"on": true, "time": "17:00", "end": "18:30", "title": "Páteční mládež", "note": "Hry, chvály, slovo z Bible, svačina"},
+  "weeklyCancelled": [],
+  "events": [],
+  "announcement": {"on": false, "text": ""}
+}
