@@ -11,25 +11,15 @@
     "on": true,
     "dayOfWeek": 5,
     "time": "17:00",
-    "end": "18:30",
+    "end": "19:00",
     "title": "Páteční mládež",
     "note": "Hry, chvály, slovo z Bible, svačina",
     "place": "Křesťané Kuřim (Legionářská 281)"
   },
   "topics": {
-    "2026-11-27": "Přísloví 25:28 – Ovládání sebe sama",
-    "2026-12-04": "Jak číst Bibli, aby dávala smysl",
-    "2026-12-11": "Přátelství a tlak okolí",
-    "2027-01-08": "Nový začátek (2. Korintským 5:17)",
-    "2027-01-15": "Proč věřit, když kolem všechno padá",
-    "2027-01-22": "Otázky a odpovědi (Q&A večer)"
+    "2026-11-27": "Přísloví 25:28 – Ovládání sebe sama"
   },
-  "weeklyCancelled": [
-    "2026-12-25",
-    "2027-01-01",
-    "2027-02-19",
-    "2027-03-26"
-  ],
+  "weeklyCancelled": [],
   "events": [
     {
       "id": "vanoce-2026",
