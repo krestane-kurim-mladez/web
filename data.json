@@ -16,23 +16,9 @@
     "note": "Hry, chvály, slovo z Bible, svačina",
     "place": "Křesťané Kuřim (Legionářská 281)"
   },
-  "topics": {
-    "2026-11-27": "Přísloví 25:28 – Ovládání sebe sama",
-    "2026-12-04": "⁠Ježíš jako největší dar Jan 3:16"
-  },
+  "topics": {},
   "weeklyCancelled": [],
-  "events": [
-    {
-      "id": "vanoce-2026",
-      "date": "2026-11-27",
-      "time": "17:00",
-      "end": "20:00",
-      "title": "Vánoční speciál na mládeži",
-      "place": "Křesťané Kuřim, Legionářská 281",
-      "note": "Delší večer, vánoční hry, cukroví, punč a povídání u stromečku.",
-      "category": "special"
-    }
-  ],
+  "events": [],
   "announcement": {
     "on": false,
     "type": "info",
