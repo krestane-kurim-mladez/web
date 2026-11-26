@@ -3,487 +3,808 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Mládež Křesťané Kuřim</title>
-<meta name="description" content="Mládež Křesťané Kuřim: hry, chvály, Bible a svačina. Každý pátek v 17:00, zdarma.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%20role%3D%22img%22%20aria-label%3D%22Ml%C3%A1de%C5%BE%20K%C5%99es%C5%A5an%C3%A9%20Ku%C5%99im%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2216%22%20fill%3D%22%2324384D%22/%3E%3Cg%20fill%3D%22%23F2B84B%22%3E%3Crect%20x%3D%2235%22%20y%3D%2210%22%20width%3D%228%22%20height%3D%2244%22%20rx%3D%222%22/%3E%3Crect%20x%3D%2225%22%20y%3D%2220%22%20width%3D%2228%22%20height%3D%228%22%20rx%3D%222%22/%3E%3C/g%3E%3Cg%20fill%3D%22%23E0634D%22%3E%3Crect%20x%3D%2221%22%20y%3D%2214%22%20width%3D%228%22%20height%3D%2244%22%20rx%3D%222%22/%3E%3Crect%20x%3D%2211%22%20y%3D%2226%22%20width%3D%2228%22%20height%3D%228%22%20rx%3D%222%22/%3E%3C/g%3E%3Cpath%20d%3D%22M12%2054h14%22%20stroke%3D%22%23fff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.5%22/%3E%3C/svg%3E" type="image/svg+xml">
+<meta name="robots" content="noindex,nofollow">
+<title>Tryhard Admin · Mládež Křesťané Kuřim</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2216%22%20fill%3D%22%23323663%22/%3E%3Cg%20fill%3D%22%234eb5f1%22%3E%3Crect%20x%3D%2235%22%20y%3D%2210%22%20width%3D%228%22%20height%3D%2244%22%20rx%3D%222%22/%3E%3Crect%20x%3D%2225%22%20y%3D%2220%22%20width%3D%2228%22%20height%3D%228%22%20rx%3D%222%22/%3E%3C/g%3E%3Cg%20fill%3D%22%23fff%22%3E%3Crect%20x%3D%2221%22%20y%3D%2214%22%20width%3D%228%22%20height%3D%2244%22%20rx%3D%222%22/%3E%3Crect%20x%3D%2211%22%20y%3D%2226%22%20width%3D%2228%22%20height%3D%228%22%20rx%3D%222%22/%3E%3C/g%3E%3C/svg%3E" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Condensed:wght@400;500;700&family=Volkhov:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
 <style>
-/* FOTKA V UVODU: pridej do :root radek  --hero-photo:url("foto.jpg");  */
-:root{--pri:#323663;--pri-d:#06023c;--acc:#4eb5f1;--acc-d:#062f5d;--sun:#FFC83D;--mint:#5EE0B8;--pink:#FF9EC4;--coral:#FF6B5E;
---sand:#F8F7F3;--sand2:#ECEAE4;--bg:#fff;--page:#E9E7E0;--card:#fff;--text:#3A3C4F;--muted:#62657A;--line:#ECEAE4;--hc:#323663;--link:#323663;--focus:#4eb5f1;
---btn:#323663;--btn-fg:#fff;--btn-sh:#06023c;--btn-h:#41468a;
---head:'Roboto Condensed','Roboto','Segoe UI',system-ui,sans-serif;--body:'Roboto','Segoe UI',system-ui,sans-serif;--serif:'Volkhov',Georgia,serif;--r:14px;color-scheme:light}
-:root[data-theme=dark]{--sand:#1A1D3E;--sand2:#10122A;--bg:#151832;--page:#0D0F22;--card:#1D2147;--text:#E8EAFB;--muted:#A9AFD6;--line:#2C3166;--hc:#E8EAFB;--link:#9FB0FF;--btn:#4eb5f1;--btn-fg:#06023c;--btn-sh:#062f5d;--btn-h:#7cc8f5;color-scheme:dark}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--sand:#1A1D3E;--sand2:#10122A;--bg:#151832;--page:#0D0F22;--card:#1D2147;--text:#E8EAFB;--muted:#A9AFD6;--line:#2C3166;--hc:#E8EAFB;--link:#9FB0FF;--btn:#4eb5f1;--btn-fg:#06023c;--btn-sh:#062f5d;--btn-h:#7cc8f5;color-scheme:dark}}
+:root{
+  --pri:#323663;--pri-d:#06023c;--acc:#4eb5f1;--acc-d:#062f5d;--sun:#FFC83D;--mint:#5EE0B8;--pink:#FF9EC4;--coral:#FF6B5E;
+  --sand:#F8F7F3;--sand2:#ECEAE4;--bg:#fff;--page:#E9E7E0;--card:#fff;--text:#3A3C4F;--muted:#62657A;--line:#ECEAE4;--hc:#323663;
+  --btn:#323663;--btn-fg:#fff;--btn-sh:#06023c;--btn-h:#41468a;
+  --head:'Roboto Condensed','Roboto',system-ui,sans-serif;--body:'Roboto',system-ui,sans-serif;--r:14px;color-scheme:light
+}
+:root[data-theme=dark]{
+  --sand:#1A1D3E;--sand2:#10122A;--bg:#151832;--page:#0D0F22;--card:#1D2147;--text:#E8EAFB;--muted:#A9AFD6;--line:#2C3166;--hc:#E8EAFB;
+  --btn:#4eb5f1;--btn-fg:#06023c;--btn-sh:#062f5d;--btn-h:#7cc8f5;color-scheme:dark
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --sand:#1A1D3E;--sand2:#10122A;--bg:#151832;--page:#0D0F22;--card:#1D2147;--text:#E8EAFB;--muted:#A9AFD6;--line:#2C3166;--hc:#E8EAFB;
+  --btn:#4eb5f1;--btn-fg:#06023c;--btn-sh:#062f5d;--btn-h:#7cc8f5;color-scheme:dark
+}}
 *{box-sizing:border-box;margin:0}
-:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 90px);scroll-behavior:smooth}
-body{font:16px/1.7 var(--body);background:var(--page);background-image:radial-gradient(rgba(50,54,99,.08) 1px,transparent 1px);background-size:14px 14px;color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:70;background:var(--bg)}
-.body{max-width:1080px;margin:0 auto;background:var(--bg);box-shadow:0 0 40px rgba(50,54,99,.14);min-height:100vh}
-::selection{background:var(--acc);color:#06023c}
-h1,h2,h3,h4{font-family:var(--head);line-height:1.1;letter-spacing:-.01em;color:var(--hc)}
-h2{font-size:clamp(1.8rem,4.2vw,2.6rem);margin-bottom:.7rem;font-weight:700}h3{font-size:1.3rem;margin-bottom:.3rem;font-weight:700}
-p+p{margin-top:.9rem}a{color:var(--link);text-underline-offset:3px}a:hover{text-decoration-thickness:2px}
-:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:8px}
-#main:focus{outline:none}
-.wrap{width:min(1000px,100% - 2.5rem);margin-inline:auto}
-.sec{padding:clamp(2.4rem,5.5vw,4rem) 0}
-.lead{color:var(--muted);font-size:1.12rem;max-width:62ch}
-
-.btn{display:inline-flex;align-items:center;gap:.5rem;font:700 1.02rem var(--head);padding:.72rem 1.5rem;border-radius:12px;border:2px solid var(--btn);background:var(--btn);color:var(--btn-fg);text-decoration:none;cursor:pointer;box-shadow:0 4px 0 var(--btn-sh);transition:transform .15s,box-shadow .15s,background .15s}
-.btn:hover{background:var(--btn-h);border-color:var(--btn-h);color:var(--btn-fg);transform:translateY(-2px);box-shadow:0 6px 0 var(--btn-sh)}
-.btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--btn-sh)}
-.btn.ghost{background:transparent;color:inherit;border-color:currentColor;box-shadow:none}
-.btn.ghost:hover{background:color-mix(in srgb,currentColor 12%,transparent);color:inherit;border-color:currentColor;transform:none;box-shadow:none}
-.btn[aria-disabled=true]{opacity:.55;pointer-events:none}
-.hero .btn:not(.ghost),.band .btn:not(.ghost){--btn:#4eb5f1;--btn-fg:#06023c;--btn-sh:#062f5d;--btn-h:#7cc8f5}
-.card{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--cc,var(--acc));border-radius:var(--r);padding:1.5rem;box-shadow:0 6px 18px rgba(50,54,99,.08)}
-.grid>*:nth-child(4n+1),.ct>*:nth-child(4n+1),.two>.card:nth-child(1){--cc:var(--acc)}
-.grid>*:nth-child(4n+2),.ct>*:nth-child(4n+2),.two>.card:nth-child(2){--cc:var(--sun)}
-.grid>*:nth-child(4n+3),.ct>*:nth-child(4n+3){--cc:var(--mint)}
-.grid>*:nth-child(4n),.ct>*:nth-child(4n){--cc:var(--pink)}
-.grid{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-
-header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:60;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-header.top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:linear-gradient(90deg,var(--pri),var(--acc),var(--sun))}
-header .wrap{display:flex;align-items:center;gap:.7rem;height:76px}
-.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--hc)!important;font:700 1.35rem var(--head)}
-.brand svg{width:46px;height:46px;transition:transform .3s}.brand:hover svg{transform:rotate(-8deg) scale(1.06)}
-.brand span{line-height:1.1}.brand small{display:block;font:500 .78rem var(--body);color:var(--muted);margin-top:.1rem}
+body{font:15px/1.6 var(--body);background:var(--page);background-image:radial-gradient(rgba(50,54,99,.08) 1px,transparent 1px);background-size:14px 14px;color:var(--text);padding-bottom:90px}
+.shell{max-width:1020px;margin:0 auto;background:var(--bg);min-height:100vh;box-shadow:0 0 40px rgba(50,54,99,.14)}
+header{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:linear-gradient(90deg,var(--pri),var(--acc),var(--sun))}
+.wrap{width:min(940px,100% - 2rem);margin-inline:auto}
+header .wrap{display:flex;align-items:center;gap:.8rem;height:70px}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--hc);font:700 1.25rem var(--head)}
+.brand svg{width:40px;height:40px}.brand small{display:block;font:500 .75rem var(--body);color:var(--muted)}
 .grow{margin-left:auto}
-.ib{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer;font-size:1.1rem;display:grid;place-items:center;transition:background .15s,transform .15s}
-.ib:hover{background:var(--sand);transform:rotate(-6deg)}
-.burger{width:auto;padding:0 1.15rem;border-radius:12px;gap:.65rem;display:inline-flex;align-items:center;font:700 1rem var(--head);background:var(--btn);color:var(--btn-fg);border-color:var(--btn);box-shadow:0 3px 0 var(--btn-sh)}
-.burger:hover{background:var(--btn-h);transform:translateY(-1px)}
-.burger i{position:relative;display:block;width:18px;height:2.5px;background:currentColor;border-radius:2px;box-shadow:0 6px currentColor,0 -6px currentColor;transition:.25s}
-.burger[aria-expanded=true] i{box-shadow:none;transform:rotate(45deg)}
-.burger[aria-expanded=true] i::after{content:"";position:absolute;inset:0;background:currentColor;border-radius:2px;transform:rotate(90deg)}
+.badge{background:var(--sun);color:#2b2100;font:700 .75rem var(--head);padding:.2rem .6rem;border-radius:999px;text-transform:uppercase;letter-spacing:.04em}
+.ib{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer;font-size:1.05rem;display:grid;place-items:center}
+.ib:hover{background:var(--sand)}
 
-#menu{position:fixed;top:calc(env(safe-area-inset-top,0px) + 86px);right:max(1rem,calc((100vw - 1080px)/2 + 1rem));width:min(410px,calc(100vw - 2rem));z-index:55;background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 20px 50px rgba(50,54,99,.28);visibility:hidden;opacity:0;transform:translateY(-8px);transition:.25s}
-#menu::before{content:"";position:absolute;top:-8px;right:34px;width:14px;height:14px;background:var(--card);border-left:1px solid var(--line);border-top:1px solid var(--line);transform:rotate(45deg)}
-#menu.open{visibility:visible;opacity:1;transform:none}
-#menu .wrap{width:auto;margin:0;padding:.6rem 1.2rem 1.2rem;max-height:calc(100dvh - 120px);overflow:auto;border-radius:var(--r)}
-#menu nav{display:grid}
-#menu nav a{display:flex;align-items:center;gap:.9rem;color:var(--text);text-decoration:none;font:500 1.12rem var(--head);padding:.65rem .2rem;border-bottom:1px solid var(--line);transition:color .15s,padding .15s}
-#menu nav a span{font:700 .78rem var(--head);color:#06023c;background:var(--acc);border-radius:999px;min-width:2.1rem;text-align:center;padding:.15rem .45rem;flex:none}
-#menu nav a:nth-child(4n+2) span{background:var(--sun)}#menu nav a:nth-child(4n+3) span{background:var(--mint)}#menu nav a:nth-child(4n) span{background:var(--pink)}
-#menu nav a b{font:inherit}#menu nav a small{display:block;font:400 .85rem/1.4 var(--body);color:var(--muted);margin-top:.05rem}
-#menu nav a:hover,#menu nav a[aria-current=page]{color:var(--link);padding-left:.5rem}
-#menu nav a[aria-current=page]{font-weight:700}
-#menu.open nav a{animation:in .4s both}#menu.open nav a:nth-child(2){animation-delay:.03s}#menu.open nav a:nth-child(3){animation-delay:.06s}#menu.open nav a:nth-child(4){animation-delay:.09s}#menu.open nav a:nth-child(5){animation-delay:.12s}#menu.open nav a:nth-child(6){animation-delay:.15s}#menu.open nav a:nth-child(7){animation-delay:.18s}#menu.open nav a:nth-child(8){animation-delay:.21s}
-.mfoot{margin-top:1.2rem;display:flex;flex-wrap:wrap;gap:.7rem}
-.soc{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}.soc a{color:var(--text);text-decoration:none;font:500 .95rem var(--head);padding:.5rem 1rem;border:1px solid var(--line);border-radius:999px;transition:.15s}.soc a:hover{background:var(--acc);border-color:var(--acc);color:#06023c}
+main{padding:1.6rem 0}
+.card{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--cc,var(--acc));border-radius:var(--r);padding:1.4rem;margin-bottom:1.2rem;box-shadow:0 6px 18px rgba(50,54,99,.07)}
+.card.c-sun{--cc:var(--sun)}.card.c-mint{--cc:var(--mint)}.card.c-pink{--cc:var(--pink)}.card.c-coral{--cc:var(--coral)}
+h2{font:700 1.35rem var(--head);color:var(--hc);margin-bottom:.7rem;display:flex;align-items:center;justify-content:space-between;gap:.5rem}
+h3{font:700 1.05rem var(--head);color:var(--hc);margin:1rem 0 .4rem}
+label{display:block;font-size:.82rem;font-weight:700;color:var(--muted);margin:.75rem 0 .25rem;text-transform:uppercase;letter-spacing:.03em}
+input,textarea,select{width:100%;font:inherit;padding:.65rem .85rem;border-radius:10px;border:1.5px solid var(--line);background:var(--sand);color:var(--text);transition:border-color .15s,background .15s}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--acc);background:var(--card)}
+input[type=checkbox]{width:18px;height:18px;margin-right:.55rem;accent-color:var(--acc);cursor:pointer}
+input[type=file]{padding:.5rem;background:var(--card)}
+.chk{display:flex;align-items:center;font-size:.95rem;font-weight:500;text-transform:none;letter-spacing:0;color:var(--text);margin-top:.8rem;cursor:pointer}
+textarea{min-height:84px;resize:vertical}
 
-.hero{position:relative;overflow:hidden;color:#fff;min-height:430px;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(2.6rem,6vw,4rem) 0 0;background-color:var(--pri);background-image:linear-gradient(180deg,rgba(50,54,99,.35),rgba(6,2,60,.75)),var(--hero-photo,linear-gradient(140deg,#4eb5f1,#323663 60%,#06023c));background-size:cover;background-position:center}
-.hero::before{content:"";position:absolute;width:560px;height:560px;right:-160px;top:-180px;background:radial-gradient(circle,rgba(78,181,241,.5),transparent 65%)}
-.hero::after{content:"";position:absolute;width:420px;height:420px;left:-160px;bottom:-140px;background:radial-gradient(circle,rgba(255,200,61,.3),transparent 65%)}
-.hero .wrap{position:relative;z-index:1}
-.hero h1{color:#fff;font-size:clamp(2.6rem,8vw,5.2rem);font-weight:700;letter-spacing:-.02em;line-height:1}
-.hero h1 em{font-style:normal;color:#06023c;background:var(--sun);padding:0 .14em;border-radius:.16em;display:inline-block;transform:rotate(-2deg);animation:pop .6s .15s both cubic-bezier(.3,1.6,.5,1)}
-.hero h1 u{text-decoration:none;color:transparent;-webkit-text-stroke:2px #fff}
-@keyframes pop{from{transform:rotate(-8deg) scale(.7);opacity:0}}
-.hero p.sub{font-size:1.15rem;max-width:46ch;color:#E6ECF6;margin:1.2rem 0 1.6rem}
-.cta{display:flex;flex-wrap:wrap;gap:.9rem}
-.next{margin:2rem 0 2.4rem;display:inline-flex;flex-wrap:wrap;gap:1.2rem;align-items:center;background:rgba(255,255,255,.14);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.45);border-radius:var(--r);padding:1rem 1.4rem}
-.next b{font:700 1.25rem var(--head);display:block}.next span{color:#DCE5F2;font-size:.92rem}
-.cd{display:flex;gap:.5rem}.cd div{background:#fff;color:var(--pri);border-radius:10px;padding:.4rem .7rem;text-align:center;min-width:60px}
-.cd strong{font:700 1.5rem var(--head);display:block;line-height:1.2}.cd small{font-size:.7rem;font-weight:500}
-.marq{position:relative;z-index:2;background:var(--acc);color:#06023c;overflow:hidden;white-space:nowrap;padding:.6rem 0;font:700 1rem var(--head);text-transform:uppercase;letter-spacing:.04em}
-.marq div{display:inline-block;animation:mq 28s linear infinite}
-@keyframes mq{to{transform:translateX(-50%)}}
+.g2{display:grid;gap:.9rem;grid-template-columns:1fr 1fr}
+.g3{display:grid;gap:.9rem;grid-template-columns:1fr 1fr 1fr}
+.g-topic{display:grid;gap:.6rem;grid-template-columns:165px 1fr auto;align-items:end}
+@media(max-width:680px){.g2,.g3,.g-topic{grid-template-columns:1fr}}
 
-.tiles{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
-.tile{display:block;position:relative;background:var(--c);color:var(--tc)!important;border-radius:var(--r);padding:1.5rem 1.3rem;text-decoration:none;min-height:200px;transition:transform .2s,box-shadow .2s;overflow:hidden;box-shadow:0 6px 18px rgba(50,54,99,.14)}
-.tile:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(50,54,99,.24)}
-.tile:nth-child(1){--c:var(--pri);--tc:#fff}.tile:nth-child(2){--c:var(--acc);--tc:#06023c}.tile:nth-child(3){--c:var(--sun);--tc:#2b2100}.tile:nth-child(4){--c:var(--mint);--tc:#06312a}.tile:nth-child(5){--c:var(--pink);--tc:#4a0f2b}
-.tile .n{display:inline-grid;place-items:center;width:2.6rem;height:2.6rem;border-radius:50%;font:700 .95rem var(--head);background:rgba(255,255,255,.25);border:2px solid currentColor}
-.tile h3{font-size:1.5rem;margin:.9rem 0 .3rem;color:inherit}.tile p{font-size:.95rem;opacity:.9;padding-right:2rem}
-.tile .ar{position:absolute;right:1rem;bottom:.9rem;font-size:1.5rem;transition:transform .2s}.tile:hover .ar{transform:translateX(5px)}
-.band{background:linear-gradient(135deg,#323663,#1d2050);color:#fff;border-radius:var(--r);padding:clamp(1.6rem,4vw,2.6rem);display:grid;gap:1.4rem;grid-template-columns:1.2fr 1fr;align-items:center;box-shadow:0 10px 28px rgba(50,54,99,.25)}
-.band h2{margin:0;color:#fff}.band p{color:#DCE2F4}
-.pills{display:flex;flex-wrap:wrap;gap:.6rem}.pills span{background:var(--sun);color:#2b2100;font:700 1rem var(--head);border-radius:999px;padding:.4rem 1.1rem}
-.pills span:nth-child(2){background:var(--mint);color:#06312a}.pills span:nth-child(3){background:var(--acc);color:#06023c}
-@media(max-width:800px){.band,.where{grid-template-columns:1fr!important}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;font:700 .95rem var(--head);padding:.65rem 1.25rem;border-radius:11px;border:2px solid var(--btn);background:var(--btn);color:var(--btn-fg);text-decoration:none;cursor:pointer;box-shadow:0 3px 0 var(--btn-sh);transition:transform .12s,box-shadow .12s,background .12s}
+.btn:hover:not(:disabled){background:var(--btn-h);border-color:var(--btn-h);transform:translateY(-1px);box-shadow:0 4px 0 var(--btn-sh)}
+.btn:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 var(--btn-sh)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn.acc{--btn:var(--acc);--btn-fg:#06023c;--btn-sh:var(--acc-d);--btn-h:#7cc8f5}
+.btn.ghost{background:transparent;color:var(--text);border-color:var(--line);box-shadow:none}
+.btn.ghost:hover:not(:disabled){background:var(--sand);border-color:var(--muted)}
+.btn.danger{background:transparent;color:var(--coral);border-color:var(--coral);box-shadow:none;padding:.4rem .8rem;font-size:.85rem}
+.btn.danger:hover{background:var(--coral);color:#fff}
+.row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin-top:1rem}
 
-.view{display:none}.view.on{display:block;animation:in .45s}
-@keyframes in{from{opacity:0;transform:translateY(10px)}}
-.ph{background:var(--sand);border-bottom:1px solid var(--line);padding:clamp(2.4rem,6vw,3.8rem) 0 clamp(2rem,4.5vw,2.8rem);position:relative;overflow:hidden}
-.ph::before{content:"";position:absolute;right:-70px;top:-90px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(78,181,241,.35),transparent 68%)}
-.ph::after{content:"";position:absolute;left:0;top:0;bottom:0;width:8px;background:linear-gradient(180deg,var(--pri),var(--acc),var(--sun))}
-.ph .wrap{position:relative;z-index:1}.ph h1{font-size:clamp(2.2rem,7vw,3.8rem);font-weight:700;color:var(--hc)}
-.ph p{color:var(--muted);font-size:1.12rem;max-width:60ch;margin-top:.7rem}
-.two{display:grid;gap:2rem;grid-template-columns:1fr 1fr;align-items:start}@media(max-width:800px){.two{grid-template-columns:1fr}}
-details{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:12px;margin-bottom:.8rem;overflow:hidden;box-shadow:0 3px 10px rgba(50,54,99,.06)}
-summary{cursor:pointer;list-style:none;padding:1rem 1.3rem;font:700 1.15rem var(--head);color:var(--hc);display:flex;justify-content:space-between;align-items:center;gap:1rem}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";display:grid;place-items:center;flex:none;width:30px;height:30px;border-radius:50%;background:var(--acc);color:#06023c;font:700 1.3rem/1 var(--head);transition:transform .2s}
-details[open] summary::after{transform:rotate(45deg);background:var(--sun)}details>div{padding:0 1.3rem 1.2rem;color:var(--muted)}
-.steps{display:grid;gap:1.2rem;counter-reset:s}
-.step{counter-increment:s;display:grid;grid-template-columns:64px 1fr;gap:1.2rem;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:1.4rem;box-shadow:0 6px 18px rgba(50,54,99,.08)}
-.step::before{content:counter(s);width:56px;height:56px;border-radius:50%;background:var(--acc);color:#06023c;font:700 1.7rem/56px var(--head);text-align:center}
-.step:nth-child(2)::before{background:var(--sun)}.step:nth-child(3)::before{background:var(--mint)}.step:nth-child(4)::before{background:var(--pink)}
-.step p{color:var(--muted)}
-.fact{border-left:5px solid var(--acc);padding:.3rem 0 .3rem 1.2rem;margin:1.4rem 0;font:400 1.35rem/1.5 var(--serif);color:var(--hc)}
+.item-row{display:flex;align-items:center;justify-content:space-between;gap:.8rem;padding:.65rem .9rem;background:var(--sand);border:1px solid var(--line);border-radius:10px;margin-top:.5rem}
+.item-row b{font-family:var(--head);color:var(--hc);min-width:105px;display:inline-block}
+.ev-box{border:1.5px solid var(--line);border-left:4px solid var(--coral);border-radius:12px;padding:1rem;margin-top:.9rem;background:var(--sand)}
+.ev-box.pg{border-left-color:var(--acc)}
+.ev-top{display:flex;justify-content:space-between;align-items:center;gap:.5rem;margin-bottom:.3rem}
 
-.calw{display:grid;gap:1.4rem;grid-template-columns:1.25fr 1fr}@media(max-width:900px){.calw{grid-template-columns:1fr}}
-.ch{display:flex;align-items:center;justify-content:space-between;margin-bottom:.8rem}.ch h3{text-transform:capitalize;margin:0}
-.cg{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}.cg b{font:500 .75rem var(--body);color:var(--muted);text-align:center;padding:.3rem 0}
-.cg button{aspect-ratio:1;border-radius:10px;border:2px solid transparent;background:transparent;color:var(--text);font:500 .95rem var(--body);cursor:pointer;position:relative;transition:background .15s}
-.cg button:hover{background:var(--sand)}
-.cg button.e::after{content:"";position:absolute;bottom:6px;left:50%;width:7px;height:7px;margin-left:-3.5px;border-radius:50%;background:var(--coral)}
-.cg button.sp2::after{background:var(--sun);width:9px;height:9px;margin-left:-4.5px;box-shadow:0 0 0 1.5px var(--pri)}
-.cg button.t{border-color:var(--acc)}.cg button.s{background:var(--pri);color:#fff}
-:root[data-theme=dark] .cg button.s{background:var(--acc);color:#06023c}
-.lg{display:inline-flex;align-items:center;gap:.4rem;margin-right:1rem}.lg i{display:inline-block;width:10px;height:10px;border-radius:50%}.lg .d1{background:var(--sun);box-shadow:0 0 0 1.5px var(--pri)}.lg .d2{background:var(--coral)}
-.ev{display:grid;grid-template-columns:70px 1fr;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--line)}.ev:last-child{border:0}
-.ev .d{background:var(--sun);color:#2b2100;border-radius:12px;text-align:center;padding:.4rem;height:fit-content}.ev .d b{font:700 1.45rem var(--head);display:block;line-height:1.1}.ev .d small{font-size:.72rem;font-weight:500}
-.ev.sp .d{background:var(--coral);color:#fff}.ev h4{font:700 1.1rem var(--head)}.ev p,.ev a{font-size:.9rem;color:var(--muted)}.ev a{display:inline-block;margin-top:.2rem;font-weight:700;color:var(--link)}
+/* Náhled hero fotky a odpočtu */
+.hero-thumb{margin-top:.8rem;border-radius:12px;overflow:hidden;border:1.5px solid var(--line);background:var(--sand);min-height:170px;max-height:240px;position:relative;display:flex;align-items:flex-end}
+.hero-thumb img{width:100%;height:220px;object-fit:cover;object-position:var(--pos,center);display:block}
+.hero-thumb .cap{position:absolute;inset:auto 0 0;padding:.5rem .8rem;background:linear-gradient(transparent,rgba(0,0,0,.72));color:#fff;font-size:.85rem}
 
-.ct{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
-.ct .card h3{display:flex;gap:.5rem;align-items:center}.ct .big{font:700 1.25rem var(--head);word-break:break-word}
-.where{display:grid;grid-template-columns:.9fr 1.1fr;gap:1.6rem;align-items:stretch}
-.map{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);min-height:340px;position:relative;box-shadow:0 6px 18px rgba(50,54,99,.1)}.map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
-.maplink{position:absolute;left:.8rem;bottom:.8rem;z-index:2;background:var(--acc);color:#06023c!important;text-decoration:none;font:700 .9rem var(--head);padding:.5rem .95rem;border-radius:999px}
-address{font-style:normal;font:700 1.25rem/1.5 var(--head);color:var(--hc);margin:.6rem 0 1rem}
-footer{background:var(--sand2);color:var(--muted);padding:1.8rem 0 1.6rem;border-top:1px solid var(--line)}
-footer .row{display:flex;flex-wrap:wrap;gap:1.2rem;align-items:center;justify-content:space-between}
-footer .big{font:700 1.05rem var(--head);color:var(--btn-fg);text-decoration:none;background:var(--btn);padding:.7rem 1.3rem;border-radius:12px;box-shadow:0 4px 0 var(--btn-sh);transition:transform .15s,box-shadow .15s}footer .big:hover{color:var(--btn-fg);background:var(--btn-h);transform:translateY(-2px);box-shadow:0 6px 0 var(--btn-sh)}
-footer small{display:block;margin-top:1.1rem;color:var(--muted);font-size:.88rem}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.preview{background:linear-gradient(140deg,#4eb5f1,#323663 60%,#06023c);color:#fff;border-radius:var(--r);padding:1.2rem 1.4rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;margin-top:.6rem}
+.preview b{font:700 1.2rem var(--head);display:block}
+.preview span{color:#E6ECF6;font-size:.92rem}
+.preview .tag{background:var(--sun);color:#2b2100;font:700 .8rem var(--head);padding:.25rem .7rem;border-radius:999px}
+
+.tabs{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.2rem;border-bottom:2px solid var(--line);padding-bottom:.6rem}
+.tab{font:700 .95rem var(--head);padding:.5rem 1rem;border-radius:9px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.tab:hover{background:var(--sand);color:var(--hc)}
+.tab.on{background:var(--pri);color:#fff}
+:root[data-theme=dark] .tab.on{background:var(--acc);color:#06023c}
+.pane{display:none}.pane.on{display:block}
+
+.msg{padding:.85rem 1rem;border-radius:10px;margin-top:.9rem;font-size:.92rem;font-weight:500}
+.msg.ok{background:#E3F3E9;color:#1d5a37;border-left:4px solid #2E7D4F}
+.msg.er{background:#FBE5E1;color:#8a2a1c;border-left:4px solid var(--coral)}
+.msg.in{background:#FFF3D6;color:#6a4b00;border-left:4px solid var(--sun)}
+:root[data-theme=dark] .msg.ok{background:#173a28;color:#9be0b8}
+:root[data-theme=dark] .msg.er{background:#3d1c17;color:#ffb3a6}
+:root[data-theme=dark] .msg.in{background:#3d3210;color:#ffe08a}
+
+.bar{position:fixed;left:0;right:0;bottom:0;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(10px);border-top:2px solid var(--line);padding:.75rem 0;z-index:50}
+.bar .wrap{display:flex;gap:.7rem;align-items:center;flex-wrap:wrap}
+.status-dot{width:10px;height:10px;border-radius:50%;background:#2E7D4F;display:inline-block}
+.status-dot.dirty{background:var(--coral);box-shadow:0 0 0 3px rgba(255,107,94,.25)}
+#dirtyTxt{font-size:.88rem;font-weight:500;color:var(--muted)}
+details summary{cursor:pointer;font:700 .95rem var(--head);color:var(--hc);margin-top:.9rem}
+details ol{padding-left:1.3rem;margin-top:.5rem;color:var(--muted);font-size:.9rem}
+code{background:var(--sand);padding:.1rem .4rem;border-radius:5px;font-family:monospace;font-size:.88em}
+[hidden]{display:none!important}
 </style>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="logo" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#323663"/><g fill="#4eb5f1"><rect x="35" y="10" width="8" height="44" rx="2"/><rect x="25" y="20" width="28" height="8" rx="2"/></g><g fill="#fff"><rect x="21" y="14" width="8" height="44" rx="2"/><rect x="11" y="26" width="28" height="8" rx="2"/></g><path d="M12 54h14" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".5"/></symbol></svg>
-
-<div class="body">
-<header class="top"><div class="wrap">
-  <a class="brand" href="#uvod" aria-label="Mládež Křesťané Kuřim – domů"><svg aria-hidden="true"><use href="#logo"/></svg><span>Mládež<small>Křesťané Kuřim</small></span></a>
+<div class="shell">
+<header><div class="wrap">
+  <a class="brand" href="index.html" target="_blank" rel="noopener">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#323663"/><g fill="#4eb5f1"><rect x="35" y="10" width="8" height="44" rx="2"/><rect x="25" y="20" width="28" height="8" rx="2"/></g><g fill="#fff"><rect x="21" y="14" width="8" height="44" rx="2"/><rect x="11" y="26" width="28" height="8" rx="2"/></g><path d="M12 54h14" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".5"/></svg>
+    <span>Tryhard Admin<small>Mládež Křesťané Kuřim</small></span>
+  </a>
+  <span class="badge">CFG + Media</span>
   <span class="grow"></span>
-  <button class="ib" id="theme" type="button" aria-label="Přepnout světlý a tmavý režim">🌓</button>
-  <button class="ib burger" id="burger" type="button" aria-expanded="false" aria-controls="menu"><i></i><span>Menu</span></button>
+  <button class="ib" id="theme" type="button" title="Přepnout světlý/tmavý režim">🌓</button>
+  <a class="btn ghost" href="index.html" target="_blank" rel="noopener" style="padding:.45rem .9rem;font-size:.88rem">Web ↗</a>
 </div></header>
 
-<div id="menu" role="dialog" aria-label="Hlavní menu"><div class="wrap">
-  <nav>
-    <a href="#uvod"><span>00</span><b>Úvod<small>Zpátky na začátek</small></b></a>
-    <a href="#mladez"><span>01</span><b>Kdo jsme (mládež)<small>Kdo je mládež a pro koho je</small></b></a>
-    <a href="#program"><span>02</span><b>Co a jak<small>Pátek krok za krokem</small></b></a>
-    <a href="#sbor"><span>03</span><b>Křesťané Kuřim<small>Sbor, do kterého patříme</small></b></a>
-    <a href="#vira"><span>04</span><b>Čemu věříme<small>Základy víry srozumitelně</small></b></a>
-    <a href="#kalendar"><span>05</span><b>Kalendář akcí<small>Pátky i speciální akce</small></b></a>
-    <a href="#kontakt"><span>06</span><b>Kontakty<small>Telefon, e-mail, sítě a mapa</small></b></a>
-    <a href="#podminky"><span>07</span><b>Podmínky<small>Pravidla mládeže a informace o sboru</small></b></a>
+<main class="wrap">
+
+<!-- 1. PŘIPOJENÍ KE GITHUBU -->
+<section class="card" id="conn">
+  <h2><span>1. Připojení ke GitHubu</span></h2>
+  <div class="g2">
+    <div><label for="o">Uživatel / organizace (owner)</label><input id="o" placeholder="např. krestane-kurim-mladez" autocomplete="off"></div>
+    <div><label for="r">Název repozitáře</label><input id="r" placeholder="např. web" autocomplete="off"></div>
+  </div>
+  <div class="g3">
+    <div><label for="b">Větev (branch)</label><input id="b" value="main"></div>
+    <div>
+      <label for="mode">Kam ukládat změny</label>
+      <select id="mode">
+        <option value="index">Přímo do index.html (var CFG)</option>
+        <option value="json">Do externího data.json</option>
+      </select>
+    </div>
+    <div><label for="f">Cesta k souboru</label><input id="f" value="index.html"></div>
+  </div>
+  <label for="t">GitHub Personal Access Token</label>
+  <input id="t" type="password" placeholder="github_pat_…" autocomplete="off">
+  <label class="chk"><input type="checkbox" id="rem">Zapamatovat přihlášení v tomto prohlížeči</label>
+
+  <div class="row">
+    <button class="btn acc" id="go" type="button">Načíst data z GitHubu</button>
+    <button class="btn ghost" id="demo" type="button">Testovací režim (offline)</button>
+    <button class="btn danger" id="out" type="button" hidden>Odhlásit a smazat token</button>
+  </div>
+  <div id="cm"></div>
+
+  <details><summary>Návod: Jak nastavit GitHub token (jednorázově)</summary><ol>
+    <li>Otevři GitHub → <b>Settings → Developer settings → Personal access tokens → Fine-grained tokens</b>.</li>
+    <li>Klikni na <b>Generate new token</b>, zadej název (např. <code>Mladez Admin</code>) a platnost.</li>
+    <li>V <b>Repository access</b> vyber <b>Only select repositories</b> a označ repozitář webu.</li>
+    <li>V <b>Permissions → Repository permissions</b> nastav <b>Contents: Read and write</b>.</li>
+    <li>Vygeneruj token, vlož ho sem a klikni na <b>Načíst data z GitHubu</b>.</li>
+  </ol></details>
+</section>
+
+<!-- HLAVNÍ EDITOR -->
+<div id="editor" hidden>
+
+  <!-- ŽIVÝ NÁHLED -->
+  <section class="card c-sun">
+    <h2><span>Živý náhled odpočtu na webu</span><span style="font-size:.8rem;font-weight:400;color:var(--muted)">Aktualizuje se okamžitě</span></h2>
+    <div class="preview">
+      <div>
+        <b id="pvTitle">Páteční mládež</b>
+        <span id="pvSub">Pátek 17:00</span>
+      </div>
+      <span class="tag" id="pvBadge">Nejbližší akce</span>
+    </div>
+  </section>
+
+  <!-- NAVIGACE SEKCÍ -->
+  <nav class="tabs" role="tablist">
+    <button class="tab on" data-tab="p-media" type="button">🖼️ Úvodní fotka &amp; Stránky</button>
+    <button class="tab" data-tab="p-patek" type="button">📅 Pátky &amp; Témata</button>
+    <button class="tab" data-tab="p-akce" type="button">🔥 Speciální akce</button>
+    <button class="tab" data-tab="p-kontakt" type="button">📞 Kontakty &amp; Mapa</button>
+    <button class="tab" data-tab="p-raw" type="button">⚙️ Pokročilé / CFG</button>
   </nav>
-  <div class="mfoot"><a class="btn" href="https://krestanekurim.cz/" target="_blank" rel="noopener">Web sboru: krestanekurim.cz ↗</a><a class="btn ghost" data-c="tel" href="#">Zavolat</a></div>
-  <div class="soc"><a data-c="ig2" target="_blank" rel="noopener" href="#">📸 Instagram</a><a data-c="fb2" target="_blank" rel="noopener" href="#">👍 Facebook</a><a data-c="mail2" href="#">✉️ E-mail</a></div>
-</div></div>
 
-<main id="main" tabindex="-1">
+  <!-- TAB 1: ÚVODNÍ FOTKA A VLASTNÍ STRÁNKY -->
+  <div class="pane on" id="p-media">
+    <section class="card c-mint">
+      <h2>Horní fotka mládeže na úvodní stránce</h2>
+      <p style="color:var(--muted);font-size:.9rem">Vyber fotku z počítače, disku nebo galerie. Admin ji nahraje do repozitáře (např. <code>img/hero-mladez.jpg</code>) a nastaví na úvod webu.</p>
 
-<!-- ÚVOD -->
-<section class="view" id="v-">
-  <div class="hero"><div class="wrap">
-    <h1>Hry. <em>Chvály.</em> <u>Bible.</u> Svačina.</h1>
-    <p class="sub">Mládež Křesťané Kuřim pro lidi kolem 13–18 let. Každý pátek v 17:00, zdarma, bez registrací a bez tlaku.</p>
-    <div class="cta"><a class="btn" href="#program">Jak to probíhá</a><a class="btn ghost" href="#kontakt">Kde nás najdeš</a></div>
-    <div class="next" id="next"><div><b id="nxT">Nejbližší setkání</b><span id="nxD"></span></div><div class="cd" aria-hidden="true"><div><strong id="c1">0</strong><small>dní</small></div><div><strong id="c2">0</strong><small>hodin</small></div><div><strong id="c3">0</strong><small>minut</small></div><div><strong id="c4">0</strong><small>sekund</small></div></div></div>
+      <div class="g2" style="margin-top:.6rem">
+        <div>
+          <label for="heroFile">Vybrat fotku z disku / galerie</label>
+          <input type="file" id="heroFile" accept="image/*">
+        </div>
+        <div>
+          <label for="heroTargetPath">Cesta v repozitáři</label>
+          <input id="heroTargetPath" value="img/hero-mladez.jpg">
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn acc" id="uploadHero" type="button">Nahrát fotku na GitHub</button>
+        <button class="btn ghost" id="clearHero" type="button">Odebrat fotku (výchozí pozadí)</button>
+      </div>
+      <div id="upMsg"></div>
+
+      <div class="g2" style="margin-top:.8rem">
+        <div>
+          <label for="heroPhotoInp">Aktuální cesta nebo URL fotky</label>
+          <input id="heroPhotoInp" data-k="heroPhoto" placeholder="např. img/hero-mladez.jpg">
+        </div>
+        <div>
+          <label for="heroPosSel">Svislé zarovnání fotky (aby se neusekly hlavy)</label>
+          <select id="heroPosSel" data-k="heroPos">
+            <option value="center">Na střed (center)</option>
+            <option value="top">Nahoru / hlavy (top)</option>
+            <option value="50% 25%">Mírně nahoru (50% 25%)</option>
+            <option value="bottom">Dolů (bottom)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="hero-thumb" id="heroPreviewBox">
+        <img id="heroPreviewImg" src="" alt="Náhled horní fotky">
+        <div class="cap" id="heroPreviewCap">Žádná fotka není nastavena</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2><span>Vlastní podstránky webu</span><button class="btn acc" id="pa" type="button">+ Přidat stránku</button></h2>
+      <p style="color:var(--muted);font-size:.9rem">Vytvoř další stránky (např. <i>Tábory</i>, <i>Fotky</i>, <i>Info pro rodiče</i>). Každá stránka dostane vlastní odkaz <code>#nazev</code> a může se zobrazit v menu i na úvodní stránce.</p>
+      <div id="pagesList"></div>
+    </section>
   </div>
-  <div class="marq" aria-hidden="true"><div>Hry ✦ Chvály ✦ Bible ✦ Svačina ✦ Zdarma ✦ Pátek 17:00 ✦ Hry ✦ Chvály ✦ Bible ✦ Svačina ✦ Zdarma ✦ Pátek 17:00 ✦ Hry ✦ Chvály ✦ Bible ✦ Svačina ✦ Zdarma ✦ Pátek 17:00 ✦ Hry ✦ Chvály ✦ Bible ✦ Svačina ✦ Zdarma ✦ Pátek 17:00 ✦ </div></div></div>
-  <div class="sec"><div class="wrap">
-    <h2>Objev web</h2><p class="lead" style="margin-bottom:1.6rem">Každá část má vlastní stránku. Vyber si, co tě zajímá.</p>
-    <div class="tiles">
-      <a class="tile" href="#mladez"><span class="n">01</span><h3>Kdo jsme</h3><p>Kdo je mládež, pro koho je a na co se můžeš zeptat.</p><span class="ar">→</span></a>
-      <a class="tile" href="#program"><span class="n">02</span><h3>Co a jak</h3><p>Pátek krok za krokem a tvůj první večer.</p><span class="ar">→</span></a>
-      <a class="tile" href="#sbor"><span class="n">03</span><h3>Křesťané Kuřim</h3><p>Sbor, do kterého patříme, a další akce.</p><span class="ar">→</span></a>
-      <a class="tile" href="#vira"><span class="n">04</span><h3>Čemu věříme</h3><p>Základy víry srozumitelně a do hloubky.</p><span class="ar">→</span></a>
-      <a class="tile" href="#kalendar"><span class="n">05</span><h3>Kalendář akcí</h3><p>Pátky i speciální akce přehledně na jednom místě.</p><span class="ar">→</span></a>
-    </div>
-  </div></div>
-  <div class="sec" style="padding-top:0"><div class="wrap">
-    <div class="band"><div><h2>Všechno zdarma</h2><p>Vstup, program i svačina nestojí nic. Nikdo tě do ničeho nenutí a nemusíš nic umět.</p></div><div class="pills"><span>Zdarma</span><span>Bez registrace</span><span>Bez tlaku</span></div></div>
-  </div></div>
-  <div class="sec" style="padding-top:0"><div class="wrap where">
-    <div><h2>Najdeš nás u nádraží</h2><p class="lead">Na rohu ulic Legionářská a Husova. Celou adresu a kontakty máš na stránce Kontakty.</p><p style="margin-top:1.2rem"><a class="btn" href="#kontakt">Kontakty a adresa</a></p></div>
-    <div class="map"><iframe title="Mapa: Křesťané Kuřim" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-map></iframe><a class="maplink" data-c="gmap" target="_blank" rel="noopener" href="#">Otevřít v Mapách ↗</a></div>
-  </div></div>
-</section>
 
-<!-- KDO JSME -->
-<section class="view" id="v-mladez">
-  <div class="ph"><div class="wrap"><h1>Kdo jsme</h1><p>Parta lidí z Kuřimi a okolí, která se schází v pátek večer. Ne kroužek, ne škola, ne přednáška.</p></div></div>
-  <div class="sec"><div class="wrap two">
-    <div><h2>Mládež v Kuřimi </h2>
-      <p>Mládež je určená všem lidem ve věku přibližně od 13 do 18 let. Společně hrajeme hry, zpíváme chvály, učíme se z Bible o Bohu a o tom všem se normálně bavíme.</p>
-      <p>Patříme pod místní sbor Křesťané Kuřim, ale pátek má svůj vlastní rytmus a styl, uzpůsobený mladým lidem.</p>
-      <div class="fact">Nemusíš nic umět, nic znát a nic platit.</div>
-    </div>
-    <div class="grid" style="grid-template-columns:1fr">
-      <div class="card"><h3>Pro koho</h3><p>Pro kluky a holky zhruba 13–18 let, věřící i hledající. Přijít můžeš sám, nebo s kamarádem.</p></div>
-      <div class="card"><h3>Jak se tu chováme</h3><p>Přátelsky a otevřeně. Pokud nechceš hrát, zpívat nebo mluvit, nikdo to po tobě nechce.</p></div>
-      <div class="card"><h3>Kdo to vede</h3><p>Kontaktní osobou mládeže je Josef Sponar. Telefon a další kontakty najdeš na stránce <a href="#kontakt">Kontakty</a>.</p></div>
-    </div>
-  </div></div>
-  <div class="sec" style="padding-top:0"><div class="wrap"><h2>Časté otázky</h2><div style="margin-top:1rem">
-    <details><summary>Musím věřit v Boha, abych mohl přijít?</summary><div>Ne. Jsi vítaný, ať jsi věřící, nebo jen zvědavý. Můžeš se ptát na cokoli a nikdo tě nebude tlačit k žádnému rozhodnutí.</div></details>
-    <details><summary>Co když nikoho neznám?</summary><div>Většina z nás někdy přišla poprvé. Hry na začátku jsou právě proto, aby se led rychle rozpustil.</div></details>
-    <details><summary>Musím hrát hry nebo zpívat?</summary><div>Nemusíš. Kdo nechce hrát, může v klidu sedět a povídat si s ostatními. Zpívat můžeš nahlas, potichu, nebo jen poslouchat.</div></details>
-    <details><summary>Kolik to stojí?</summary><div>Nic. Vstup, program i svačina jsou zdarma.</div></details>
-    <details><summary>Musím se předem hlásit?</summary><div>Ne. Nejsou tu žádné registrace ani formuláře. Přijď v pátek v 17:00. Když chceš, můžeš se předem ozvat vedoucímu.</div></details>
-  </div></div></div>
-</section>
+  <!-- TAB 2: PÁTKY A TÉMATA -->
+  <div class="pane" id="p-patek">
+    <section class="card c-mint">
+      <h2>Pravidelná páteční mládež</h2>
+      <label class="chk"><input type="checkbox" data-k="weekly.on">Automaticky generovat každý pátek v kalendáři</label>
+      <div class="g3">
+        <div><label>Začátek</label><input type="time" data-k="weekly.time"></div>
+        <div><label>Konec</label><input type="time" data-k="weekly.end"></div>
+        <div><label>Název v kalendáři</label><input data-k="weekly.title"></div>
+      </div>
+      <label>Krátký popis (note)</label>
+      <input data-k="weekly.note" placeholder="Hry, chvály, slovo z Bible, svačina">
+    </section>
 
-<!-- CO A JAK -->
-<section class="view" id="v-program">
-  <div class="ph"><div class="wrap"><h1>Co a jak</h1><p>Každý pátek od 17:00 do 18:30. Čtyři části, které na sebe navazují.</p></div></div>
-  <div class="sec"><div class="wrap"><div class="steps">
-    <div class="step"><div><h3>Hry</h3><p>Rozjezd večera. Hry, při kterých se zasmějeme a poznáme. Žádná výkonnost, jde o zábavu.</p></div></div>
-    <div class="step"><div><h3>Chvály</h3><p>Zpíváme křesťanské písně. Je to společný čas, kdy se zklidníme a obrátíme se k Bohu.</p></div></div>
-    <div class="step"><div><h3>Slovo z Bible</h3><p>Otevřeme biblický text a promluvíme si o tom, co říká do skutečného života: do školy, přátelství i rozhodování.</p></div></div>
-    <div class="step"><div><h3>Svačina, hry a pokec</h3><p>Svačina je na stole. Při dalších hrách platí: kdo nechce hrát, může v klidu sedět a kecat s ostatními.</p></div></div>
+    <section class="card">
+      <h2>Témata na jednotlivé pátky</h2>
+      <p style="color:var(--muted);font-size:.9rem">Zobrazí se v odpočtu na úvodní stránce i po rozkliknutí pátku v kalendáři.</p>
+      <div class="g-topic" style="margin-top:.6rem">
+        <div><label for="td">Datum pátku</label><input type="date" id="td"></div>
+        <div><label for="tt">Téma (např. Přísloví 25:28)</label><input id="tt" placeholder="Přísloví 25:28 – Ovládání sebe sama"></div>
+        <div style="display:flex;gap:.4rem">
+          <button class="btn ghost" id="tNextFri" type="button">Další pátek</button>
+          <button class="btn acc" id="tAdd" type="button">Uložit téma</button>
+        </div>
+      </div>
+      <div id="topicsList" style="margin-top:1rem"></div>
+    </section>
+
+    <section class="card c-coral">
+      <h2>Zrušené pátky (kdy mládež není)</h2>
+      <p style="color:var(--muted);font-size:.9rem">Vybrané pátky zmizí z kalendáře i z odpočtu.</p>
+      <div class="row">
+        <input type="date" id="cd" style="width:auto">
+        <button class="btn" id="ca" type="button">Přidat zrušený pátek</button>
+      </div>
+      <div id="canc" style="margin-top:.8rem"></div>
+    </section>
   </div>
-  <div class="two" style="margin-top:2.5rem"><div><h2>Tvůj první večer</h2><p>Dorazíš, někdo tě přivítá a ukáže ti, kde co je. Nic nevyplňuješ a nikomu se nepředstavuješ, pokud nechceš. Prostě se přidáš.</p></div>
-  <div><h2>Co s sebou</h2><p>Nic zvláštního. Pohodlné oblečení na hry a dobrá nálada. Pokud chceš vědět, kde přesně nás najdeš, mrkni na <a href="#kontakt">Kontakty</a>.</p></div></div>
-  </div></div>
-</section>
 
-<!-- SBOR -->
-<section class="view" id="v-sbor">
-  <div class="ph"><div class="wrap"><h1>Křesťané Kuřim</h1><p>Místní sbor, do kterého mládež patří. Rodina, kde je každý návštěvník vítaný.</p></div></div>
-  <div class="sec"><div class="wrap two">
-    <div><h2>Kdo je sbor</h2>
-      <p>Jsme křesťanská církev, jejímž posláním je sdílet dobrou zprávu o tom, že Ježíš Kristus nabízí každému člověku smíření s Bohem a odpuštění hříchů. Chceme přivádět lidi ke Kristu a zakládat nová společenství.</p>
-      <p>Naše společenství je rodina přijatá Bohem. Staráme se jeden o druhého, modlíme se jeden za druhého a navzájem si sloužíme.</p></div>
-    <div><h2>Kam patříme</h2>
-      <p>Mládež je součástí sboru Křesťané Kuřim, z.s. Sbor se schází v budově na rohu ulic Legionářská a Husova, hned u nádraží. Pátečním večerem to ale nekončí.</p>
-      <p style="margin-top:1.2rem"><a class="btn" href="https://krestanekurim.cz/kdo-jsme/" target="_blank" rel="noopener">Víc o sboru ↗</a></p></div>
-  </div></div>
-  <div class="sec" style="padding-top:0"><div class="wrap"><h2>Další setkání ve sboru</h2><div class="grid" style="margin-top:1rem">
-    <div class="card"><h3>Nedělní bohoslužby</h3><p>Každou neděli od 9:45.</p><p><a href="https://krestanekurim.cz/nedelni-bohosluzby/" target="_blank" rel="noopener">Podrobnosti ↗</a></p></div>
-    <div class="card"><h3>Biblické hodiny</h3><p>Každý čtvrtek od 18:00.</p><p><a href="https://krestanekurim.cz/biblicke-hodiny/" target="_blank" rel="noopener">Podrobnosti ↗</a></p></div>
-    <div class="card"><h3>Dětský klub</h3><p>Program pro děti.</p><p><a href="https://krestanekurim.cz/detsky-klub/" target="_blank" rel="noopener">Podrobnosti ↗</a></p></div>
-    <div class="card"><h3>CityCamp</h3><p>Letní akce pro mladší generaci.</p><p><a href="https://krestanekurim.cz/citycamp/" target="_blank" rel="noopener">Podrobnosti ↗</a></p></div>
-    <div class="card"><h3>Kázání a písně online</h3><p>Zmeškal jsi neděli? Kázání najdeš na YouTube i Spotify.</p><p><a href="https://www.youtube.com/krestanekurim" target="_blank" rel="noopener">YouTube ↗</a> · <a href="https://open.spotify.com/show/4n0OOeqW0Dg8RijaboeNXo" target="_blank" rel="noopener">Spotify ↗</a></p></div>
-    <div class="card"><h3>Potřebuješ pomoc?</h3><p>Sbor má stránku pro ty, kdo něco řeší.</p><p><a href="https://krestanekurim.cz/potrebuji-pomoc/" target="_blank" rel="noopener">Otevřít ↗</a></p></div>
-  </div></div></div>
-</section>
-
-<!-- VÍRA -->
-<section class="view" id="v-vira">
-  <div class="ph"><div class="wrap"><h1>Čemu věříme</h1><p>Základy víry sboru Křesťané Kuřim. Srozumitelně, ale bez ořezávání.</p></div></div>
-  <div class="sec"><div class="wrap two">
-    <div>
-      <details open><summary>Bůh: Otec, Syn a Duch Svatý</summary><div><p>Věříme v jednoho Boha, který existuje ve třech osobách: Otec, Syn a Duch Svatý. Je stvořitel a vládce všeho a jediný si zaslouží naši nejvyšší lásku a úctu.</p><p>Ježíš Kristus je Boží Syn, skutečně Bůh i skutečně člověk. Žil bez hříchu, zemřel na kříži za naše hříchy a třetího dne vstal z mrtvých. Duch Svatý nás usvědčuje, vede a v nás přebývá.</p></div></details>
-      <details><summary>Bible</summary><div>Bible je zapsané Boží slovo. Věříme, že je autoritativní, spolehlivá a naprosto dostačující ve všem, co se týká víry a života s Bohem. Proto se každý pátek vracíme k jejímu textu.</div></details>
-      <details><summary>Člověk</summary><div>Člověk je stvořený k Božímu obrazu, aby Boha uctíval. Kvůli hříchu je ale jeho vztah s Bohem rozbitý a sám ho opravit nedokáže.</div></details>
-    </div>
-    <div>
-      <details open><summary>Spasení z milosti</summary><div>Smíření s Bohem přichází pokáním a vírou v to, co pro nás udělal Ježíš. Odpuštění je Boží dar, ne odměna za naše skutky. Nemusíš si ho zasloužit a nemůžeš si ho koupit.</div></details>
-      <details><summary>Život s Bohem a církev</summary><div>Víra se projevuje změnou, v níž se postupně podobáme Kristu, a Duch Svatý nám v tom pomáhá. Církev tvoří všichni, kdo patří Kristu. Místně se scházejí lidé, kteří si navzájem slouží a nechávají se vést zkušenými staršími.</div></details>
-      <details><summary>Co bude na konci</summary><div>Věříme, že se Ježíš vrátí, spravedlivě odsoudí zlo a vytvoří nové nebe a novou zemi. Ti, kdo patří Bohu, budou žít v jeho blízkosti.</div></details>
-    </div>
+  <!-- TAB 3: SPECIÁLNÍ AKCE -->
+  <div class="pane" id="p-akce">
+    <section class="card c-coral">
+      <h2><span>Speciální akce</span><button class="btn acc" id="ea" type="button">+ Přidat akci</button></h2>
+      <p style="color:var(--muted);font-size:.9rem">Výlety, víkendovky, vánoční večer nebo společné akce.</p>
+      <div id="evs"></div>
+    </section>
   </div>
-  <div class="wrap" style="margin-top:1.4rem"><p class="lead">Tohle je stručné shrnutí. Plné znění vyznání víry sboru najdeš na webu <a href="https://krestanekurim.cz/cemu-verime/" target="_blank" rel="noopener">krestanekurim.cz</a>.</p></div></div>
-</section>
 
-<!-- KALENDÁŘ -->
-<section class="view" id="v-kalendar">
-  <div class="ph"><div class="wrap"><h1>Kalendář akcí</h1><p>Pátky i speciální akce. Klikni na den a uvidíš, co se děje.</p></div></div>
-  <div class="sec"><div class="wrap calw">
-    <div class="card"><div class="ch"><button class="ib" id="cp" aria-label="Předchozí měsíc">←</button><h3 id="cm"></h3><button class="ib" id="cn" aria-label="Další měsíc">→</button></div><div class="cg" id="cg"></div>
-      <p style="font-size:.82rem;color:var(--muted);margin-top:.8rem"><span class="lg"><i class="d1"></i>páteční mládež</span><span class="lg"><i class="d2"></i>speciální akce</span></p></div>
-    <div class="card"><h3 id="dt">Nejbližší akce</h3><div id="el" aria-live="polite"></div></div>
+  <!-- TAB 4: KONTAKTY A MAPA -->
+  <div class="pane" id="p-kontakt">
+    <section class="card c-pink">
+      <h2>Kontaktní údaje a sítě</h2>
+      <div class="g2">
+        <div><label>Telefon (9 číslic bez +420)</label><input data-k="phone" inputmode="numeric" placeholder="776498104"></div>
+        <div><label>Telefon (formát zobrazení)</label><input data-k="phoneShow" placeholder="776 498 104"></div>
+      </div>
+      <label>Kontaktní e-mail</label>
+      <input data-k="email" type="email" placeholder="krestane.kurim.mladez@gmail.com">
+      <div class="g2">
+        <div><label>Instagram (celá URL)</label><input data-k="instagram" placeholder="https://www.instagram.com/krestanekurim.mladez/"></div>
+        <div><label>Facebook (celá URL)</label><input data-k="facebook" placeholder="https://www.facebook.com/krestanekurim.mladez"></div>
+      </div>
+      <div class="g2">
+        <div><label>Adresa (řádky se zalomí na webu)</label><textarea data-k="address"></textarea></div>
+        <div>
+          <label>Adresa pro vyhledávání v Mapách</label>
+          <input data-k="mapQuery" placeholder="Legionářská 281, 664 34 Kuřim">
+          <label>Google Kalendář ID (nepovinné)</label>
+          <input data-k="googleCalendarId" placeholder="abc123@group.calendar.google.com">
+        </div>
+      </div>
+    </section>
   </div>
-  <div class="wrap" id="gcw" style="margin-top:1rem" hidden><div class="map"><iframe title="Google Kalendář" id="gcf" loading="lazy"></iframe></div></div>
-  </div>
-</section>
 
-<!-- KONTAKT -->
-<section class="view" id="v-kontakt">
-  <div class="ph"><div class="wrap"><h1>Kontakty</h1><p>Ozvi se, když něco potřebuješ. Nebo prostě přijď v pátek.</p></div></div>
-  <div class="sec"><div class="wrap">
-    <div class="ct">
-      <div class="card"><h3>👤 Josef Sponar</h3><p>Vedoucí mládeže</p><p class="big"><a data-c="tel" href="#"></a></p></div>
-      <div class="card"><h3>✉️ E-mail</h3><p>Pište nám cokoli</p><p class="big"><a data-c="mail" href="#"></a></p></div>
-      <div class="card"><h3>📸 Instagram</h3><p>Novinky a fotky</p><p class="big"><a data-c="ig" href="#" target="_blank" rel="noopener"></a></p></div>
-      <div class="card"><h3>👍 Facebook</h3><p>Novinky a akce</p><p class="big"><a data-c="fb" href="#" target="_blank" rel="noopener"></a></p></div>
-      <div class="card"><h3>⛪ Web sboru</h3><p>Křesťané Kuřim, z.s.</p><p class="big"><a href="https://krestanekurim.cz/" target="_blank" rel="noopener">krestanekurim.cz ↗</a></p></div>
-    </div>
-    <div class="where" style="margin-top:2rem">
-      <div><h2>Kde, kdy a jak</h2>
-        <address data-c="addr"></address>
-        <p><strong>Kdy:</strong> každý pátek 17:00–18:30</p>
-        <p><strong>Kde přesně:</strong> roh ulic Legionářská a Husova, hned u vlakového a autobusového nádraží. Vcházíme <strong>pravým vstupem</strong>.</p>
-        <p><strong>Jak:</strong> jen přijď. Bez registrace, zdarma.</p>
-        <p style="margin-top:1.2rem;display:flex;gap:.6rem;flex-wrap:wrap"><a class="btn" data-c="gmap" target="_blank" rel="noopener" href="#">Otevřít v Google Mapách</a><a class="btn ghost" style="color:var(--text)" href="https://en.mapy.cz/s/dehuhucuso" target="_blank" rel="noopener">Mapy.cz</a></p></div>
-      <div class="map"><iframe title="Mapa: kde nás najdeš" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-map></iframe><a class="maplink" data-c="gmap" target="_blank" rel="noopener" href="#">Otevřít v Mapách ↗</a></div>
-    </div>
-    <div class="where" style="margin-top:3rem">
-      <div><h2>Sbor Křesťané Kuřim</h2>
-        <p>Druhé místo na mapě: Křesťané Kuřim podle Google Map. Sem patří sbor, pod který mládež spadá.</p>
-        <p style="margin-top:1.2rem;display:flex;gap:.6rem;flex-wrap:wrap"><a class="btn" href="https://maps.app.goo.gl/KmsgEg1TPojikvoQ7" target="_blank" rel="noopener">Otevřít v Google Mapách</a><a class="btn ghost" style="color:var(--text)" href="https://krestanekurim.cz/kontakt/" target="_blank" rel="noopener">Kontakt sboru ↗</a></p></div>
-      <div class="map"><iframe title="Mapa: Křesťané Kuřim" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=49.3007041,16.5302991&output=embed"></iframe><a class="maplink" href="https://maps.app.goo.gl/KmsgEg1TPojikvoQ7" target="_blank" rel="noopener">Otevřít v Mapách ↗</a></div>
-    </div>
-  </div></div>
-</section>
-<!-- PODMÍNKY -->
-<section class="view" id="v-podminky">
-  <div class="ph"><div class="wrap"><h1>Podmínky</h1><p>Jak to u nás funguje: pravidla mládeže a základní informace o sboru, pod který patříme.</p></div></div>
-  <div class="sec"><div class="wrap two">
-    <div class="card"><h2>Podmínky mládeže</h2>
-      <p><strong>Pro koho:</strong> pro všechny ve věku přibližně od 13 do 18 let.</p>
-      <p><strong>Cena a přihlášení:</strong> mládež je zdarma a bez registrace. Stačí přijít.</p>
-      <p><strong>Kdy a kde:</strong> každý pátek 17:00–18:30, Legionářská 281, Kuřim. Pátky bez mládeže najdeš v kalendáři akcí.</p>
-      <p><strong>Program:</strong> hry, chvály, slovo z Bible, rozhovor a svačina. Nikoho do ničeho nenutíme, k programu se můžeš připojit, jak ti vyhovuje.</p>
-      <p><strong>Společná pravidla:</strong> chováme se k sobě s respektem, nikoho neposmíváme a nedovolujeme šikanu. Dbáme na pokyny vedoucích a na bezpečnost her.</p>
-      <p><strong>Fotky a sdílení:</strong> fotografie z mládeže zveřejňujeme na webu a sítích jen se souhlasem dotyčných a u nezletilých i rodičů.</p>
-      <p><strong>Rodiče:</strong> s dotazy se můžou obrátit na Josefa Sponara, kontakt je na stránce <a href="#kontakt">Kontakty</a>.</p></div>
-    <div class="card"><h2>Podmínky sboru</h2>
-      <p>Mládež patří pod spolek <strong>Křesťané Kuřim, z. s.</strong> (spolek, IČO 07706791, sídlo Smetanova 572/4, 664 34 Kuřim, zapsaný od 28. 12. 2018 u Krajského soudu v Brně, sp. zn. L 25552).</p>
-      <p><strong>Co sbor učí a v co věří:</strong> shrnutí najdeš na stránce <a href="#vira">Čemu věříme</a>, plné znění na webu sboru.</p>
-      <p><strong>Členství a další pravidla sboru:</strong> podmínky členství a další dokumenty zveřejňuje sbor na svém webu.</p>
-      <p style="margin-top:1.2rem;display:flex;gap:.6rem;flex-wrap:wrap"><a class="btn" href="https://krestanekurim.cz/clenstvi/" target="_blank" rel="noopener">Členství ↗</a><a class="btn ghost" style="color:var(--text)" href="https://krestanekurim.cz/cemu-verime/" target="_blank" rel="noopener">Čemu věříme ↗</a></p></div>
-  </div></div>
-</section>
+  <!-- TAB 5: POKROČILÉ / CFG -->
+  <div class="pane" id="p-raw">
+    <section class="card">
+      <h2>Výsledný objekt CFG</h2>
+      <textarea id="rawOut" readonly style="font-family:monospace;font-size:.85rem;min-height:260px"></textarea>
+      <div class="row">
+        <button class="btn ghost" id="copyCfg" type="button">Zkopírovat CFG</button>
+        <button class="btn ghost" id="dl" type="button">Stáhnout data.json</button>
+      </div>
+    </section>
+  </div>
+
+</div>
 </main>
+</div>
 
-<footer><div class="wrap"><div class="row"><a class="brand" href="#uvod"><svg aria-hidden="true"><use href="#logo"/></svg><span>Mládež<small>Křesťané Kuřim</small></span></a><a class="big" href="https://krestanekurim.cz/" target="_blank" rel="noopener">Hlavní web sboru: krestanekurim.cz ↗</a></div><small>© 2026 Mládež Křesťané Kuřim. Součást sboru Křesťané Kuřim, z.s.</small></div></footer>
+<div class="bar" id="bar" hidden>
+  <div class="wrap">
+    <button class="btn acc" id="save" type="button">Uložit a publikovat (Ctrl+S)</button>
+    <span class="status-dot" id="dot"></span>
+    <span id="dirtyTxt">Vše je uloženo</span>
+  </div>
 </div>
 
 <script>
-/* =========================================================
-   NASTAVENÍ – tady upravuješ kontakty a akce kalendáře.
-   Stačí změnit text mezi uvozovkami a uložit soubor.
-   ========================================================= */
-var CFG={
-  "phone": "776498104",
-  "phoneShow": "+420 776 498 104",
-  "email": "krestane.kurim.mladez@gmail.com",
-  "instagram": "https://www.instagram.com/krestanekurim.mladez/",
-  "facebook": "https://www.facebook.com/profile.php?id=61589700260035",
-  "address": "Křesťané Kuřim\nLegionářská 281\n664 34 Kuřim",
-  "mapQuery": "Legionářská 281, 664 34 Kuřim",
-  "googleCalendarId": "",
-  "weekly": {
-    "on": true,
-    "time": "17:00",
-    "end": "18:30",
-    "title": "Páteční mládež",
-    "note": "Hry, chvály, slovo z Bible, svačina"
-  },
-  "topics": {
-    "2026-11-27": "Přísloví 25:28"
-  },
-  "weeklyCancelled": [],
-  "events": []
-};
 (function(){
 "use strict";
-var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+var $=function(s){return document.querySelector(s)},$$=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
+var D=null,sha=null,rawFile=null,dirty=false,isDemo=false,LS="mladez-admin-v3";
 
-/* dosazení kontaktů */
-var map="https://www.google.com/maps?q="+encodeURIComponent(CFG.mapQuery)+"&output=embed";
-$$("[data-map]").forEach(function(f){f.src=map});
-$$("[data-c]").forEach(function(a){
-  var k=a.dataset.c;
-  if(k==="tel"){a.href="tel:+420"+CFG.phone;if(!a.textContent)a.textContent=CFG.phoneShow}
-  if(k==="mail"){a.href="mailto:"+CFG.email;a.textContent=CFG.email}
-  if(k==="ig"){if(CFG.instagram){a.href=CFG.instagram;a.textContent=CFG.instagram.replace(/^https?:\/\/(www\.)?instagram\.com\//,"@").replace(/\/$/,"")}else{a.removeAttribute("href");a.textContent="Brzy přidáme"}}
-  if(k==="fb"){if(CFG.facebook){a.href=CFG.facebook;a.textContent="@"+CFG.facebook.replace(/\/$/,"").split("/").pop()}else{a.removeAttribute("href");a.textContent="Brzy přidáme"}}
-  if(k==="mail2"){a.href="mailto:"+CFG.email}
-  if(k==="ig2"&&CFG.instagram)a.href=CFG.instagram;
-  if(k==="fb2"&&CFG.facebook)a.href=CFG.facebook;
-  if(k==="addr")a.innerHTML=CFG.address.replace(/\n/g,"<br>");
-  if(k==="gmap")a.href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(CFG.mapQuery);
-});
+var DEF={
+  phone:"776498104",phoneShow:"776 498 104",
+  email:"krestane.kurim.mladez@gmail.com",
+  instagram:"https://www.instagram.com/krestanekurim.mladez/",
+  facebook:"https://www.facebook.com/krestanekurim.mladez",
+  address:"Křesťané Kuřim\nLegionářská 281\n664 34 Kuřim",
+  mapQuery:"Legionářská 281, 664 34 Kuřim",
+  heroPhoto:"",
+  heroPos:"center",
+  googleCalendarId:"",
+  weekly:{on:true,time:"17:00",end:"18:30",title:"Páteční mládež",note:"Hry, chvály, slovo z Bible, svačina"},
+  topics:{},
+  weeklyCancelled:[],
+  events:[],
+  pages:[]
+};
 
-/* téma */
+var esc=function(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})};
+var b64e=function(s){return btoa(unescape(encodeURIComponent(s)))},b64d=function(s){return decodeURIComponent(escape(atob(s.replace(/\s/g,""))))};
+function msg(t,c){$("#cm").innerHTML="<div class='msg "+c+"'>"+esc(t)+"</div>"}
+function upMsg(t,c){$("#upMsg").innerHTML="<div class='msg "+c+"'>"+esc(t)+"</div>"}
+function mark(v){
+  dirty=v;
+  $("#dot").classList.toggle("dirty",v);
+  $("#dirtyTxt").textContent=v?"Neuložené změny – nezapomeň publikovat":(isDemo?"Testovací režim (offline)":"Vše je uloženo na GitHubu");
+  updatePreview();
+  updateHeroPreview();
+  if($("#rawOut"))$("#rawOut").value="var CFG="+JSON.stringify(clean(),null,2)+";";
+}
+function get(p){return p.split(".").reduce(function(o,k){return o&&o[k]},D)}
+function set(p,v){var a=p.split("."),o=D;while(a.length>1)o=o[a.shift()];o[a[0]]=v}
+
+/* Téma */
 var root=document.documentElement;
-try{var sv=localStorage.getItem("theme");if(sv)root.setAttribute("data-theme",sv)}catch(e){}
+try{var svT=localStorage.getItem("theme");if(svT)root.setAttribute("data-theme",svT)}catch(e){}
 function isDark(){var t=root.getAttribute("data-theme");return t==="dark"||(!t&&matchMedia("(prefers-color-scheme:dark)").matches)}
-function themeIcon(){var b=$("#theme");b.textContent=isDark()?"☀️":"🌙";b.setAttribute("aria-pressed",isDark())}
+function themeIcon(){$("#theme").textContent=isDark()?"☀️":"🌙"}
 $("#theme").onclick=function(){var n=isDark()?"light":"dark";root.setAttribute("data-theme",n);try{localStorage.setItem("theme",n)}catch(e){}themeIcon()};
 themeIcon();
 
-/* menu */
-var menu=$("#menu"),bg=$("#burger");
-menu.inert=true;
-function mo(o,ret){var was=menu.classList.contains("open");menu.classList.toggle("open",o);menu.inert=!o;bg.setAttribute("aria-expanded",o);$(".burger span").textContent=o?"Zavřít":"Menu";if(o){requestAnimationFrame(function(){var f=$("#menu nav a");if(f)f.focus()})}else if(was&&ret)bg.focus()}
-bg.onclick=function(){mo(!menu.classList.contains("open"),true)};
-addEventListener("keydown",function(e){if(e.key==="Escape")mo(false,true)});
-document.addEventListener("click",function(e){if(menu.classList.contains("open")&&!menu.contains(e.target)&&!bg.contains(e.target))mo(false)});
+/* Taby */
+$$(".tab").forEach(function(b){
+  b.onclick=function(){
+    $$(".tab").forEach(function(x){x.classList.remove("on")});
+    $$(".pane").forEach(function(x){x.classList.remove("on")});
+    b.classList.add("on");
+    $("#"+b.dataset.tab).classList.add("on");
+  };
+});
 
-/* router */
-var T={"":"Úvod","mladez":"Kdo jsme","program":"Co a jak","sbor":"Křesťané Kuřim","vira":"Čemu věříme","kalendar":"Kalendář akcí","kontakt":"Kontakty","podminky":"Podmínky"};
-function route(){
-  var r=location.hash.replace(/^#/,"");if(r==="uvod")r="";if(!T.hasOwnProperty(r))r="";
-  $$(".view").forEach(function(v){v.classList.toggle("on",v.id==="v-"+r)});
-  $$("#menu nav a").forEach(function(a){a.removeAttribute("aria-current");if(a.getAttribute("href")==="#"+(r||"uvod"))a.setAttribute("aria-current","page")});
-  document.title=(r?T[r]+" · ":"")+"Mládež Křesťané Kuřim";
-  mo(false);scrollTo(0,0);
-}
-addEventListener("hashchange",function(){route();$("#main").focus({preventScroll:true})});
+$("#mode").onchange=function(){$("#f").value=this.value==="index"?"index.html":"data.json"};
 
-/* kalendář */
-function key(d){return d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2)}
-var EV={};
-function build(){
-  EV={};function add(k,e){(EV[k]=EV[k]||[]).push(e)}
-  CFG.events.forEach(function(e){add(e.date,e)});
-  if(CFG.weekly.on){
-    var d=new Date();d.setHours(12,0,0,0);d.setMonth(d.getMonth()-2);
-    while(d.getDay()!==5)d.setDate(d.getDate()+1);
-    for(var i=0;i<130;i++){var k=key(d);if(CFG.weeklyCancelled.indexOf(k)<0)add(k,{date:k,time:CFG.weekly.time,end:CFG.weekly.end,title:CFG.weekly.title,note:CFG.weekly.note,topic:(CFG.topics||{})[k],weekly:true});d.setDate(d.getDate()+7)}  }
+try{
+  var sv=JSON.parse(localStorage.getItem(LS)||"{}");
+  ["o","r","b","f","mode"].forEach(function(k){if(sv[k])$("#"+k).value=sv[k]});
+  if(sv.t){$("#t").value=sv.t;$("#rem").checked=true}
+}catch(e){}
+
+function api(path,opt){
+  var o=$("#o").value.trim(),r=$("#r").value.trim();
+  opt=opt||{};opt.headers={"Accept":"application/vnd.github+json","Authorization":"Bearer "+$("#t").value.trim(),"Content-Type":"application/json"};
+  return fetch("https://api.github.com/repos/"+encodeURIComponent(o)+"/"+encodeURIComponent(r)+"/contents/"+path.split("/").map(encodeURIComponent).join("/")+(opt.q||""),opt);
 }
-function when(e){var p=e.date.split("-"),t=(e.time||"00:00").split(":");return new Date(+p[0],p[1]-1,+p[2],+t[0],+t[1])}
-function all(){var a=[];Object.keys(EV).forEach(function(k){EV[k].forEach(function(e){a.push(e)})});return a.sort(function(x,y){return when(x)-when(y)})}
-function nextEv(){var n=new Date(),l=all();for(var i=0;i<l.length;i++){var e=l[i],end=when(e);end.setHours(end.getHours()+2);if(end>n)return e}return null}
-function gcal(e){
-  var w=when(e),f=function(d){return d.getFullYear()+("0"+(d.getMonth()+1)).slice(-2)+("0"+d.getDate()).slice(-2)+"T"+("0"+d.getHours()).slice(-2)+("0"+d.getMinutes()).slice(-2)+"00"};
-  var en=new Date(w);if(e.end){var q=e.end.split(":");en.setHours(+q[0],+q[1])}else en.setHours(en.getHours()+2);
-  return "https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent(e.title)+"&dates="+f(w)+"/"+f(en)+"&details="+encodeURIComponent(e.note||"")+"&location="+encodeURIComponent(e.place||CFG.mapQuery);
+function norm(){
+  var o=$("#o").value.trim(),r=$("#r").value.trim(),m;
+  if(m=r.match(/^https?:\/\/([^.\/]+)\.github\.io\/([^\/?#]+)/i)){o=m[1];r=m[2]}
+  else if(m=r.match(/^https?:\/\/github\.com\/([^\/]+)\/([^\/?#]+)/i)){o=m[1];r=m[2].replace(/\.git$/,"")}
+  else if(r.indexOf("/")>0){var p=r.split("/");o=p[0];r=p[1]}
+  $("#o").value=o;$("#r").value=r;
 }
-var MN=["leden","únor","březen","duben","květen","červen","červenec","srpen","září","říjen","listopad","prosinec"];
-var cur=new Date();cur.setDate(1);var selDay=null;
-function evHtml(l){
-  if(!l.length)return"<p style='color:var(--muted)'>V tento den nic neplánujeme.</p>";
-  return l.map(function(e){var p=e.date.split("-");
-    return "<div class='ev"+(e.weekly?"":" sp")+"'><div class='d'><b>"+(+p[2])+"</b><small>"+MN[p[1]-1].slice(0,3)+".</small></div><div><h4>"+e.title+"</h4><p>"+(e.time||"")+(e.end?"–"+e.end:"")+(e.place?" · "+e.place:"")+"</p>"+(e.topic?"<p><strong>Téma:</strong> "+e.topic+"</p>":"")+(e.note?"<p>"+e.note+"</p>":"")+"<a href='"+gcal(e)+"' target='_blank' rel='noopener'>Přidat do kalendáře</a></div></div>"}).join("");
+
+function extractCfgFromHtml(html){
+  var idx=html.indexOf("var CFG=");
+  if(idx<0)throw new Error("V souboru index.html nebyl nalezen blok 'var CFG={...};'.");
+  var start=html.indexOf("{",idx),depth=0,inStr=false,escCh=false,end=-1;
+  for(var i=start;i<html.length;i++){
+    var ch=html[i];
+    if(inStr){
+      if(escCh)escCh=false;
+      else if(ch==="\\")escCh=true;
+      else if(ch===inStr)inStr=false;
+    }else{
+      if(ch==='"'||ch==="'")inStr=ch;
+      else if(ch==="{")depth++;
+      else if(ch==="}"){depth--;if(depth===0){end=i;break}}
     }
-    function renderCal(){
-  $("#cm").textContent=MN[cur.getMonth()]+" "+cur.getFullYear();
-  var g=$("#cg");g.innerHTML=["Po","Út","St","Čt","Pá","So","Ne"].map(function(x){return"<b>"+x+"</b>"}).join("");
-  var first=(cur.getDay()+6)%7,days=new Date(cur.getFullYear(),cur.getMonth()+1,0).getDate(),tk=key(new Date());
-  for(var i=0;i<first;i++)g.appendChild(document.createElement("span"));
-  for(var d=1;d<=days;d++){
-    var k=cur.getFullYear()+"-"+("0"+(cur.getMonth()+1)).slice(-2)+"-"+("0"+d).slice(-2),b=document.createElement("button"),l=EV[k]||[];
-    b.type="button";b.textContent=d;b.dataset.k=k;b.setAttribute("aria-label",d+". "+MN[cur.getMonth()]+(l.length?": "+l.map(function(e){return e.title}).filter(function(t,i,a){return a.indexOf(t)===i}).join(", "):""));
-    if(l.length){b.className="e";if(l.some(function(e){return !e.weekly}))b.className="e";else b.className="e sp2"}
-    if(k===tk){b.classList.add("t");b.setAttribute("aria-current","date")}if(k===selDay)b.classList.add("s");b.setAttribute("aria-pressed",k===selDay);
-    b.onclick=(function(k,d){return function(){selDay=k;$("#dt").textContent=d+". "+MN[cur.getMonth()]+" "+cur.getFullYear();$("#el").innerHTML=evHtml(EV[k]||[]);renderCal();var nb=$('#cg button[data-k="'+k+'"]');if(nb)nb.focus({preventScroll:true});if(innerWidth<900)$("#dt").scrollIntoView({behavior:"smooth",block:"start"})}})(k,d);
-    g.appendChild(b);
+  }
+  if(end<0)throw new Error("Nepodařilo se přečíst konec objektu CFG v index.html.");
+  var objStr=html.slice(start,end+1);
+  var parsed=(new Function("return ("+objStr+")"))();
+  return {cfg:parsed,start:idx,end:html[end+1]===";"?end+2:end+1};
+}
+
+function load(){
+  norm();
+  var o=$("#o").value.trim(),r=$("#r").value.trim(),t=$("#t").value.trim(),f=$("#f").value.trim(),b=$("#b").value.trim();
+  if(!o||!r||!t){msg("Vyplň uživatele, repozitář a token.","er");return}
+  $("#go").disabled=true;msg("Připojuji se ke GitHubu…","in");
+  api(f,{q:"?ref="+encodeURIComponent(b)}).then(function(res){
+    if(res.status===401||res.status===403)throw new Error("Token nemá oprávnění (401/403). Zkontroluj token a právo Contents: Read and write.");
+    if(res.status===404){
+      if($("#mode").value==="index")throw new Error("Soubor "+f+" nebyl v repozitáři "+o+"/"+r+" (větev "+b+") nalezen.");
+      return {nf:true};
+    }
+    if(!res.ok)throw new Error("GitHub vrátil chybu "+res.status+".");
+    return res.json();
+  }).then(function(j){
+    isDemo=false;
+    if(j.nf){
+      D=JSON.parse(JSON.stringify(DEF));sha=null;rawFile=null;
+      msg("Soubor "+f+" zatím neexistuje – po uložení se vytvoří.","in");
+    }else{
+      sha=j.sha;
+      rawFile=b64d(j.content);
+      if($("#mode").value==="index"){
+        var ext=extractCfgFromHtml(rawFile);
+        D=Object.assign(JSON.parse(JSON.stringify(DEF)),ext.cfg);
+      }else{
+        D=Object.assign(JSON.parse(JSON.stringify(DEF)),JSON.parse(rawFile));
+      }
+      msg("Připojeno! Data z "+f+" byla úspěšně načtena.","ok");
+    }
+    D.topics=D.topics||{};
+    D.weeklyCancelled=D.weeklyCancelled||[];
+    D.events=D.events||[];
+    D.pages=D.pages||[];
+    try{localStorage.setItem(LS,JSON.stringify({o:o,r:r,b:b,f:f,mode:$("#mode").value,t:$("#rem").checked?t:""}))}catch(e){}
+    $("#editor").hidden=false;$("#bar").hidden=false;$("#out").hidden=false;
+    render();mark(false);
+  }).catch(function(e){msg(e.message||"Chyba připojení.","er")}).then(function(){$("#go").disabled=false});
+}
+$("#go").onclick=load;
+
+$("#demo").onclick=function(){
+  isDemo=true;sha=null;rawFile=null;
+  D=JSON.parse(JSON.stringify(DEF));
+  D.topics={"2026-11-27":"Přísloví 25:28"};
+  $("#editor").hidden=false;$("#bar").hidden=false;
+  render();mark(false);
+  msg("Offline testovací režim. Pro nahrání fotek a publikování na web se připoj ke GitHubu.","in");
+};
+
+$("#out").onclick=function(){
+  try{localStorage.removeItem(LS)}catch(e){}
+  $("#t").value="";D=null;sha=null;rawFile=null;
+  $("#editor").hidden=true;$("#bar").hidden=true;$("#out").hidden=true;
+  msg("Odhlášeno a token smazán z prohlížeče.","ok");
+};
+
+/* Nahrání fotky z disku / galerie na GitHub */
+$("#heroFile").onchange=function(){
+  var file=this.files&&this.files[0];
+  if(!file)return;
+  var ext=(file.name.split(".").pop()||"jpg").toLowerCase().replace(/[^a-z0-9]/g,"")||"jpg";
+  $("#heroTargetPath").value="img/hero-mladez."+ext;
+  var reader=new FileReader();
+  reader.onload=function(ev){
+    $("#heroPreviewImg").src=ev.target.result;
+    $("#heroPreviewCap").textContent="Vybráno ze zařízení: "+file.name+" ("+Math.round(file.size/1024)+" KB) – zatím nenahráno";
+  };
+  reader.readAsDataURL(file);
+};
+
+$("#uploadHero").onclick=function(){
+  var inp=$("#heroFile"),file=inp&&inp.files&&inp.files[0];
+  var targetPath=($("#heroTargetPath").value||"img/hero-mladez.jpg").trim().replace(/^\/+/,"");
+  if(!file){upMsg("Nejdřív vyber fotku z počítače, disku nebo galerie.","er");return}
+  if(file.size>6*1024*1024){upMsg("Fotka je větší než 6 MB. Raději ji předem zmenši (např. na šířku 1600 px).","er");return}
+  if(isDemo){upMsg("V offline režimu se fotka nenahraje na GitHub, ale nastaví se cesta "+targetPath+".","in");D.heroPhoto=targetPath;$("#heroPhotoInp").value=targetPath;mark(true);return}
+
+  var btn=$("#uploadHero");btn.disabled=true;
+  upMsg("Nahrávám fotku do repozitáře ("+targetPath+")…","in");
+
+  var reader=new FileReader();
+  reader.onload=function(){
+    var base64=String(reader.result).split(",")[1]||"";
+    var branch=$("#b").value.trim();
+    api(targetPath,{q:"?ref="+encodeURIComponent(branch)}).then(function(r){
+      return r.ok?r.json():null;
+    }).then(function(existing){
+      var body={
+        message:"Admin: nahrání úvodní fotky ("+targetPath+")",
+        content:base64,
+        branch:branch
+      };
+      if(existing&&existing.sha)body.sha=existing.sha;
+      return api(targetPath,{method:"PUT",body:JSON.stringify(body)});
+    }).then(function(res){
+      if(!res.ok)throw new Error("Nepodařilo se nahrát obrázek (chyba "+res.status+"). Zkontroluj práva tokenu.");
+      return res.json();
+    }).then(function(){
+      D.heroPhoto=targetPath;
+      $("#heroPhotoInp").value=targetPath;
+      upMsg("Fotka nahrána na GitHub do "+targetPath+". Teď klikni dole na 'Uložit a publikovat' a propíše se do webu!","ok");
+      mark(true);
+    }).catch(function(err){
+      upMsg(err.message||"Chyba při nahrávání fotky.","er");
+    }).finally(function(){btn.disabled=false});
+  };
+  reader.readAsDataURL(file);
+};
+
+$("#clearHero").onclick=function(){
+  if(!D)return;
+  D.heroPhoto="";
+  $("#heroPhotoInp").value="";
+  if($("#heroFile"))$("#heroFile").value="";
+  upMsg("Úvodní fotka odebrána (po uložení se vrátí výchozí barevné pozadí).","in");
+  mark(true);
+};
+
+function updateHeroPreview(){
+  if(!D)return;
+  var img=$("#heroPreviewImg"),cap=$("#heroPreviewCap");
+  var p=(D.heroPhoto||"").trim();
+  img.style.objectPosition=D.heroPos||"center";
+  if(p){
+    if(/^https?:\/\//i.test(p)||p.startsWith("data:")){img.src=p}
+    else{
+      var o=$("#o").value.trim(),r=$("#r").value.trim(),b=$("#b").value.trim()||"main";
+      img.src=(o&&r)?"https://raw.githubusercontent.com/"+encodeURIComponent(o)+"/"+encodeURIComponent(r)+"/"+encodeURIComponent(b)+"/"+p.replace(/^\/+/,""):p;
+    }
+    cap.textContent="Aktivní fotka: "+p+" · Zarovnání: "+(D.heroPos||"center");
+  }else if(!img.src||img.src.indexOf("data:")!==0){
+    img.removeAttribute("src");
+    cap.textContent="Žádná fotka není nastavena (použije se výchozí přechod)";
   }
 }
-$("#cp").onclick=function(){cur.setMonth(cur.getMonth()-1);renderCal()};
-$("#cn").onclick=function(){cur.setMonth(cur.getMonth()+1);renderCal()};
-build();renderCal();
-$("#el").innerHTML=evHtml(all().filter(function(e){return when(e)>new Date()}).slice(0,6));
-if(CFG.googleCalendarId){$("#gcw").hidden=false;$("#gcf").src="https://calendar.google.com/calendar/embed?src="+encodeURIComponent(CFG.googleCalendarId)+"&ctz=Europe%2FPrague&hl=cs"}
 
-/* odpočet */
-function tick(){
-  var e=nextEv();if(!e)return;
-  var w=when(e),n=new Date(),ms=w-n,live=ms<=0;
-  $("#nxT").textContent=live?"Právě teď to běží!":e.title;
-  $("#nxD").textContent=w.toLocaleDateString("cs-CZ",{weekday:"long",day:"numeric",month:"long"})+" v "+e.time+(e.topic?" · Téma: "+e.topic:"");
-  if(ms<0)ms=0;var s=Math.floor(ms/1000);
-  $("#c1").textContent=Math.floor(s/86400);var p2=function(n){return("0"+n).slice(-2)};$("#c2").textContent=p2(Math.floor(s%86400/3600));$("#c3").textContent=p2(Math.floor(s%3600/60));$("#c4").textContent=p2(s%60);
+/* Vlastní stránky */
+function renderPages(){
+  var box=$("#pagesList");
+  if(!D.pages.length){box.innerHTML="<p style='color:var(--muted);font-size:.9rem;margin-top:.6rem'>Zatím žádné vlastní stránky.</p>";return}
+  box.innerHTML="";
+  D.pages.forEach(function(pg,i){
+    var w=document.createElement("div");w.className="ev-box pg";
+    w.innerHTML="<div class='ev-top'><b>#"+esc(pg.slug||"nova-stranka")+" – "+esc(pg.title||"Nová stránka")+"</b><button class='btn danger' type='button'>Smazat stránku</button></div>"+
+      "<div class='g2'>"+
+        "<div><label>URL kotva (bez # a mezer, např. tabory)</label><input data-pi='"+i+"' data-pf='slug' value='"+esc(pg.slug)+"'></div>"+
+        "<div><label>Název stránky</label><input data-pi='"+i+"' data-pf='title' value='"+esc(pg.title)+"' placeholder='Např. Letní tábory'></div>"+
+      "</div>"+
+      "<label>Krátký podnadpis</label><input data-pi='"+i+"' data-pf='lead' value='"+esc(pg.lead)+"' placeholder='Co se na této stránce dozvíš'>"+
+      "<label>Text stránky (prázdný řádek = nový odstavec)</label><textarea data-pi='"+i+"' data-pf='body' placeholder='Napiš text stránky…'>"+esc(pg.body)+"</textarea>"+
+      "<div class='g2'>"+
+        "<div><label>Text tlačítka (nepovinné)</label><input data-pi='"+i+"' data-pf='ctaLabel' value='"+esc(pg.ctaLabel)+"' placeholder='Např. Přihlásit se'></div>"+
+        "<div><label>Odkaz tlačítka (nepovinné)</label><input data-pi='"+i+"' data-pf='ctaUrl' value='"+esc(pg.ctaUrl)+"' placeholder='https://… nebo #kontakt'></div>"+
+      "</div>"+
+      "<div class='row' style='margin-top:.5rem'>"+
+        "<label class='chk' style='margin:0'><input type='checkbox' data-pi='"+i+"' data-pf='inMenu' "+(pg.inMenu!==false?"checked":"")+">Zobrazit v hlavním menu</label>"+
+        "<label class='chk' style='margin:0'><input type='checkbox' data-pi='"+i+"' data-pf='inTiles' "+(pg.inTiles?"checked":"")+">Zobrazit dlaždici na úvodě</label>"+
+      "</div>";
+    w.querySelector("button").onclick=function(){if(confirm("Smazat stránku '"+(pg.title||pg.slug)+"'?")){D.pages.splice(i,1);mark(true);renderPages()}};
+    box.appendChild(w);
+  });
 }
-tick();setInterval(tick,1000);
+$("#pa").onclick=function(){
+  var n=D.pages.length+1;
+  D.pages.push({slug:"stranka-"+n,title:"Nová stránka "+n,lead:"",body:"",ctaLabel:"",ctaUrl:"",inMenu:true,inTiles:false});
+  mark(true);renderPages();
+};
 
-addEventListener("scroll",function(){$("header.top").classList.toggle("sc",scrollY>8)},{passive:true});
-route();
+/* Vykreslení formulářů */
+function render(){
+  $$("[data-k]").forEach(function(el){
+    var v=get(el.dataset.k);
+    if(el.type==="checkbox")el.checked=!!v;
+    else el.value=v==null?"":v;
+  });
+  renderPages();renderTopics();renderCanc();renderEv();updatePreview();updateHeroPreview();
+}
+
+document.addEventListener("input",function(e){
+  var el=e.target;if(!D||!el.dataset)return;
+  if(el.dataset.k){
+    set(el.dataset.k,el.type==="checkbox"?el.checked:el.value);
+    mark(true);
+  }else if(el.dataset.i!==undefined){
+    D.events[+el.dataset.i][el.dataset.f]=el.value;
+    mark(true);
+  }else if(el.dataset.pi!==undefined){
+    var idx=+el.dataset.pi,f=el.dataset.pf;
+    D.pages[idx][f]=el.type==="checkbox"?el.checked:el.value;
+    mark(true);
+  }
+});
+document.addEventListener("change",function(e){
+  var el=e.target;if(!D||!el.dataset)return;
+  if(el.dataset.k){set(el.dataset.k,el.type==="checkbox"?el.checked:el.value);mark(true)}
+  else if(el.dataset.pi!==undefined&&el.type==="checkbox"){D.pages[+el.dataset.pi][el.dataset.pf]=el.checked;mark(true)}
+});
+
+/* Témata pátků */
+function nextFridayStr(){
+  var d=new Date();
+  var diff=(5-d.getDay()+7)%7;
+  if(diff===0&&d.getHours()>=19)diff=7;
+  d.setDate(d.getDate()+diff);
+  return d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2);
+}
+$("#td").value=nextFridayStr();
+$("#tNextFri").onclick=function(){$("#td").value=nextFridayStr();$("#tt").focus()};
+
+function renderTopics(){
+  var box=$("#topicsList"),keys=Object.keys(D.topics||{}).sort();
+  if(!keys.length){box.innerHTML="<p style='color:var(--muted);font-size:.9rem'>Zatím nejsou zadaná žádná témata.</p>";return}
+  box.innerHTML="";
+  keys.forEach(function(k){
+    var p=k.split("-"),row=document.createElement("div");
+    row.className="item-row";
+    row.innerHTML="<div><b>"+esc(p[2]+". "+p[1]+". "+p[0])+"</b><span>"+esc(D.topics[k])+"</span></div><button class='btn danger' type='button'>Smazat</button>";
+    row.querySelector("button").onclick=function(){delete D.topics[k];mark(true);renderTopics()};
+    box.appendChild(row);
+  });
+}
+$("#tAdd").onclick=function(){
+  var d=$("#td").value,t=$("#tt").value.trim();
+  if(!d||!t){alert("Vyplň datum i název tématu.");return}
+  D.topics[d]=t;
+  $("#tt").value="";
+  mark(true);renderTopics();
+};
+
+/* Zrušené pátky */
+function renderCanc(){
+  var c=$("#canc");
+  if(!D.weeklyCancelled.length){c.innerHTML="<p style='color:var(--muted);font-size:.9rem'>Žádné zrušené pátky.</p>";return}
+  c.innerHTML="";
+  D.weeklyCancelled.forEach(function(d,i){
+    var p=d.split("-"),w=document.createElement("div");
+    w.className="item-row";
+    w.innerHTML="<div><b>"+esc(p[2]+". "+p[1]+". "+p[0])+"</b><span>Mládež se nekoná</span></div><button class='btn danger' type='button'>Odebrat</button>";
+    w.querySelector("button").onclick=function(){D.weeklyCancelled.splice(i,1);mark(true);renderCanc()};
+    c.appendChild(w);
+  });
+}
+$("#ca").onclick=function(){
+  var v=$("#cd").value;if(!v)return;
+  if(D.weeklyCancelled.indexOf(v)<0)D.weeklyCancelled.push(v);
+  D.weeklyCancelled.sort();$("#cd").value="";
+  mark(true);renderCanc();
+};
+
+/* Speciální akce */
+function renderEv(){
+  var c=$("#evs");
+  if(!D.events.length){c.innerHTML="<p style='color:var(--muted);font-size:.9rem;margin-top:.6rem'>Zatím žádné speciální akce.</p>";return}
+  c.innerHTML="";
+  D.events.forEach(function(e,i){
+    var w=document.createElement("div");w.className="ev-box";
+    w.innerHTML="<div class='ev-top'><b>"+esc(e.title||"Nová speciální akce")+"</b><button class='btn danger' type='button'>Smazat</button></div>"+
+      "<div class='g3'>"+
+        "<div><label>Datum</label><input type='date' data-i='"+i+"' data-f='date' value='"+esc(e.date)+"'></div>"+
+        "<div><label>Od</label><input type='time' data-i='"+i+"' data-f='time' value='"+esc(e.time)+"'></div>"+
+        "<div><label>Do</label><input type='time' data-i='"+i+"' data-f='end' value='"+esc(e.end)+"'></div>"+
+      "</div>"+
+      "<div class='g2'>"+
+        "<div><label>Název akce</label><input data-i='"+i+"' data-f='title' value='"+esc(e.title)+"' placeholder='Např. Vánoční večer'></div>"+
+        "<div><label>Místo (nepovinné)</label><input data-i='"+i+"' data-f='place' value='"+esc(e.place)+"' placeholder='Křesťané Kuřim'></div>"+
+      "</div>"+
+      "<label>Popis akce (nepovinné)</label><input data-i='"+i+"' data-f='note' value='"+esc(e.note)+"' placeholder='Co nás čeká, co vzít s sebou…'>";
+    w.querySelector("button").onclick=function(){if(confirm("Opravdu smazat tuto akci?")){D.events.splice(i,1);mark(true);renderEv()}};
+    c.appendChild(w);
+  });
+}
+$("#ea").onclick=function(){
+  var d=new Date();d.setDate(d.getDate()+7);
+  D.events.push({date:d.toISOString().slice(0,10),time:"17:00",end:"19:00",title:"",place:"",note:""});
+  mark(true);renderEv();
+};
+
+/* Živý náhled nejbližší akce */
+function updatePreview(){
+  if(!D)return;
+  var list=[];
+  (D.events||[]).forEach(function(e){if(e.date&&e.title)list.push({date:e.date,time:e.time||"17:00",title:e.title,sp:true})});
+  if(D.weekly&&D.weekly.on){
+    var d=new Date();d.setHours(12,0,0,0);
+    while(d.getDay()!==5)d.setDate(d.getDate()+1);
+    for(var i=0;i<12;i++){
+      var k=d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2);
+      if((D.weeklyCancelled||[]).indexOf(k)<0){
+        list.push({date:k,time:D.weekly.time||"17:00",title:D.weekly.title||"Páteční mládež",topic:(D.topics||{})[k],sp:false});
+      }
+      d.setDate(d.getDate()+7);
+    }
+  }
+  list.sort(function(a,b){return (a.date+a.time).localeCompare(b.date+b.time)});
+  var now=new Date();
+  var nx=list.find(function(x){
+    var p=x.date.split("-"),t=(x.time||"00:00").split(":");
+    return new Date(+p[0],p[1]-1,+p[2],+t[0]+2,+t[1])>now;
+  });
+  if(!nx){$("#pvTitle").textContent="Žádná naplánovaná akce";$("#pvSub").textContent="Zapni páteční mládež nebo přidej speciální akci";return}
+  var p=nx.date.split("-"),dt=new Date(+p[0],p[1]-1,+p[2]);
+  $("#pvTitle").textContent=nx.title;
+  $("#pvSub").textContent=dt.toLocaleDateString("cs-CZ",{weekday:"long",day:"numeric",month:"long"})+" v "+nx.time+(nx.topic?" · Téma: "+nx.topic:"");
+  $("#pvBadge").textContent=nx.sp?"Speciální akce":"Páteční mládež";
+}
+
+function clean(){
+  var o=JSON.parse(JSON.stringify(D));
+  o.events=(o.events||[]).filter(function(e){return e.date&&e.title&&e.title.trim()}).sort(function(a,b){return (a.date+(a.time||"")).localeCompare(b.date+(b.time||""))});
+  o.events.forEach(function(e){["end","place","note"].forEach(function(k){if(!e[k])delete e[k]})});
+  var sortedTopics={};
+  Object.keys(o.topics||{}).sort().forEach(function(k){if(o.topics[k]&&o.topics[k].trim())sortedTopics[k]=o.topics[k].trim()});
+  o.topics=sortedTopics;
+  o.pages=(o.pages||[]).map(function(pg){
+    var sl=String(pg.slug||"").replace(/^#/,"").replace(/[^a-z0-9_-]/gi,"").toLowerCase();
+    return Object.assign({},pg,{slug:sl});
+  }).filter(function(pg){return pg.slug&&pg.title&&pg.title.trim()});
+  return o;
+}
+
+function saveAll(){
+  if(isDemo){alert("Jsi v offline testovacím režimu. Pro uložení na web se připoj ke GitHubu.");return}
+  var bad=D.events.filter(function(e){return !e.date||!(e.title||"").trim()});
+  if(bad.length&&!confirm("Některé speciální akce nemají datum nebo název a nebudou uloženy. Pokračovat?"))return;
+
+  var data=clean(),contentToWrite="";
+  if($("#mode").value==="index"){
+    if(!rawFile){msg("Chybí načtený obsah index.html. Klikni znovu na Načíst data.","er");return}
+    var ext=extractCfgFromHtml(rawFile);
+    var newCfgBlock="var CFG="+JSON.stringify(data,null,2)+";";
+    contentToWrite=rawFile.slice(0,ext.start)+newCfgBlock+rawFile.slice(ext.end);
+  }else{
+    contentToWrite=JSON.stringify(data,null,2)+"\n";
+  }
+
+  var body={
+    message:"Admin: aktualizace obsahu ("+new Date().toLocaleString("cs-CZ")+")",
+    content:b64e(contentToWrite),
+    branch:$("#b").value.trim()
+  };
+  if(sha)body.sha=sha;
+
+  $("#save").disabled=true;$("#dirtyTxt").textContent="Ukládám na GitHub…";
+  api($("#f").value.trim(),{method:"PUT",body:JSON.stringify(body)}).then(function(res){
+    if(res.status===409||res.status===422)throw new Error("Soubor mezitím někdo upravil. Načti data znovu a změny zopakuj.");
+    if(!res.ok)throw new Error("Chyba zápisu ("+res.status+"). Zkontroluj oprávnění tokenu.");
+    return res.json();
+  }).then(function(j){
+    sha=j.content.sha;
+    if($("#mode").value==="index")rawFile=contentToWrite;
+    D=data;render();mark(false);
+    msg("Publikováno! GitHub Pages web aktualizuje zhruba do 30–60 sekund.","ok");
+    window.scrollTo({top:0,behavior:"smooth"});
+  }).catch(function(e){
+    $("#dirtyTxt").textContent="Chyba při ukládání";
+    msg(e.message,"er");
+    window.scrollTo({top:0,behavior:"smooth"});
+  }).then(function(){$("#save").disabled=false});
+}
+
+$("#save").onclick=saveAll;
+addEventListener("keydown",function(e){if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="s"){e.preventDefault();if(!$("#bar").hidden)saveAll()}});
+
+$("#copyCfg").onclick=function(){
+  navigator.clipboard.writeText($("#rawOut").value).then(function(){alert("CFG zkopírováno do schránky!")});
+};
+$("#dl").onclick=function(){
+  var a=document.createElement("a");
+  a.href=URL.createObjectURL(new Blob([JSON.stringify(clean(),null,2)],{type:"application/json"}));
+  a.download="data.json";a.click();
+};
+addEventListener("beforeunload",function(e){if(dirty){e.preventDefault();e.returnValue=""}});
 })();
 </script>
 </body>
