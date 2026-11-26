@@ -3,6 +3,7 @@
   "phoneShow": "776 498 104",
   "email": "krestane.kurim.mladez@gmail.com",
   "instagram": "https://www.instagram.com/krestanekurim.mladez/",
+  "facebook": "https://www.facebook.com/krestanekurim.mladez",
   "address": "Křesťané Kuřim\nLegionářská 281\n664 34 Kuřim",
   "mapQuery": "Legionářská 281, 664 34 Kuřim",
   "googleCalendarId": "",
@@ -14,6 +15,14 @@
     "title": "Páteční mládež",
     "note": "Hry, chvály, slovo z Bible, svačina",
     "place": "Křesťané Kuřim (Legionářská 281)"
+  },
+  "topics": {
+    "2026-11-27": "Přísloví 25:28 – Ovládání sebe sama",
+    "2026-12-04": "Jak číst Bibli, aby dávala smysl",
+    "2026-12-11": "Přátelství a tlak okolí",
+    "2027-01-08": "Nový začátek (2. Korintským 5:17)",
+    "2027-01-15": "Proč věřit, když kolem všechno padá",
+    "2027-01-22": "Otázky a odpovědi (Q&A večer)"
   },
   "weeklyCancelled": [
     "2026-12-25",
@@ -105,7 +114,6 @@
     "mapyCzUrl": "https://en.mapy.cz/s/dehuhucuso",
     "googleCalendarId": ""
   },
-  "facebook": "https://www.facebook.com/krestanekurim.mladez",
   "programSteps": [
     {
       "order": 1,
@@ -153,13 +161,5 @@
       "q": "Musím se předem hlásit?",
       "a": "Ne. Nejsou tu žádné registrace ani formuláře. Přijď v pátek v 17:00. Když chceš, můžeš se předem ozvat vedoucímu."
     }
-  ],
-  "topics": {
-    "2026-11-27": "Přísloví 25:28 – Ovládání sebe sama",
-    "2026-12-04": "Jak číst Bibli, aby dávala smysl",
-    "2026-12-11": "Přátelství a tlak okolí",
-    "2027-01-08": "Nový začátek (2. Korintským 5:17)",
-    "2027-01-15": "Proč věřit, když kolem všechno padá",
-    "2027-01-22": "Otázky a odpovědi (Q&A večer)"
-  }
+  ]
 }
