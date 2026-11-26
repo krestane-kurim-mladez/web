@@ -30,37 +30,6 @@
       "place": "Křesťané Kuřim, Legionářská 281",
       "note": "Delší večer, vánoční hry, cukroví, punč a povídání u stromečku.",
       "category": "special"
-    },
-    {
-      "id": "deskovky-2027-01",
-      "date": "2027-01-16",
-      "time": "14:00",
-      "end": "18:00",
-      "title": "Odpolední deskovky a turnaj",
-      "place": "Křesťané Kuřim, Legionářská 281",
-      "note": "Sobotní odpoledne plné deskových her, občerstvení zajištěno.",
-      "category": "hangout"
-    },
-    {
-      "id": "bowling-2027-02",
-      "date": "2027-02-05",
-      "time": "17:00",
-      "end": "19:30",
-      "title": "Společný bowling",
-      "place": "Sraz v 16:45 před sborovnou (Legionářská 281)",
-      "note": "Místo běžného programu jdeme hrát bowling. Dej vědět předem, ať zamluvíme dráhy.",
-      "category": "trip"
-    },
-    {
-      "id": "vikendovka-jaro-2027",
-      "date": "2027-04-16",
-      "endDate": "2027-04-18",
-      "time": "17:00",
-      "end": "14:00",
-      "title": "Jarní víkendovka mládeže",
-      "place": "Upřesníme včas",
-      "note": "Víkend mimo město plný her, chval, rozhovorů a pohody.",
-      "category": "camp"
     }
   ],
   "announcement": {
