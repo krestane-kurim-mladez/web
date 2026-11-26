@@ -1,111 +1,32 @@
 {
   "phone": "776498104",
-  "phoneShow": "776 498 104",
+  "phoneShow": "+420 776 498 104",
   "email": "krestane.kurim.mladez@gmail.com",
   "instagram": "https://www.instagram.com/krestanekurim.mladez/",
   "facebook": "https://www.facebook.com/profile.php?id=61589700260035",
   "address": "Křesťané Kuřim\nLegionářská 281\n664 34 Kuřim",
-  "mapQuery": "Legionářská 281, 664 34 Kuřim, Brno-Venkov",
+  "mapQuery": "Legionářská 281, 664 34 Kuřim",
+  "heroPhoto": "",
+  "heroPos": "center",
   "googleCalendarId": "",
   "weekly": {
     "on": true,
-    "dayOfWeek": 5,
     "time": "17:00",
-    "end": "19:00",
+    "end": "18:30",
     "title": "Páteční mládež",
-    "note": "Hry, chvály, slovo z Bible, svačina",
-    "place": "Křesťané Kuřim (Legionářská 281)"
+    "note": "Hry, chvály, slovo z Bible, svačina"
   },
-  "topics": {},
+  "topics": {
+    "2026-11-27": "Přísloví 25:28"
+  },
   "weeklyCancelled": [],
   "events": [],
-  "announcement": {
-    "on": false,
-    "type": "info",
-    "text": "Tento pátek od 17:00 | Tema - Přisloví 25:27 – nezapomeň přijít!",
-    "linkText": "Více v kalendáři",
-    "linkHref": "#kalendar"
-  },
-  "meta": {
-    "version": "2.0",
-    "lastUpdated": "2026-11-26",
-    "language": "cs"
-  },
-  "site": {
-    "name": "Mládež Křesťané Kuřim",
-    "tagline": "Hry. Chvály. Bible. Svačina.",
-    "ageRange": "13–18 let",
-    "heroPhoto": "",
-    "marqueeItems": [
-      "Hry",
-      "Chvály",
-      "Bible",
-      "Svačina",
-      "Zdarma",
-      "Pátek 17:00"
-    ]
-  },
-  "contact": {
-    "leaderName": "Josef Sponar",
-    "leaderRole": "Vedoucí mládeže",
-    "phone": "776498104",
-    "phoneShow": "776 498 104",
-    "email": "krestane.kurim.mladez@gmail.com",
-    "instagram": "https://www.instagram.com/krestanekurim.mladez/",
-    "facebook": "https://www.facebook.com/krestanekurim.mladez",
-    "churchWeb": "https://krestanekurim.cz/",
-    "address": "Křesťané Kuřim\nLegionářská 281\n664 34 Kuřim",
-    "addressNote": "Roh ulic Legionářská a Husova, hned u vlakového a autobusového nádraží. Vcházíme pravým vstupem.",
-    "mapQuery": "Legionářská 281, 664 34 Kuřim",
-    "mapyCzUrl": "https://en.mapy.cz/s/dehuhucuso",
-    "googleCalendarId": ""
-  },
-  "programSteps": [
-    {
-      "order": 1,
-      "title": "Hry",
-      "duration": "20 min",
-      "description": "Rozjezd večera. Hry, při kterých se zasmějeme a poznáme. Žádná výkonnost, jde o zábavu."
-    },
-    {
-      "order": 2,
-      "title": "Chvály",
-      "duration": "15 min",
-      "description": "Zpíváme křesťanské písně. Je to společný čas, kdy se zklidníme a obrátíme se k Bohu."
-    },
-    {
-      "order": 3,
-      "title": "Slovo z Bible",
-      "duration": "25 min",
-      "description": "Otevřeme biblický text a promluvíme si o tom, co říká do skutečného života: do školy, přátelství i rozhodování."
-    },
-    {
-      "order": 4,
-      "title": "Svačina, hry a pokec",
-      "duration": "30 min",
-      "description": "Svačina je na stole. Při dalších hrách platí: kdo nechce hrát, může v klidu sedět a kecat s ostatními."
-    }
-  ],
-  "faq": [
-    {
-      "q": "Musím věřit v Boha, abych mohl přijít?",
-      "a": "Ne. Jsi vítaný, ať jsi věřící, nebo jen zvědavý. Můžeš se ptát na cokoli a nikdo tě nebude tlačit k žádnému rozhodnutí."
-    },
-    {
-      "q": "Co když nikoho neznám?",
-      "a": "Většina z nás někdy přišla poprvé. Hry na začátku jsou právě proto, aby se led rychle rozpustil."
-    },
-    {
-      "q": "Musím hrát hry nebo zpívat?",
-      "a": "Nemusíš. Kdo nechce hrát, může v klidu sedět a povídat si s ostatními. Zpívat můžeš nahlas, potichu, nebo jen poslouchat."
-    },
-    {
-      "q": "Kolik to stojí?",
-      "a": "Nic. Vstup, program i svačina jsou zdarma."
-    },
-    {
-      "q": "Musím se předem hlásit?",
-      "a": "Ne. Nejsou tu žádné registrace ani formuláře. Přijď v pátek v 17:00. Když chceš, můžeš se předem ozvat vedoucímu."
-    }
-  ]
+  "pages": []
 }
+```[cite: 8]
+
+### Kam `data.json` vložit
+* V repozitáři na GitHubu otevři soubor `data.json` (nebo klikni na `Add file` → `Create new file` a pojmenuj ho `data.json`, pokud ho tam ještě nemáš), vlož kód výše a ulož.
+* V `admin.html` pak při přihlášení můžeš nechat režim **Přímo do index.html (var CFG)** (doporučené, když se upravuje `index.html`) nebo přepnout na **Do externího data.json** (cesta `data.json`).
+
+Mám ti teď vypsat upravený `index.html` na míru tvému souboru?
