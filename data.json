@@ -1,4 +1,76 @@
 {
+  "phone": "776498104",
+  "phoneShow": "776 498 104",
+  "email": "krestane.kurim.mladez@gmail.com",
+  "instagram": "https://www.instagram.com/krestanekurim.mladez/",
+  "address": "Křesťané Kuřim\nLegionářská 281\n664 34 Kuřim",
+  "mapQuery": "Legionářská 281, 664 34 Kuřim",
+  "googleCalendarId": "",
+  "weekly": {
+    "on": true,
+    "dayOfWeek": 5,
+    "time": "17:00",
+    "end": "18:30",
+    "title": "Páteční mládež",
+    "note": "Hry, chvály, slovo z Bible, svačina",
+    "place": "Křesťané Kuřim (Legionářská 281)"
+  },
+  "weeklyCancelled": [
+    "2026-12-25",
+    "2027-01-01",
+    "2027-02-19",
+    "2027-03-26"
+  ],
+  "events": [
+    {
+      "id": "vanoce-2026",
+      "date": "2026-12-18",
+      "time": "17:00",
+      "end": "20:00",
+      "title": "Vánoční speciál na mládeži",
+      "place": "Křesťané Kuřim, Legionářská 281",
+      "note": "Delší večer, vánoční hry, cukroví, punč a povídání u stromečku.",
+      "category": "special"
+    },
+    {
+      "id": "deskovky-2027-01",
+      "date": "2027-01-16",
+      "time": "14:00",
+      "end": "18:00",
+      "title": "Odpolední deskovky a turnaj",
+      "place": "Křesťané Kuřim, Legionářská 281",
+      "note": "Sobotní odpoledne plné deskových her, občerstvení zajištěno.",
+      "category": "hangout"
+    },
+    {
+      "id": "bowling-2027-02",
+      "date": "2027-02-05",
+      "time": "17:00",
+      "end": "19:30",
+      "title": "Společný bowling",
+      "place": "Sraz v 16:45 před sborovnou (Legionářská 281)",
+      "note": "Místo běžného programu jdeme hrát bowling. Dej vědět předem, ať zamluvíme dráhy.",
+      "category": "trip"
+    },
+    {
+      "id": "vikendovka-jaro-2027",
+      "date": "2027-04-16",
+      "endDate": "2027-04-18",
+      "time": "17:00",
+      "end": "14:00",
+      "title": "Jarní víkendovka mládeže",
+      "place": "Upřesníme včas",
+      "note": "Víkend mimo město plný her, chval, rozhovorů a pohody.",
+      "category": "camp"
+    }
+  ],
+  "announcement": {
+    "on": false,
+    "type": "info",
+    "text": "Tento pátek od 17:00 | Tema - Přisloví 25:27 – nezapomeň přijít!",
+    "linkText": "Více v kalendáři",
+    "linkHref": "#kalendar"
+  },
   "meta": {
     "version": "2.0",
     "lastUpdated": "2026-11-26",
@@ -33,30 +105,7 @@
     "mapyCzUrl": "https://en.mapy.cz/s/dehuhucuso",
     "googleCalendarId": ""
   },
-  "phone": "776498104",
-  "phoneShow": "776 498 104",
-  "email": "krestane.kurim.mladez@gmail.com",
-  "instagram": "https://www.instagram.com/krestanekurim.mladez/",
   "facebook": "https://www.facebook.com/krestanekurim.mladez",
-  "address": "Křesťané Kuřim\nLegionářská 281\n664 34 Kuřim",
-  "mapQuery": "Legionářská 281, 664 34 Kuřim",
-  "googleCalendarId": "",
-  "announcement": {
-    "on": false,
-    "type": "info",
-    "text": "Tento pátek od 17:00 – nezapomeň přijít!",
-    "linkText": "Více v kalendáři",
-    "linkHref": "#kalendar"
-  },
-  "weekly": {
-    "on": true,
-    "dayOfWeek": 5,
-    "time": "17:00",
-    "end": "18:30",
-    "title": "Páteční mládež",
-    "note": "Hry, chvály, slovo z Bible, svačina",
-    "place": "Křesťané Kuřim (Legionářská 281)"
-  },
   "programSteps": [
     {
       "order": 1,
@@ -112,54 +161,5 @@
     "2027-01-08": "Nový začátek (2. Korintským 5:17)",
     "2027-01-15": "Proč věřit, když kolem všechno padá",
     "2027-01-22": "Otázky a odpovědi (Q&A večer)"
-  },
-  "weeklyCancelled": [
-    "2026-12-25",
-    "2027-01-01",
-    "2027-02-19",
-    "2027-03-26"
-  ],
-  "events": [
-    {
-      "id": "vanoce-2026",
-      "date": "2026-12-18",
-      "time": "17:00",
-      "end": "20:00",
-      "title": "Vánoční speciál na mládeži",
-      "place": "Křesťané Kuřim, Legionářská 281",
-      "note": "Delší večer, vánoční hry, cukroví, punč a povídání u stromečku.",
-      "category": "special"
-    },
-    {
-      "id": "deskovky-2027-01",
-      "date": "2027-01-16",
-      "time": "14:00",
-      "end": "18:00",
-      "title": "Odpolední deskovky a turnaj",
-      "place": "Křesťané Kuřim, Legionářská 281",
-      "note": "Sobotní odpoledne plné deskových her, občerstvení zajištěno.",
-      "category": "hangout"
-    },
-    {
-      "id": "bowling-2027-02",
-      "date": "2027-02-05",
-      "time": "17:00",
-      "end": "19:30",
-      "title": "Společný bowling",
-      "place": "Sraz v 16:45 před sborovnou (Legionářská 281)",
-      "note": "Místo běžného programu jdeme hrát bowling. Dej vědět předem, ať zamluvíme dráhy.",
-      "category": "trip"
-    },
-    {
-      "id": "vikendovka-jaro-2027",
-      "date": "2027-04-16",
-      "endDate": "2027-04-18",
-      "time": "17:00",
-      "end": "14:00",
-      "title": "Jarní víkendovka mládeže",
-      "place": "Upřesníme včas",
-      "note": "Víkend mimo město plný her, chval, rozhovorů a pohody.",
-      "category": "camp"
-    }
-  ]
+  }
 }
