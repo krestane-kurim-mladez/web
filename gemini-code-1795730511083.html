@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Tryhard Admin · Mládež Křesťané Kuřim</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2216%22%20fill%3D%22%23323663%22/%3E%3Cg%20fill%3D%22%234eb5f1%22%3E%3Crect%20x%3D%2235%22%20y%3D%2210%22%20width%3D%228%22%20height%3D%2244%22%20rx%3D%222%22/%3E%3Crect%20x%3D%2225%22%20y%3D%2220%22%20width%3D%2228%22%20height%3D%228%22%20rx%3D%222%22/%3E%3C/g%3E%3Cg%20fill%3D%22%23fff%22%3E%3Crect%20x%3D%2221%22%20y%3D%2214%22%20width%3D%228%22%20height%3D%2244%22%20rx%3D%222%22/%3E%3Crect%20x%3D%2211%22%20y%3D%2226%22%20width%3D%2228%22%20height%3D%228%22%20rx%3D%222%22/%3E%3C/g%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pri:#323663;--pri-d:#06023c;--acc:#4eb5f1;--acc-d:#062f5d;--sun:#FFC83D;--mint:#5EE0B8;--pink:#FF9EC4;--coral:#FF6B5E;
+  --sand:#F8F7F3;--sand2:#ECEAE4;--bg:#fff;--page:#E9E7E0;--card:#fff;--text:#3A3C4F;--muted:#62657A;--line:#ECEAE4;--hc:#323663;
+  --btn:#323663;--btn-fg:#fff;--btn-sh:#06023c;--btn-h:#41468a;
+  --head:'Roboto Condensed','Roboto',system-ui,sans-serif;--body:'Roboto',system-ui,sans-serif;--r:14px;color-scheme:light
+}
+:root[data-theme=dark]{
+  --sand:#1A1D3E;--sand2:#10122A;--bg:#151832;--page:#0D0F22;--card:#1D2147;--text:#E8EAFB;--muted:#A9AFD6;--line:#2C3166;--hc:#E8EAFB;
+  --btn:#4eb5f1;--btn-fg:#06023c;--btn-sh:#062f5d;--btn-h:#7cc8f5;color-scheme:dark
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --sand:#1A1D3E;--sand2:#10122A;--bg:#151832;--page:#0D0F22;--card:#1D2147;--text:#E8EAFB;--muted:#A9AFD6;--line:#2C3166;--hc:#E8EAFB;
+  --btn:#4eb5f1;--btn-fg:#06023c;--btn-sh:#062f5d;--btn-h:#7cc8f5;color-scheme:dark
+}}
+*{box-sizing:border-box;margin:0}
+body{font:15px/1.6 var(--body);background:var(--page);background-image:radial-gradient(rgba(50,54,99,.08) 1px,transparent 1px);background-size:14px 14px;color:var(--text);padding-bottom:90px}
+.shell{max-width:1020px;margin:0 auto;background:var(--bg);min-height:100vh;box-shadow:0 0 40px rgba(50,54,99,.14)}
+header{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:linear-gradient(90deg,var(--pri),var(--acc),var(--sun))}
+.wrap{width:min(940px,100% - 2rem);margin-inline:auto}
+header .wrap{display:flex;align-items:center;gap:.8rem;height:70px}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--hc);font:700 1.25rem var(--head)}
+.brand svg{width:40px;height:40px}.brand small{display:block;font:500 .75rem var(--body);color:var(--muted)}
+.grow{margin-left:auto}
+.badge{background:var(--sun);color:#2b2100;font:700 .75rem var(--head);padding:.2rem .6rem;border-radius:999px;text-transform:uppercase;letter-spacing:.04em}
+.ib{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer;font-size:1.05rem;display:grid;place-items:center}
+.ib:hover{background:var(--sand)}
+
+main{padding:1.6rem 0}
+.card{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--cc,var(--acc));border-radius:var(--r);padding:1.4rem;margin-bottom:1.2rem;box-shadow:0 6px 18px rgba(50,54,99,.07)}
+.card.c-sun{--cc:var(--sun)}.card.c-mint{--cc:var(--mint)}.card.c-pink{--cc:var(--pink)}.card.c-coral{--cc:var(--coral)}
+h2{font:700 1.35rem var(--head);color:var(--hc);margin-bottom:.7rem;display:flex;align-items:center;justify-content:space-between;gap:.5rem}
+h3{font:700 1.05rem var(--head);color:var(--hc);margin:1rem 0 .4rem}
+label{display:block;font-size:.82rem;font-weight:700;color:var(--muted);margin:.75rem 0 .25rem;text-transform:uppercase;letter-spacing:.03em}
+input,textarea,select{width:100%;font:inherit;padding:.65rem .85rem;border-radius:10px;border:1.5px solid var(--line);background:var(--sand);color:var(--text);transition:border-color .15s,background .15s}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--acc);background:var(--card)}
+input[type=checkbox]{width:18px;height:18px;margin-right:.55rem;accent-color:var(--acc);cursor:pointer}
+.chk{display:flex;align-items:center;font-size:.95rem;font-weight:500;text-transform:none;letter-spacing:0;color:var(--text);margin-top:.8rem;cursor:pointer}
+textarea{min-height:84px;resize:vertical}
+
+.g2{display:grid;gap:.9rem;grid-template-columns:1fr 1fr}
+.g3{display:grid;gap:.9rem;grid-template-columns:1fr 1fr 1fr}
+.g-topic{display:grid;gap:.6rem;grid-template-columns:165px 1fr auto;align-items:end}
+@media(max-width:680px){.g2,.g3,.g-topic{grid-template-columns:1fr}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;font:700 .95rem var(--head);padding:.65rem 1.25rem;border-radius:11px;border:2px solid var(--btn);background:var(--btn);color:var(--btn-fg);text-decoration:none;cursor:pointer;box-shadow:0 3px 0 var(--btn-sh);transition:transform .12s,box-shadow .12s,background .12s}
+.btn:hover:not(:disabled){background:var(--btn-h);border-color:var(--btn-h);transform:translateY(-1px);box-shadow:0 4px 0 var(--btn-sh)}
+.btn:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 var(--btn-sh)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn.acc{--btn:var(--acc);--btn-fg:#06023c;--btn-sh:var(--acc-d);--btn-h:#7cc8f5}
+.btn.sun{--btn:var(--sun);--btn-fg:#2b2100;--btn-sh:#9c7400;--btn-h:#ffd666}
+.btn.ghost{background:transparent;color:var(--text);border-color:var(--line);box-shadow:none}
+.btn.ghost:hover:not(:disabled){background:var(--sand);border-color:var(--muted)}
+.btn.danger{background:transparent;color:var(--coral);border-color:var(--coral);box-shadow:none;padding:.4rem .8rem;font-size:.85rem}
+.btn.danger:hover{background:var(--coral);color:#fff}
+.row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin-top:1rem}
+
+/* Seznamy položek */
+.item-row{display:flex;align-items:center;justify-content:space-between;gap:.8rem;padding:.65rem .9rem;background:var(--sand);border:1px solid var(--line);border-radius:10px;margin-top:.5rem}
+.item-row b{font-family:var(--head);color:var(--hc);min-width:105px;display:inline-block}
+.ev-box{border:1.5px solid var(--line);border-left:4px solid var(--coral);border-radius:12px;padding:1rem;margin-top:.9rem;background:var(--sand)}
+.ev-top{display:flex;justify-content:space-between;align-items:center;gap:.5rem;margin-bottom:.3rem}
+
+/* Live Preview karta (jako v hero sekci) */
+.preview{background:linear-gradient(140deg,#4eb5f1,#323663 60%,#06023c);color:#fff;border-radius:var(--r);padding:1.2rem 1.4rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;margin-top:.6rem}
+.preview b{font:700 1.2rem var(--head);display:block}
+.preview span{color:#E6ECF6;font-size:.92rem}
+.preview .tag{background:var(--sun);color:#2b2100;font:700 .8rem var(--head);padding:.25rem .7rem;border-radius:999px}
+
+/* Taby v editoru */
+.tabs{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.2rem;border-bottom:2px solid var(--line);padding-bottom:.6rem}
+.tab{font:700 .95rem var(--head);padding:.5rem 1rem;border-radius:9px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.tab:hover{background:var(--sand);color:var(--hc)}
+.tab.on{background:var(--pri);color:#fff}
+:root[data-theme=dark] .tab.on{background:var(--acc);color:#06023c}
+.pane{display:none}.pane.on{display:block}
+
+/* Hlášky a spodní lišta */
+.msg{padding:.85rem 1rem;border-radius:10px;margin-top:.9rem;font-size:.92rem;font-weight:500}
+.msg.ok{background:#E3F3E9;color:#1d5a37;border-left:4px solid #2E7D4F}
+.msg.er{background:#FBE5E1;color:#8a2a1c;border-left:4px solid var(--coral)}
+.msg.in{background:#FFF3D6;color:#6a4b00;border-left:4px solid var(--sun)}
+:root[data-theme=dark] .msg.ok{background:#173a28;color:#9be0b8}
+:root[data-theme=dark] .msg.er{background:#3d1c17;color:#ffb3a6}
+:root[data-theme=dark] .msg.in{background:#3d3210;color:#ffe08a}
+
+.bar{position:fixed;left:0;right:0;bottom:0;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(10px);border-top:2px solid var(--line);padding:.75rem 0;z-index:50}
+.bar .wrap{display:flex;gap:.7rem;align-items:center;flex-wrap:wrap}
+.status-dot{width:10px;height:10px;border-radius:50%;background:#2E7D4F;display:inline-block}
+.status-dot.dirty{background:var(--coral);box-shadow:0 0 0 3px rgba(255,107,94,.25)}
+#dirtyTxt{font-size:.88rem;font-weight:500;color:var(--muted)}
+details summary{cursor:pointer;font:700 .95rem var(--head);color:var(--hc);margin-top:.9rem}
+details ol{padding-left:1.3rem;margin-top:.5rem;color:var(--muted);font-size:.9rem}
+code{background:var(--sand);padding:.1rem .4rem;border-radius:5px;font-family:monospace;font-size:.88em}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="shell">
+<header><div class="wrap">
+  <a class="brand" href="index.html" target="_blank" rel="noopener">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#323663"/><g fill="#4eb5f1"><rect x="35" y="10" width="8" height="44" rx="2"/><rect x="25" y="20" width="28" height="8" rx="2"/></g><g fill="#fff"><rect x="21" y="14" width="8" height="44" rx="2"/><rect x="11" y="26" width="28" height="8" rx="2"/></g><path d="M12 54h14" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".5"/></svg>
+    <span>Tryhard Admin<small>Mládež Křesťané Kuřim</small></span>
+  </a>
+  <span class="badge">CFG Sync</span>
+  <span class="grow"></span>
+  <button class="ib" id="theme" type="button" title="Přepnout světlý/tmavý režim">🌓</button>
+  <a class="btn ghost" href="index.html" target="_blank" rel="noopener" style="padding:.45rem .9rem;font-size:.88rem">Web ↗</a>
+</div></header>
+
+<main class="wrap">
+
+<!-- PŘIPOJENÍ KE GITHUBU -->
+<section class="card" id="conn">
+  <h2><span>1. Připojení ke GitHubu</span></h2>
+  <div class="g2">
+    <div><label for="o">Uživatel / organizace (owner)</label><input id="o" placeholder="např. krestanekurim" autocomplete="off"></div>
+    <div><label for="r">Název repozitáře</label><input id="r" placeholder="např. mladez-web" autocomplete="off"></div>
+  </div>
+  <div class="g3">
+    <div><label for="b">Větev (branch)</label><input id="b" value="main"></div>
+    <div>
+      <label for="mode">Kam ukládat změny</label>
+      <select id="mode">
+        <option value="index">Přímo do index.html (var CFG)</option>
+        <option value="json">Do externího data.json</option>
+      </select>
+    </div>
+    <div><label for="f">Cesta k souboru</label><input id="f" value="index.html"></div>
+  </div>
+  <label for="t">GitHub Personal Access Token</label>
+  <input id="t" type="password" placeholder="github_pat_…" autocomplete="off">
+  <label class="chk"><input type="checkbox" id="rem">Zapamatovat přihlášení v tomto prohlížeči</label>
+
+  <div class="row">
+    <button class="btn acc" id="go" type="button">Načíst data z GitHubu</button>
+    <button class="btn ghost" id="demo" type="button">Testovací režim (offline)</button>
+    <button class="btn danger" id="out" type="button" hidden>Odhlásit a smazat token</button>
+  </div>
+  <div id="cm"></div>
+
+  <details><summary>Návod: Jak nastavit GitHub token (jednorázově)</summary><ol>
+    <li>Otevři GitHub → <b>Settings → Developer settings → Personal access tokens → Fine-grained tokens</b>.</li>
+    <li>Klikni na <b>Generate new token</b>, zadej název (např. <code>Mladez Admin</code>) a platnost.</li>
+    <li>V <b>Repository access</b> vyber <b>Only select repositories</b> a označ repozitář webu.</li>
+    <li>V <b>Permissions → Repository permissions</b> nastav <b>Contents: Read and write</b>.</li>
+    <li>Vygeneruj token, vlož ho sem a klikni na <b>Načíst data z GitHubu</b>.</li>
+  </ol></details>
+</section>
+
+<!-- HLAVNÍ EDITOR -->
+<div id="editor" hidden>
+
+  <!-- ŽIVÝ NÁHLED -->
+  <section class="card c-sun">
+    <h2><span>Živý náhled odpočtu na webu</span><span style="font-size:.8rem;font-weight:400;color:var(--muted)">Aktualizuje se okamžitě</span></h2>
+    <div class="preview">
+      <div>
+        <b id="pvTitle">Páteční mládež</b>
+        <span id="pvSub">Pátek 17:00</span>
+      </div>
+      <span class="tag" id="pvBadge">Nejbližší akce</span>
+    </div>
+  </section>
+
+  <!-- NAVIGACE SEKCÍ -->
+  <nav class="tabs" role="tablist">
+    <button class="tab on" data-tab="p-patek" type="button">📅 Pátky &amp; Témata</button>
+    <button class="tab" data-tab="p-akce" type="button">🔥 Speciální akce</button>
+    <button class="tab" data-tab="p-kontakt" type="button">📞 Kontakty &amp; Mapa</button>
+    <button class="tab" data-tab="p-raw" type="button">⚙️ Pokročilé / JSON</button>
+  </nav>
+
+  <!-- TAB 1: PÁTKY A TÉMATA -->
+  <div class="pane on" id="p-patek">
+    <section class="card c-mint">
+      <h2>Pravidelná páteční mládež</h2>
+      <label class="chk"><input type="checkbox" data-k="weekly.on">Automaticky generovat každý pátek v kalendáři</label>
+      <div class="g3">
+        <div><label>Začátek</label><input type="time" data-k="weekly.time"></div>
+        <div><label>Konec</label><input type="time" data-k="weekly.end"></div>
+        <div><label>Název v kalendáři</label><input data-k="weekly.title"></div>
+      </div>
+      <label>Krátký popis (note)</label>
+      <input data-k="weekly.note" placeholder="Hry, chvály, slovo z Bible, svačina">
+    </section>
+
+    <section class="card">
+      <h2>Témata na jednotlivé pátky</h2>
+      <p style="color:var(--muted);font-size:.9rem">Zobrazí se v odpočtu na úvodní stránce i po rozkliknutí pátku v kalendáři (např. biblický text nebo téma večera).</p>
+      <div class="g-topic" style="margin-top:.6rem">
+        <div><label for="td">Datum pátku</label><input type="date" id="td"></div>
+        <div><label for="tt">Téma (např. Přísloví 25:28)</label><input id="tt" placeholder="Přísloví 25:28 – Ovládání sebe sama"></div>
+        <div style="display:flex;gap:.4rem">
+          <button class="btn ghost" id="tNextFri" type="button" title="Vyplní datum nejbližšího pátku">Nejbližší pátek</button>
+          <button class="btn acc" id="tAdd" type="button">Uložit téma</button>
+        </div>
+      </div>
+      <div id="topicsList" style="margin-top:1rem"></div>
+    </section>
+
+    <section class="card c-coral">
+      <h2>Zrušené pátky (kdy mládež není)</h2>
+      <p style="color:var(--muted);font-size:.9rem">Vybrané pátky zmizí z kalendáře i z odpočtu (např. prázdniny, státní svátek, tábor).</p>
+      <div class="row">
+        <input type="date" id="cd" style="width:auto">
+        <button class="btn" id="ca" type="button">Přidat zrušený pátek</button>
+      </div>
+      <div id="canc" style="margin-top:.8rem"></div>
+    </section>
+  </div>
+
+  <!-- TAB 2: SPECIÁLNÍ AKCE -->
+  <div class="pane" id="p-akce">
+    <section class="card c-coral">
+      <h2><span>Speciální akce</span><button class="btn acc" id="ea" type="button">+ Přidat akci</button></h2>
+      <p style="color:var(--muted);font-size:.9rem">Výlety, víkendovky, vánoční večer nebo společné akce. V kalendáři se zvýrazní červenou tečkou.</p>
+      <div id="evs"></div>
+    </section>
+  </div>
+
+  <!-- TAB 3: KONTAKTY A MAPA -->
+  <div class="pane" id="p-kontakt">
+    <section class="card c-pink">
+      <h2>Kontaktní údaje a sítě</h2>
+      <div class="g2">
+        <div><label>Telefon (9 číslic bez +420)</label><input data-k="phone" inputmode="numeric" placeholder="776498104"></div>
+        <div><label>Telefon (formát zobrazení)</label><input data-k="phoneShow" placeholder="776 498 104"></div>
+      </div>
+      <label>Kontaktní e-mail</label>
+      <input data-k="email" type="email" placeholder="krestane.kurim.mladez@gmail.com">
+      <div class="g2">
+        <div><label>Instagram (celá URL)</label><input data-k="instagram" placeholder="https://www.instagram.com/krestanekurim.mladez/"></div>
+        <div><label>Facebook (celá URL)</label><input data-k="facebook" placeholder="https://www.facebook.com/krestanekurim.mladez"></div>
+      </div>
+      <div class="g2">
+        <div><label>Adresa (řádky se zalomí na webu)</label><textarea data-k="address"></textarea></div>
+        <div>
+          <label>Adresa pro vyhledávání v Mapách</label>
+          <input data-k="mapQuery" placeholder="Legionářská 281, 664 34 Kuřim">
+          <label>Google Kalendář ID (nepovinné)</label>
+          <input data-k="googleCalendarId" placeholder="abc123@group.calendar.google.com">
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- TAB 4: POKROČILÉ / RAW -->
+  <div class="pane" id="p-raw">
+    <section class="card">
+      <h2>Výsledný objekt CFG (jen pro kontrolu / kopírování)</h2>
+      <p style="color:var(--muted);font-size:.9rem;margin-bottom:.6rem">Tato data se uloží do <code>index.html</code> (nebo <code>data.json</code>). Můžeš si je zkopírovat i ručně.</p>
+      <textarea id="rawOut" readonly style="font-family:monospace;font-size:.85rem;min-height:260px"></textarea>
+      <div class="row">
+        <button class="btn ghost" id="copyCfg" type="button">Zkopírovat CFG</button>
+        <button class="btn ghost" id="dl" type="button">Stáhnout data.json</button>
+      </div>
+    </section>
+  </div>
+
+</div>
+</main>
+</div>
+
+<!-- SPODNÍ ULOŽIT LIŠTA -->
+<div class="bar" id="bar" hidden>
+  <div class="wrap">
+    <button class="btn acc" id="save" type="button">Uložit a publikovat (Ctrl+S)</button>
+    <span class="status-dot" id="dot"></span>
+    <span id="dirtyTxt">Vše je uloženo</span>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+var $=function(s){return document.querySelector(s)},$$=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
+var D=null,sha=null,rawFile=null,dirty=false,isDemo=false,LS="mladez-admin-v2";
+
+var DEF={
+  phone:"776498104",phoneShow:"776 498 104",
+  email:"krestane.kurim.mladez@gmail.com",
+  instagram:"https://www.instagram.com/krestanekurim.mladez/",
+  facebook:"https://www.facebook.com/krestanekurim.mladez",
+  address:"Křesťané Kuřim\nLegionářská 281\n664 34 Kuřim",
+  mapQuery:"Legionářská 281, 664 34 Kuřim",
+  googleCalendarId:"",
+  weekly:{on:true,time:"17:00",end:"18:30",title:"Páteční mládež",note:"Hry, chvály, slovo z Bible, svačina"},
+  topics:{},
+  weeklyCancelled:[],
+  events:[]
+};
+
+var esc=function(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})};
+var b64e=function(s){return btoa(unescape(encodeURIComponent(s)))},b64d=function(s){return decodeURIComponent(escape(atob(s.replace(/\s/g,""))))};
+function msg(t,c){$("#cm").innerHTML="<div class='msg "+c+"'>"+esc(t)+"</div>"}
+function mark(v){
+  dirty=v;
+  $("#dot").classList.toggle("dirty",v);
+  $("#dirtyTxt").textContent=v?"Neuložené změny – nezapomeň publikovat":(isDemo?"Testovací režim (offline)":"Vše je uloženo na GitHubu");
+  updatePreview();
+  if($("#rawOut"))$("#rawOut").value="var CFG="+JSON.stringify(clean(),null,2)+";";
+}
+function get(p){return p.split(".").reduce(function(o,k){return o&&o[k]},D)}
+function set(p,v){var a=p.split("."),o=D;while(a.length>1)o=o[a.shift()];o[a[0]]=v}
+
+/* Téma */
+var root=document.documentElement;
+try{var svT=localStorage.getItem("theme");if(svT)root.setAttribute("data-theme",svT)}catch(e){}
+function isDark(){var t=root.getAttribute("data-theme");return t==="dark"||(!t&&matchMedia("(prefers-color-scheme:dark)").matches)}
+function themeIcon(){$("#theme").textContent=isDark()?"☀️":"🌙"}
+$("#theme").onclick=function(){var n=isDark()?"light":"dark";root.setAttribute("data-theme",n);try{localStorage.setItem("theme",n)}catch(e){}themeIcon()};
+themeIcon();
+
+/* Taby */
+$$(".tab").forEach(function(b){
+  b.onclick=function(){
+    $$(".tab").forEach(function(x){x.classList.remove("on")});
+    $$(".pane").forEach(function(x){x.classList.remove("on")});
+    b.classList.add("on");
+    $("#"+b.dataset.tab).classList.add("on");
+  };
+});
+
+/* Přepnutí režimu souboru */
+$("#mode").onchange=function(){
+  $("#f").value=this.value==="index"?"index.html":"data.json";
+};
+
+/* Načtení uložených přihlašovacích údajů */
+try{
+  var sv=JSON.parse(localStorage.getItem(LS)||"{}");
+  ["o","r","b","f","mode"].forEach(function(k){if(sv[k])$("#"+k).value=sv[k]});
+  if(sv.t){$("#t").value=sv.t;$("#rem").checked=true}
+}catch(e){}
+
+function api(path,opt){
+  var o=$("#o").value.trim(),r=$("#r").value.trim();
+  opt=opt||{};opt.headers={"Accept":"application/vnd.github+json","Authorization":"Bearer "+$("#t").value.trim(),"Content-Type":"application/json"};
+  return fetch("https://api.github.com/repos/"+encodeURIComponent(o)+"/"+encodeURIComponent(r)+"/contents/"+path.split("/").map(encodeURIComponent).join("/")+(opt.q||""),opt);
+}
+function norm(){
+  var o=$("#o").value.trim(),r=$("#r").value.trim(),m;
+  if(m=r.match(/^https?:\/\/([^.\/]+)\.github\.io\/([^\/?#]+)/i)){o=m[1];r=m[2]}
+  else if(m=r.match(/^https?:\/\/github\.com\/([^\/]+)\/([^\/?#]+)/i)){o=m[1];r=m[2].replace(/\.git$/,"")}
+  else if(r.indexOf("/")>0){var p=r.split("/");o=p[0];r=p[1]}
+  $("#o").value=o;$("#r").value=r;
+}
+
+/* Extrakce var CFG={...}; z index.html */
+function extractCfgFromHtml(html){
+  var idx=html.indexOf("var CFG=");
+  if(idx<0)throw new Error("V souboru index.html nebyl nalezen blok 'var CFG={...};'.");
+  var start=html.indexOf("{",idx),depth=0,inStr=false,escCh=false,end=-1;
+  for(var i=start;i<html.length;i++){
+    var ch=html[i];
+    if(inStr){
+      if(escCh)escCh=false;
+      else if(ch==="\\")escCh=true;
+      else if(ch===inStr)inStr=false;
+    }else{
+      if(ch==='"'||ch==="'")inStr=ch;
+      else if(ch==="{")depth++;
+      else if(ch==="}"){depth--;if(depth===0){end=i;break}}
+    }
+  }
+  if(end<0)throw new Error("Nepodařilo se přečíst konec objektu CFG v index.html.");
+  var objStr=html.slice(start,end+1);
+  // Bezpečné vyhodnocení JS objektového literálu CFG
+  var parsed=(new Function("return ("+objStr+")"))();
+  return {cfg:parsed,start:idx,end:html[end+1]===";"?end+2:end+1};
+}
+
+function load(){
+  norm();
+  var o=$("#o").value.trim(),r=$("#r").value.trim(),t=$("#t").value.trim(),f=$("#f").value.trim(),b=$("#b").value.trim();
+  if(!o||!r||!t){msg("Vyplň uživatele, repozitář a token.","er");return}
+  $("#go").disabled=true;msg("Připojuji se ke GitHubu…","in");
+  api(f,{q:"?ref="+encodeURIComponent(b)}).then(function(res){
+    if(res.status===401||res.status===403)throw new Error("Token nemá oprávnění (401/403). Zkontroluj token a právo Contents: Read and write.");
+    if(res.status===404){
+      if($("#mode").value==="index")throw new Error("Soubor "+f+" nebyl v repozitáři "+o+"/"+r+" (větev "+b+") nalezen.");
+      return {nf:true};
+    }
+    if(!res.ok)throw new Error("GitHub vrátil chybu "+res.status+".");
+    return res.json();
+  }).then(function(j){
+    isDemo=false;
+    if(j.nf){
+      D=JSON.parse(JSON.stringify(DEF));sha=null;rawFile=null;
+      msg("Soubor "+f+" zatím neexistuje – po uložení se vytvoří.","in");
+    }else{
+      sha=j.sha;
+      rawFile=b64d(j.content);
+      if($("#mode").value==="index"){
+        var ext=extractCfgFromHtml(rawFile);
+        D=Object.assign(JSON.parse(JSON.stringify(DEF)),ext.cfg);
+      }else{
+        D=Object.assign(JSON.parse(JSON.stringify(DEF)),JSON.parse(rawFile));
+      }
+      msg("Připojeno! Data z "+f+" byla úspěšně načtena.","ok");
+    }
+    D.topics=D.topics||{};
+    D.weeklyCancelled=D.weeklyCancelled||[];
+    D.events=D.events||[];
+    try{localStorage.setItem(LS,JSON.stringify({o:o,r:r,b:b,f:f,mode:$("#mode").value,t:$("#rem").checked?t:""}))}catch(e){}
+    $("#editor").hidden=false;$("#bar").hidden=false;$("#out").hidden=false;
+    render();mark(false);
+  }).catch(function(e){msg(e.message||"Chyba připojení.","er")}).then(function(){$("#go").disabled=false});
+}
+$("#go").onclick=load;
+
+$("#demo").onclick=function(){
+  isDemo=true;sha=null;rawFile=null;
+  D=JSON.parse(JSON.stringify(DEF));
+  D.topics={"2026-11-27":"Přísloví 25:28"};
+  $("#editor").hidden=false;$("#bar").hidden=false;
+  render();mark(false);
+  msg("Běžíš v offline testovacím režimu. Změny si můžeš vyzkoušet a stáhnout jako JSON.","in");
+};
+
+$("#out").onclick=function(){
+  try{localStorage.removeItem(LS)}catch(e){}
+  $("#t").value="";D=null;sha=null;rawFile=null;
+  $("#editor").hidden=true;$("#bar").hidden=true;$("#out").hidden=true;
+  msg("Odhlášeno a token smazán z prohlížeče.","ok");
+};
+
+/* Vykreslení formulářů */
+function render(){
+  $$("[data-k]").forEach(function(el){
+    var v=get(el.dataset.k);
+    if(el.type==="checkbox")el.checked=!!v;
+    else el.value=v==null?"":v;
+  });
+  renderTopics();renderCanc();renderEv();updatePreview();
+}
+
+document.addEventListener("input",function(e){
+  var el=e.target;if(!D||!el.dataset)return;
+  if(el.dataset.k){
+    set(el.dataset.k,el.type==="checkbox"?el.checked:el.value);
+    mark(true);
+  }else if(el.dataset.i!==undefined){
+    D.events[+el.dataset.i][el.dataset.f]=el.value;
+    mark(true);
+  }
+});
+
+/* Témata pátků */
+function nextFridayStr(){
+  var d=new Date();
+  var diff=(5-d.getDay()+7)%7;
+  if(diff===0&&d.getHours()>=19)diff=7;
+  d.setDate(d.getDate()+diff);
+  return d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2);
+}
+$("#td").value=nextFridayStr();
+$("#tNextFri").onclick=function(){$("#td").value=nextFridayStr();$("#tt").focus()};
+
+function renderTopics(){
+  var box=$("#topicsList"),keys=Object.keys(D.topics||{}).sort();
+  if(!keys.length){box.innerHTML="<p style='color:var(--muted);font-size:.9rem'>Zatím nejsou zadaná žádná témata.</p>";return}
+  box.innerHTML="";
+  keys.forEach(function(k){
+    var p=k.split("-"),row=document.createElement("div");
+    row.className="item-row";
+    row.innerHTML="<div><b>"+esc(p[2]+". "+p[1]+". "+p[0])+"</b><span>"+esc(D.topics[k])+"</span></div><button class='btn danger' type='button'>Smazat</button>";
+    row.querySelector("button").onclick=function(){delete D.topics[k];mark(true);renderTopics()};
+    box.appendChild(row);
+  });
+}
+$("#tAdd").onclick=function(){
+  var d=$("#td").value,t=$("#tt").value.trim();
+  if(!d||!t){alert("Vyplň datum i název tématu.");return}
+  D.topics[d]=t;
+  $("#tt").value="";
+  mark(true);renderTopics();
+};
+
+/* Zrušené pátky */
+function renderCanc(){
+  var c=$("#canc");
+  if(!D.weeklyCancelled.length){c.innerHTML="<p style='color:var(--muted);font-size:.9rem'>Žádné zrušené pátky.</p>";return}
+  c.innerHTML="";
+  D.weeklyCancelled.forEach(function(d,i){
+    var p=d.split("-"),w=document.createElement("div");
+    w.className="item-row";
+    w.innerHTML="<div><b>"+esc(p[2]+". "+p[1]+". "+p[0])+"</b><span>Mládež se nekoná</span></div><button class='btn danger' type='button'>Odebrat</button>";
+    w.querySelector("button").onclick=function(){D.weeklyCancelled.splice(i,1);mark(true);renderCanc()};
+    c.appendChild(w);
+  });
+}
+$("#ca").onclick=function(){
+  var v=$("#cd").value;if(!v)return;
+  if(D.weeklyCancelled.indexOf(v)<0)D.weeklyCancelled.push(v);
+  D.weeklyCancelled.sort();$("#cd").value="";
+  mark(true);renderCanc();
+};
+
+/* Speciální akce */
+function renderEv(){
+  var c=$("#evs");
+  if(!D.events.length){c.innerHTML="<p style='color:var(--muted);font-size:.9rem;margin-top:.6rem'>Zatím žádné speciální akce.</p>";return}
+  c.innerHTML="";
+  D.events.forEach(function(e,i){
+    var w=document.createElement("div");w.className="ev-box";
+    w.innerHTML="<div class='ev-top'><b>"+esc(e.title||"Nová speciální akce")+"</b><button class='btn danger' type='button'>Smazat</button></div>"+
+      "<div class='g3'>"+
+        "<div><label>Datum</label><input type='date' data-i='"+i+"' data-f='date' value='"+esc(e.date)+"'></div>"+
+        "<div><label>Od</label><input type='time' data-i='"+i+"' data-f='time' value='"+esc(e.time)+"'></div>"+
+        "<div><label>Do</label><input type='time' data-i='"+i+"' data-f='end' value='"+esc(e.end)+"'></div>"+
+      "</div>"+
+      "<div class='g2'>"+
+        "<div><label>Název akce</label><input data-i='"+i+"' data-f='title' value='"+esc(e.title)+"' placeholder='Např. Vánoční večer'></div>"+
+        "<div><label>Místo (nepovinné)</label><input data-i='"+i+"' data-f='place' value='"+esc(e.place)+"' placeholder='Křesťané Kuřim'></div>"+
+      "</div>"+
+      "<label>Popis akce (nepovinné)</label><input data-i='"+i+"' data-f='note' value='"+esc(e.note)+"' placeholder='Co nás čeká, co vzít s sebou…'>";
+    w.querySelector("button").onclick=function(){if(confirm("Opravdu smazat tuto akci?")){D.events.splice(i,1);mark(true);renderEv()}};
+    c.appendChild(w);
+  });
+}
+$("#ea").onclick=function(){
+  var d=new Date();d.setDate(d.getDate()+7);
+  D.events.push({date:d.toISOString().slice(0,10),time:"17:00",end:"19:00",title:"",place:"",note:""});
+  mark(true);renderEv();
+};
+
+/* Živý náhled nejbližší akce */
+function updatePreview(){
+  if(!D)return;
+  var list=[];
+  D.events.forEach(function(e){if(e.date&&e.title)list.push({date:e.date,time:e.time||"17:00",title:e.title,sp:true})});
+  if(D.weekly&&D.weekly.on){
+    var d=new Date();d.setHours(12,0,0,0);
+    while(d.getDay()!==5)d.setDate(d.getDate()+1);
+    for(var i=0;i<12;i++){
+      var k=d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2);
+      if((D.weeklyCancelled||[]).indexOf(k)<0){
+        list.push({date:k,time:D.weekly.time||"17:00",title:D.weekly.title||"Páteční mládež",topic:(D.topics||{})[k],sp:false});
+      }
+      d.setDate(d.getDate()+7);
+    }
+  }
+  list.sort(function(a,b){return (a.date+a.time).localeCompare(b.date+b.time)});
+  var now=new Date();
+  var nx=list.find(function(x){
+    var p=x.date.split("-"),t=(x.time||"00:00").split(":");
+    return new Date(+p[0],p[1]-1,+p[2],+t[0]+2,+t[1])>now;
+  });
+  if(!nx){$("#pvTitle").textContent="Žádná naplánovaná akce";$("#pvSub").textContent="Zapni páteční mládež nebo přidej speciální akci";return}
+  var p=nx.date.split("-"),dt=new Date(+p[0],p[1]-1,+p[2]);
+  $("#pvTitle").textContent=nx.title;
+  $("#pvSub").textContent=dt.toLocaleDateString("cs-CZ",{weekday:"long",day:"numeric",month:"long"})+" v "+nx.time+(nx.topic?" · Téma: "+nx.topic:"");
+  $("#pvBadge").textContent=nx.sp?"Speciální akce":"Páteční mládež";
+}
+
+/* Čištění dat před uložením */
+function clean(){
+  var o=JSON.parse(JSON.stringify(D));
+  o.events=o.events.filter(function(e){return e.date&&e.title&&e.title.trim()}).sort(function(a,b){return (a.date+(a.time||"")).localeCompare(b.date+(b.time||""))});
+  o.events.forEach(function(e){["end","place","note"].forEach(function(k){if(!e[k])delete e[k]})});
+  var sortedTopics={};
+  Object.keys(o.topics||{}).sort().forEach(function(k){if(o.topics[k]&&o.topics[k].trim())sortedTopics[k]=o.topics[k].trim()});
+  o.topics=sortedTopics;
+  return o;
+}
+
+/* Uložení na GitHub */
+function saveAll(){
+  if(isDemo){alert("Jsi v offline testovacím režimu. Pro uložení na web se připoj ke GitHubu.");return}
+  var bad=D.events.filter(function(e){return !e.date||!(e.title||"").trim()});
+  if(bad.length&&!confirm("Některé speciální akce nemají datum nebo název a nebudou uloženy. Pokračovat?"))return;
+
+  var data=clean(),contentToWrite="";
+  if($("#mode").value==="index"){
+    if(!rawFile){msg("Chybí načtený obsah index.html. Klikni znovu na Načíst data.","er");return}
+    var ext=extractCfgFromHtml(rawFile);
+    var newCfgBlock="var CFG="+JSON.stringify(data,null,2)+";";
+    contentToWrite=rawFile.slice(0,ext.start)+newCfgBlock+rawFile.slice(ext.end);
+  }else{
+    contentToWrite=JSON.stringify(data,null,2)+"\n";
+  }
+
+  var body={
+    message:"Admin: aktualizace obsahu ("+new Date().toLocaleString("cs-CZ")+")",
+    content:b64e(contentToWrite),
+    branch:$("#b").value.trim()
+  };
+  if(sha)body.sha=sha;
+
+  $("#save").disabled=true;$("#dirtyTxt").textContent="Ukládám na GitHub…";
+  api($("#f").value.trim(),{method:"PUT",body:JSON.stringify(body)}).then(function(res){
+    if(res.status===409||res.status===422)throw new Error("Soubor mezitím někdo upravil. Načti data znovu a změny zopakuj.");
+    if(!res.ok)throw new Error("Chyba zápisu ("+res.status+"). Zkontroluj oprávnění tokenu.");
+    return res.json();
+  }).then(function(j){
+    sha=j.content.sha;
+    if($("#mode").value==="index")rawFile=contentToWrite;
+    D=data;render();mark(false);
+    msg("Publikováno! GitHub Pages web aktualizuje zhruba do 30–60 sekund.","ok");
+    window.scrollTo({top:0,behavior:"smooth"});
+  }).catch(function(e){
+    $("#dirtyTxt").textContent="Chyba při ukládání";
+    msg(e.message,"er");
+    window.scrollTo({top:0,behavior:"smooth"});
+  }).then(function(){$("#save").disabled=false});
+}
+
+$("#save").onclick=saveAll;
+addEventListener("keydown",function(e){if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="s"){e.preventDefault();if(!$("#bar").hidden)saveAll()}});
+
+$("#copyCfg").onclick=function(){
+  navigator.clipboard.writeText($("#rawOut").value).then(function(){alert("CFG zkopírováno do schránky!")});
+};
+$("#dl").onclick=function(){
+  var a=document.createElement("a");
+  a.href=URL.createObjectURL(new Blob([JSON.stringify(clean(),null,2)],{type:"application/json"}));
+  a.download="data.json";a.click();
+};
+addEventListener("beforeunload",function(e){if(dirty){e.preventDefault();e.returnValue=""}});
+})();
+</script>
+</body>
+</html>
