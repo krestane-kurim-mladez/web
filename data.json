@@ -6,27 +6,133 @@
   "facebook": "https://www.facebook.com/profile.php?id=61589700260035",
   "address": "Křesťané Kuřim\nLegionářská 281\n664 34 Kuřim",
   "mapQuery": "Legionářská 281, 664 34 Kuřim",
-  "heroPhoto": "",
-  "heroPos": "center",
+  "heroPhoto": "img/hero-mladez.jpg",
+  "heroPos": "top",
   "googleCalendarId": "",
   "weekly": {
     "on": true,
     "time": "17:00",
     "end": "18:30",
     "title": "Páteční mládež",
-    "note": "Hry, chvály, slovo z Bible, svačina"
+    "note": "Hry, chvály, slovo z Bible, svačina – každý pátek od 17:00, zdarma a bez registrace."
   },
   "topics": {
-    "2026-11-27": "Přísloví 25:28"
+    "2026-11-27": "Přísloví 25:28 – Ovládání sebe sama",
+    "2026-12-04": "Proč má smysl patřit do společenství",
+    "2026-12-11": "Jak číst Bibli, aby dávala smysl v běžném týdnu",
+    "2026-12-18": "Vánoční setkání a světlo, které přišlo na svět",
+    "2027-01-08": "Nový rok, nové začátky a kam míříme",
+    "2027-01-15": "Přátelství, tlak party a opravdová blízkost",
+    "2027-01-22": "Co znamená následovat Ježíše ve škole i doma",
+    "2027-01-29": "Modlitba: proč mluvit s Bohem i když nevíš jak",
+    "2027-02-05": "Pochybnosti a otázky – je v pořádku se ptát?",
+    "2027-02-12": "Odpuštění a jak unést vlastní chyby",
+    "2027-02-19": "Sociální sítě, srovnávání a pravá hodnota člověka",
+    "2027-02-26": "Jak se rozhodovat, když je možností moc",
+    "2027-03-05": "Kdo je Duch Svatý a jak nás proměňuje",
+    "2027-03-12": "Naděje, která drží i v těžších obdobích",
+    "2027-03-19": "Velikonoční příběh: proč na kříži nezůstalo",
+    "2027-03-26": "Jak žít víru otevřeně, ale přirozeně před ostatními",
+    "2027-04-02": "Velký pátek – ztišení, vděčnost a smysl oběti",
+    "2027-04-09": "Co dál po Velikonocích: žít z radosti a milosti"
   },
-  "weeklyCancelled": [],
-  "events": [],
-  "pages": []
+  "weeklyCancelled": [
+    "2026-12-25",
+    "2027-01-01",
+    "2027-03-05"
+  ],
+  "events": [
+    {
+      "date": "2026-12-18",
+      "time": "17:00",
+      "end": "19:30",
+      "title": "Vánoční večer mládeže",
+      "place": "Křesťané Kuřim, Legionářská 281",
+      "note": "Tradiční vánoční atmosféra, hry, chvály, vánoční zamyšlení, cukroví a svačina."
+    },
+    {
+      "date": "2027-01-29",
+      "time": "17:00",
+      "end": "19:30",
+      "title": "Večer modliteb a chvál",
+      "place": "Křesťané Kuřim, Legionářská 281",
+      "note": "Delší společný čas chvál, ztišení a modliteb za mládež, přátele a náš sbor."
+    },
+    {
+      "date": "2027-02-12",
+      "time": "17:00",
+      "end": "20:00",
+      "title": "Filmový & deskovkový pátek",
+      "place": "Křesťané Kuřim, Legionářská 281",
+      "note": "Deskovky, karetní hry, týmové soutěže, popcorn a společné povídání."
+    },
+    {
+      "date": "2027-03-19",
+      "time": "17:00",
+      "end": "19:30",
+      "title": "Předvelikonoční setkání",
+      "place": "Křesťané Kuřim, Legionářská 281",
+      "note": "Tematický pátek před Velikonocemi s hrami, chválami a společnou svačinou."
+    },
+    {
+      "date": "2027-04-17",
+      "time": "09:00",
+      "end": "17:00",
+      "title": "Jarní výjezd / celodenní akce mládeže",
+      "place": "Kuřim a okolí",
+      "note": "Společný výlet a program mimo běžný páteční formát. Bližší info upřesníme včas."
+    }
+  ],
+  "pages": [
+    {
+      "slug": "novacci",
+      "title": "Poprvé na mládeži",
+      "lead": "Všechno, co potřebuješ vědět před svým prvním pátkem.",
+      "body": "Chystáš se přijít poprvé a nevíš, co čekat? Mládež začíná každý pátek v 17:00 v budově na rohu ulic Legionářská a Husova v Kuřimi (vcházíme pravým vstupem).\n\nNemusíš se nikde předem registrovat ani nic platit. Můžeš přijít sám nebo vzít kamaráda či kamarádku. Pokud se ti nebude chtít zapojit do hry nebo zpívání, vůbec ničemu to nevadí – nikoho do ničeho nenutíme.\n\nPokud máš jakoukoli otázku předem, klidně napiš nebo zavolej Josefovi Sponarovi.",
+      "ctaLabel": "Kontakty a mapa",
+      "ctaUrl": "#kontakt",
+      "inMenu": true,
+      "inTiles": true
+    },
+    {
+      "slug": "rodice",
+      "title": "Info pro rodiče",
+      "lead": "Praktické informace o zázemí, bezpečí a vedení mládeže.",
+      "body": "Mládež Křesťané Kuřim je otevřené setkávání pro mladé lidi zhruba od 13 do 18 let pod záštitou spolku Křesťané Kuřim, z. s.\n\nProgram probíhá každý pátek od 17:00 do 18:30 na adrese Legionářská 281, Kuřim. Součástí každého večera jsou hry, chvály, biblické téma, rozhovory a svačina.\n\nDbáme na respektující prostředí, bezpečnost při aktivitách a jasnou komunikaci. Fotografie zveřejňujeme pouze se souhlasem zúčastněných osob, u nezletilých se souhlasem rodičů.",
+      "ctaLabel": "Podmínky mládeže a sboru",
+      "ctaUrl": "#podminky",
+      "inMenu": true,
+      "inTiles": false
+    },
+    {
+      "slug": "sluzba",
+      "title": "Zapoj se do služby",
+      "lead": "Chceš pomáhat s chválami, technikou, hrami nebo svačinou?",
+      "body": "Mládež stojí na lidech, kteří se rádi zapojí podle svých darů a možností – ať už jde o hudbu, zvuk, přípravu svačiny, vymýšlení her nebo pomoc s organizací.\n\nNemusíš být profík, důležitá je chuť být součástí týmu a sloužit ostatním. Ozvi se v pátek nebo napiš přes kontakty.",
+      "ctaLabel": "Napsat nebo zavolat",
+      "ctaUrl": "#kontakt",
+      "inMenu": true,
+      "inTiles": false
+    },
+    {
+      "slug": "otazky",
+      "title": "Otázky k víře a životu",
+      "lead": "Prostor pro témata, která mladé lidi reálně zajímají a trápí.",
+      "body": "Na mládeži se nechceme vyhýbat těžkým ani osobním otázkám. Ať už řešíš pochybnosti o Bohu, vztah k Bibli, tlak vrstevníků, školu nebo budoucnost, můžeš své téma navrhnout.\n\nKaždý pátek se vracíme k biblickému textu a snažíme se propojit ho s tím, jak žijeme ve skutečném světě.",
+      "ctaLabel": "Čemu věříme",
+      "ctaUrl": "#vira",
+      "inMenu": true,
+      "inTiles": false
+    },
+    {
+      "slug": "akce-rok",
+      "title": "Speciální akce & výjezdy",
+      "lead": "Co nás čeká kromě klasických pátečních setkání.",
+      "body": "Kromě pravidelných pátků od 17:00 občas pořádáme delší večery, filmové a deskovkové pátky, modlitební večery nebo jednodenní výjezdy.\n\nAktuální datum, čas i podrobnosti vždy najdeš v kalendáři akcí nebo na našem Instagramu a Facebooku.",
+      "ctaLabel": "Otevřít kalendář",
+      "ctaUrl": "#kalendar",
+      "inMenu": true,
+      "inTiles": false
+    }
+  ]
 }
-```[cite: 8]
-
-### Kam `data.json` vložit
-* V repozitáři na GitHubu otevři soubor `data.json` (nebo klikni na `Add file` → `Create new file` a pojmenuj ho `data.json`, pokud ho tam ještě nemáš), vlož kód výše a ulož.
-* V `admin.html` pak při přihlášení můžeš nechat režim **Přímo do index.html (var CFG)** (doporučené, když se upravuje `index.html`) nebo přepnout na **Do externího data.json** (cesta `data.json`).
-
-Mám ti teď vypsat upravený `index.html` na míru tvému souboru?
