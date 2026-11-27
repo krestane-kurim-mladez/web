@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rozpis chval | Křesťané Kuřim – mládež</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#1b1424; --surface:#271c33; --surface2:#31243f; --line:#42334f;
+    --text:#f6eee6; --muted:#b5a6bd; --accent:#ffb061; --accent2:#ff7a59; --ok:#7fd6a0;
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 Figtree,system-ui,sans-serif;
+    background-image:radial-gradient(900px 420px at 85% -10%,rgba(255,122,89,.22),transparent 70%),
+                     radial-gradient(700px 360px at 0% 0%,rgba(255,176,97,.10),transparent 70%);
+    background-repeat:no-repeat;min-height:100vh}
+  a{color:inherit}
+  button{font:inherit;color:inherit;cursor:pointer}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .wrap{max-width:760px;margin:0 auto;padding:0 18px}
+  header.top{padding:22px 0 8px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .back{font-size:14px;color:var(--muted);text-decoration:none}
+  .back:hover{color:var(--text)}
+  h1{font:800 clamp(34px,7vw,52px)/1.02 "Bricolage Grotesque",sans-serif;margin:18px 0 6px;letter-spacing:-.02em}
+  .lead{color:var(--muted);margin:0 0 24px;max-width:48ch}
+
+  .monthbar{display:flex;align-items:center;justify-content:space-between;background:var(--surface);
+    border:1px solid var(--line);border-radius:var(--radius);padding:6px;margin-bottom:18px}
+  .monthbar button{background:none;border:0;border-radius:10px;width:44px;height:44px;font-size:20px;color:var(--muted)}
+  .monthbar button:hover{background:var(--surface2);color:var(--text)}
+  .monthbar .label{font:700 18px "Bricolage Grotesque",sans-serif}
+
+  .fri{display:grid;grid-template-columns:76px 1fr;gap:16px;background:var(--surface);
+    border:1px solid var(--line);border-radius:var(--radius);padding:16px;margin-bottom:12px}
+  .fri.next{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+  .date{text-align:center;border-right:1px solid var(--line);padding-right:14px}
+  .date .num{font:800 38px/1 "Bricolage Grotesque",sans-serif;color:var(--accent)}
+  .date .mon{font-size:13px;color:var(--muted);margin-top:4px}
+  .badge{display:inline-block;font-size:12px;font-weight:600;color:#2a1a10;background:var(--accent);
+    border-radius:999px;padding:1px 10px;margin-bottom:8px}
+  .who{font-size:13px;color:var(--muted)}
+  .leader{font:700 22px/1.2 "Bricolage Grotesque",sans-serif;margin:0 0 12px}
+  .leader.empty{color:var(--muted);font-weight:500;font-size:17px}
+  .songs{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+  .songs li{display:flex;gap:10px;align-items:baseline;justify-content:space-between}
+  .songs .t{font-weight:600}
+  .songs .t a{text-decoration:none;border-bottom:1px solid var(--line)}
+  .songs .t a:hover{border-color:var(--accent)}
+  .songs .s{display:block;font-size:13px;color:var(--muted);font-weight:400}
+  .songs .k{font-size:13px;color:var(--accent);white-space:nowrap}
+  .note{margin-top:12px;font-size:14px;color:var(--muted);border-top:1px dashed var(--line);padding-top:10px}
+  .none{color:var(--muted);font-size:15px}
+
+  /* admin */
+  .adminbar{position:sticky;top:0;z-index:10;background:#3a2410;border-bottom:1px solid var(--accent);display:none}
+  .adminbar.on{display:block}
+  .adminbar .in{max-width:760px;margin:0 auto;padding:10px 18px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+  .adminbar p{margin:0;font-size:14px}
+  .btn{border:1px solid var(--line);background:var(--surface2);border-radius:10px;padding:8px 14px;font-weight:600;font-size:14px}
+  .btn:hover{border-color:var(--accent)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#2a1a10}
+  .btn.small{padding:4px 10px;font-size:13px}
+  .btn.ghost{background:none}
+  select,input[type=text],input[type=password]{width:100%;background:var(--bg);color:var(--text);border:1px solid var(--line);
+    border-radius:10px;padding:10px 12px;font:inherit}
+  .field{margin-bottom:10px}
+  .field label{display:block;font-size:13px;color:var(--muted);margin-bottom:4px}
+  .edit-songs{list-style:none;margin:0 0 10px;padding:0;display:grid;gap:6px}
+  .edit-songs li{display:flex;align-items:center;gap:6px;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:6px 8px}
+  .edit-songs .n{flex:1;font-size:15px}
+  .edit-songs button{background:none;border:0;color:var(--muted);padding:4px 7px;border-radius:6px}
+  .edit-songs button:hover{background:var(--surface2);color:var(--text)}
+
+  footer{padding:30px 0 50px;text-align:center}
+  footer button{background:none;border:0;color:var(--muted);font-size:13px;text-decoration:underline}
+
+  .modal{position:fixed;inset:0;background:rgba(10,6,16,.7);display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
+  .modal.on{display:flex}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;width:100%;max-width:460px;max-height:86vh;display:flex;flex-direction:column;overflow:hidden}
+  .card h3{margin:0;font:700 20px "Bricolage Grotesque",sans-serif}
+  .card .hd{padding:16px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px}
+  .card .bd{padding:14px 18px;overflow-y:auto}
+  .card .ft{padding:12px 18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px}
+  .pick{display:flex;align-items:center;gap:12px;padding:9px 6px;border-radius:10px;cursor:pointer}
+  .pick:hover{background:var(--surface2)}
+  .pick input{width:18px;height:18px;accent-color:var(--accent)}
+  .pick .s{display:block;font-size:12px;color:var(--muted)}
+  .pick .k{margin-left:auto;font-size:13px;color:var(--accent)}
+  .err{color:#ff8f8f;font-size:14px;margin:6px 0 0;display:none}
+  .toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--text);color:#2a1a10;
+    padding:10px 16px;border-radius:12px;font-weight:600;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:60;max-width:90vw;text-align:center}
+  .toast.on{opacity:1}
+  @media (max-width:480px){
+    .fri{grid-template-columns:60px 1fr;gap:12px;padding:14px}
+    .date .num{font-size:30px}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="adminbar" id="adminbar">
+  <div class="in">
+    <p><strong>Admin</strong> – změny se uloží až po nahrání souboru na GitHub.</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn primary" onclick="openExport()">Uložit změny</button>
+      <button class="btn ghost" onclick="logout()">Odhlásit</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <header class="top">
+    <a class="back" href="../">← Zpět na web</a>
+  </header>
+
+  <h1>Chvály na mládeži</h1>
+  <p class="lead">Kdo povede chvály a jaké písně nás tento týden čekají.</p>
+
+  <div class="monthbar">
+    <button onclick="changeMonth(-1)" aria-label="Předchozí měsíc">‹</button>
+    <div class="label" id="monthLabel"></div>
+    <button onclick="changeMonth(1)" aria-label="Další měsíc">›</button>
+  </div>
+
+  <main id="list"></main>
+
+  <footer><button onclick="openLogin()" id="adminLink">Admin</button></footer>
+</div>
+
+<!-- Přihlášení -->
+<div class="modal" id="loginModal">
+  <div class="card">
+    <div class="hd"><h3>Admin</h3><button class="btn small ghost" onclick="closeModal('loginModal')">Zavřít</button></div>
+    <div class="bd">
+      <div class="field"><label for="pin">Heslo</label>
+        <input type="password" id="pin" autocomplete="current-password" onkeydown="if(event.key==='Enter')submitLogin()"></div>
+      <p class="err" id="pinErr">Heslo nesouhlasí.</p>
+    </div>
+    <div class="ft"><span></span><button class="btn primary" onclick="submitLogin()">Odemknout</button></div>
+  </div>
+</div>
+
+<!-- Výběr písní -->
+<div class="modal" id="pickModal">
+  <div class="card">
+    <div class="hd"><h3 id="pickTitle">Vybrat písně</h3><button class="btn small ghost" onclick="closePicker()">Hotovo</button></div>
+    <div class="bd">
+      <div class="field"><input type="text" id="pickSearch" placeholder="Hledat podle názvu…" oninput="renderPicker()"></div>
+      <div id="pickList"></div>
+    </div>
+    <div class="ft"><span id="pickCount" class="who"></span><button class="btn primary" onclick="closePicker()">Hotovo</button></div>
+  </div>
+</div>
+
+<!-- Export -->
+<div class="modal" id="exportModal">
+  <div class="card">
+    <div class="hd"><h3>Uložit změny</h3><button class="btn small ghost" onclick="closeModal('exportModal')">Zavřít</button></div>
+    <div class="bd">
+      <p style="margin-top:0">Stránka sama nemůže zapisovat do GitHubu. Postup:</p>
+      <ol style="padding-left:20px;margin:0 0 12px">
+        <li>Klikni na <strong>Zkopírovat kód</strong>.</li>
+        <li>Otevři soubor na GitHubu, smaž jeho obsah a vlož zkopírovaný kód.</li>
+        <li>Klikni na <strong>Commit changes</strong>. Za minutu se rozpis změní všem.</li>
+      </ol>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn primary" onclick="copyCode()">Zkopírovat kód</button>
+        <a class="btn" style="text-decoration:none" id="ghLink" target="_blank" rel="noopener">Otevřít soubor na GitHubu</a>
+        <button class="btn" onclick="downloadFile()">Stáhnout soubor</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="./rozpis-data.js"></script>
+<script>
+/* ====== NASTAVENÍ ====== */
+// SHA-256 otisk hesla (heslo samotné v kódu není). Nové heslo: https://emn178.github.io/online-tools/sha256.html
+const PASSWORD_HASH = "8beb238f9f850370f80f4ba670004705e1fc3430a5ef059398bd353d745d2d05";
+// Kdo může vést chvály (nabídka v adminu)
+const LEADERS = ["Sasha Iliushchenko", "Grace Kolaříková"];
+// Odkaz na text písně ve zpěvníku. Prázdné = písně nejsou proklikávací. {id} se nahradí číslem písně.
+// Příklad: "../zpevnik.html#{id}"
+const SONG_LINK = "";
+// Kam se nahrává soubor s daty (větev případně změň na master)
+const GITHUB_EDIT_URL = "https://github.com/krestane-kurim-mladez/web/edit/main/rozpis/rozpis-data.js";
+
+/* ====== KATALOG: [id, název, podnadpis, tónina, capo] ====== */
+const SONGS = [
+[1,"Bůh jsoucí","Great I Am","A",""],
+[2,"Z Tvé ruky, Pane můj","","F",""],
+[3,"Můj veliký","Pouze text","",""],
+[4,"Nádherný (Vánoční)","","A",""],
+[5,"Přijď, prameni požehnání","Come Thou Fount","C",""],
+[6,"Nádherný (Bob Hartman)","Bob Hartman","A","Capo 2"],
+[7,"Svatý, svatý, svatý – S námi jsi","Holy, Holy, Holy – God with us","A",""],
+[8,"Z hlubokosti volám k Tobě (Žalm 130)","Žalm 130","D",""],
+[9,"Žalm 130 – Čekám na Tebe","I Will Wait For You","G",""],
+[10,"Chváliž Hospodina, slávy vždy Krále mocného","","D","Capo 2"],
+[11,"Lid, který chodí v temnotách","","Dm",""],
+[12,"Za krásné, jasné noci","","D",""],
+[13,"Vyvyšuju Tebe, Pane","Přechod do G","C",""],
+[14,"Svatý jsi náš Pán","Holy Is The Lord","E",""],
+[15,"Tebe znát","Knowing You","C",""],
+[16,"Tvá vzácná milost","Amazing Grace","F",""],
+[17,"Žalm 23","","G",""],
+[18,"Velká je věrnost Tvá (Navěky od počátků)","","G",""],
+[19,"Úžasný, nádherný Králi","Wonderful, Merciful Savior","A",""],
+[20,"Zjev se nám","Show Us Christ","A",""],
+[21,"Zpívejte lidé, nám vládne mocný Pán","Christmas Day","D",""],
+[22,"Žalm 25 (K Tobě, Pane, pozvedám)","Žalm 25","E",""],
+[23,"Tichá noc","","G",""],
+[24,"Vím, Ty jsi velký Bůh","","G",""],
+[25,"Zde sešli jsme se","Přechod do E","D",""],
+[26,"Ty malé město Betléme","","E",""],
+[27,"Ty jsi jediný Bůh","","E",""],
+[28,"Věčné haleluja","Endless Hallelujah","F",""],
+[29,"V Kristu věčnou naděj mám","Christ Our Hope In Life And Death","E",""],
+[30,"Ty jsi vším, co mám","All I Have Is Christ","C",""],
+[31,"Pro Pána žíti","","D",""],
+[32,"Slyšte, jaká libá píseň","Pouze text","F",""],
+[33,"Pán Bůh je přítomen","Pouze text","G",""],
+[34,"Pánova dobrota předivná","Grace Greater Than Our Sin","E",""],
+[35,"Pane díky","Jesus Thank You","E",""],
+[36,"Otče můj drahý","","A",""],
+[37,"Pán je mojí záchranou","The Lord Is My Salvation","A",""],
+[38,"Smím stát","","E",""],
+[39,"Pán mě zachová","He Will Hold Me Fast","G",""],
+[40,"Slyšte slavný nebe ples","","D","Capo 2"],
+[41,"Není vždy slunce na obloze","","G",""],
+[42,"Skálo věků","","A",""],
+[43,"Pro Krista chci žít","The Cause of Christ","A",""],
+[44,"Při Tvém jménu stát","","G","Capo 3"],
+[45,"Přijď hříšníku, chudý, nuzný","Come, Ye Sinners, Poor and Needy","Em",""],
+[46,"Ó, Slovo Boží svaté","O Word of God Incarnate","C",""],
+[47,"Před Božím trůnem v nebesích","","C",""],
+[48,"Můj Jezu, po Tvé šlépěji","","Dm",""],
+[49,"Nádherný Bůh","How Great Is Our God","G",""],
+[50,"Kříž Tvé lásky","When I Survey the Wondrous Cross","C","Capo 3"],
+[51,"Kristus Pán vstal z hrobu dnes","Christ the Lord is Risen Today","A",""],
+[52,"Kristův kříž sílu má","The Power of the Cross","G","Capo 3"],
+[53,"Má naděj na tom spočívá","","C","Capo 2"]
+].map(([id,title,sub,key,capo])=>({id,title,sub,key,capo}));
+const byId = id => SONGS.find(s=>s.id===id);
+
+/* ====== STAV ====== */
+const MONTHS = ["Leden","Únor","Březen","Duben","Květen","Červen","Červenec","Srpen","Září","Říjen","Listopad","Prosinec"];
+const MONTHS_GEN = ["ledna","února","března","dubna","května","června","července","srpna","září","října","listopadu","prosince"];
+const now = new Date();
+const state = {
+  y: now.getFullYear(), m: now.getMonth(), admin: false,
+  data: JSON.parse(JSON.stringify(window.ROZPIS_DATA || {})),
+  pickDate: null
+};
+const DRAFT_KEY = "rozpis_draft_v1";
+
+const pad = n => String(n).padStart(2,"0");
+const iso = (y,m,d) => `${y}-${pad(m+1)}-${pad(d)}`;
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+
+function fridays(y,m){
+  const out=[]; const d=new Date(y,m,1);
+  while(d.getMonth()===m){ if(d.getDay()===5) out.push(d.getDate()); d.setDate(d.getDate()+1); }
+  return out;
+}
+function nextFridayIso(){
+  const d=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+  while(d.getDay()!==5) d.setDate(d.getDate()+1);
+  return iso(d.getFullYear(),d.getMonth(),d.getDate());
+}
+function entry(date){
+  if(!state.data[date]) state.data[date]={leader:"",songs:[],note:""};
+  const e=state.data[date];
+  if(!Array.isArray(e.songs)) e.songs=[];
+  if(typeof e.leader!=="string") e.leader="";
+  if(typeof e.note!=="string") e.note="";
+  return e;
+}
+
+/* ====== VYKRESLENÍ ====== */
+function songLine(s){
+  const title = SONG_LINK
+    ? `<a href="${esc(SONG_LINK.replace("{id}",s.id))}">${esc(s.title)}</a>`
+    : esc(s.title);
+  const key = s.key ? s.key + (s.capo ? " · " + s.capo : "") : "";
+  return `<li><span class="t">${title}${s.sub?`<span class="s">${esc(s.sub)}</span>`:""}</span><span class="k">${esc(key)}</span></li>`;
+}
+
+function render(){
+  document.getElementById("monthLabel").textContent = `${MONTHS[state.m]} ${state.y}`;
+  const nextIso = nextFridayIso();
+  const html = fridays(state.y,state.m).map(day=>{
+    const date = iso(state.y,state.m,day);
+    const e = state.data[date] || {leader:"",songs:[],note:""};
+    const songs = (e.songs||[]).map(byId).filter(Boolean);
+    const isNext = date===nextIso;
+    const dateBox = `<div class="date"><div class="num">${day}</div><div class="mon">${MONTHS_GEN[state.m]}</div></div>`;
+
+    let body;
+    if(state.admin){
+      const opts = ['<option value="">– nevybráno –</option>']
+        .concat(LEADERS.map(n=>`<option ${e.leader===n?"selected":""}>${esc(n)}</option>`));
+      if(e.leader && !LEADERS.includes(e.leader)) opts.push(`<option selected>${esc(e.leader)}</option>`);
+      opts.push('<option value="__other">Jiný…</option>');
+      const list = songs.map((s,i)=>`<li>
+          <span class="n">${esc(s.title)}</span>
+          <button onclick="moveSong('${date}',${i},-1)" aria-label="Posunout nahoru">↑</button>
+          <button onclick="moveSong('${date}',${i},1)" aria-label="Posunout dolů">↓</button>
+          <button onclick="removeSong('${date}',${i})" aria-label="Odebrat">✕</button></li>`).join("");
+      body = `
+        <div class="field"><label>Vede chvály</label>
+          <select onchange="setLeader('${date}',this)">${opts.join("")}</select></div>
+        <div class="field"><label>Písně</label>
+          <ul class="edit-songs">${list}</ul>
+          <button class="btn small" onclick="openPicker('${date}')">+ Přidat písně ze zpěvníku</button></div>
+        <div class="field"><label>Poznámka (nepovinné)</label>
+          <input type="text" value="${esc(e.note)}" onchange="setNote('${date}',this.value)"></div>`;
+    } else {
+      body = `${isNext?'<span class="badge">Tento týden</span><br>':''}
+        ${e.leader
+          ? `<div class="who">Vede chvály</div><p class="leader">${esc(e.leader)}</p>`
+          : `<p class="leader empty">Zatím bez vedoucího chval</p>`}
+        ${songs.length
+          ? `<ul class="songs">${songs.map(songLine).join("")}</ul>`
+          : `<div class="none">Písně zatím nejsou vybrané.</div>`}
+        ${e.note?`<div class="note">${esc(e.note)}</div>`:""}`;
+    }
+    return `<section class="fri${isNext?" next":""}">${dateBox}<div>${body}</div></section>`;
+  }).join("");
+  document.getElementById("list").innerHTML = html;
+}
+
+function changeMonth(d){
+  state.m+=d;
+  if(state.m>11){state.m=0;state.y++;} else if(state.m<0){state.m=11;state.y--;}
+  render();
+}
+
+/* ====== ÚPRAVY ====== */
+function saveDraft(){ try{ localStorage.setItem(DRAFT_KEY, JSON.stringify(state.data)); }catch(e){} }
+function setLeader(date, sel){
+  if(sel.value==="__other"){
+    const name = (prompt("Jméno vedoucího chval:")||"").trim();
+    entry(date).leader = name;
+  } else entry(date).leader = sel.value;
+  saveDraft(); render();
+}
+function setNote(date,v){ entry(date).note=v.trim(); saveDraft(); }
+function removeSong(date,i){ entry(date).songs.splice(i,1); saveDraft(); render(); }
+function moveSong(date,i,d){
+  const a=entry(date).songs, j=i+d;
+  if(j<0||j>=a.length) return;
+  [a[i],a[j]]=[a[j],a[i]]; saveDraft(); render();
+}
+
+/* ====== VÝBĚR PÍSNÍ ====== */
+function openPicker(date){
+  state.pickDate=date;
+  const [y,m,d]=date.split("-").map(Number);
+  document.getElementById("pickTitle").textContent=`Písně na ${d}. ${m}.`;
+  document.getElementById("pickSearch").value="";
+  document.getElementById("pickModal").classList.add("on");
+  renderPicker();
+}
+function closePicker(){ document.getElementById("pickModal").classList.remove("on"); state.pickDate=null; render(); }
+function renderPicker(){
+  const q=document.getElementById("pickSearch").value.trim().toLowerCase();
+  const chosen=entry(state.pickDate).songs;
+  document.getElementById("pickCount").textContent=`Vybráno: ${chosen.length}`;
+  document.getElementById("pickList").innerHTML = SONGS
+    .filter(s=>!q || (s.title+" "+s.sub).toLowerCase().includes(q))
+    .sort((a,b)=>a.title.localeCompare(b.title,"cs"))
+    .map(s=>`<label class="pick"><input type="checkbox" ${chosen.includes(s.id)?"checked":""} onchange="togglePick(${s.id})">
+      <span>${esc(s.title)}${s.sub?`<span class="s">${esc(s.sub)}</span>`:""}</span><span class="k">${esc(s.key)}</span></label>`).join("")
+    || '<div class="none">Nic nenalezeno.</div>';
+}
+function togglePick(id){
+  const a=entry(state.pickDate).songs, i=a.indexOf(id);
+  if(i<0) a.push(id); else a.splice(i,1);
+  saveDraft();
+  document.getElementById("pickCount").textContent=`Vybráno: ${a.length}`;
+}
+
+/* ====== PŘIHLÁŠENÍ ====== */
+async function sha256(text){
+  const buf=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(text));
+  return [...new Uint8Array(buf)].map(b=>b.toString(16).padStart(2,"0")).join("");
+}
+function openLogin(){
+  document.getElementById("pin").value="";
+  document.getElementById("pinErr").style.display="none";
+  document.getElementById("loginModal").classList.add("on");
+  setTimeout(()=>document.getElementById("pin").focus(),50);
+}
+async function submitLogin(){
+  const h = await sha256(document.getElementById("pin").value);
+  if(h!==PASSWORD_HASH){ document.getElementById("pinErr").style.display="block"; return; }
+  state.admin=true;
+  try{
+    const d=localStorage.getItem(DRAFT_KEY);
+    if(d){ state.data=JSON.parse(d); toast("Načten tvůj neuložený koncept"); }
+  }catch(e){}
+  closeModal("loginModal");
+  document.getElementById("adminbar").classList.add("on");
+  document.getElementById("adminLink").style.display="none";
+  render();
+}
+function logout(){
+  state.admin=false;
+  document.getElementById("adminbar").classList.remove("on");
+  document.getElementById("adminLink").style.display="";
+  render();
+}
+function closeModal(id){ document.getElementById(id).classList.remove("on"); }
+
+/* ====== EXPORT ====== */
+function buildFile(){
+  const out={};
+  Object.keys(state.data).sort().forEach(k=>{
+    const e=state.data[k];
+    if(e && (e.leader || (e.songs&&e.songs.length) || e.note))
+      out[k]={leader:e.leader||"",songs:e.songs||[],note:e.note||""};
+  });
+  const lines=Object.keys(out).map(k=>`  ${JSON.stringify(k)}: ${JSON.stringify(out[k])}`);
+  return `// Rozpis chval na mládeži – Křesťané Kuřim\n// Přepisuje se exportem z admin režimu na stránce /rozpis/.\nwindow.ROZPIS_DATA = {\n${lines.join(",\n")}\n};\n`;
+}
+function openExport(){
+  document.getElementById("ghLink").href=GITHUB_EDIT_URL;
+  document.getElementById("exportModal").classList.add("on");
+}
+async function copyCode(){
+  try{ await navigator.clipboard.writeText(buildFile()); toast("Zkopírováno. Vlož do souboru na GitHubu."); }
+  catch(e){ toast("Kopírování se nepovedlo, použij Stáhnout soubor."); }
+}
+function downloadFile(){
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(new Blob([buildFile()],{type:"application/javascript"}));
+  a.download="rozpis-data.js"; a.click(); URL.revokeObjectURL(a.href);
+}
+let tt;
+function toast(msg){
+  const el=document.getElementById("toast"); el.textContent=msg; el.classList.add("on");
+  clearTimeout(tt); tt=setTimeout(()=>el.classList.remove("on"),2800);
+}
+
+document.addEventListener("keydown",e=>{ if(e.key==="Escape") document.querySelectorAll(".modal.on").forEach(m=>m.classList.remove("on")); });
+render();
+</script>
+</body>
+</html>
